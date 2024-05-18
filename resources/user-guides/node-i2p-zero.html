@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang=en>
+
+    
+<!-- Mirrored from app.getmonero.network/resources/user-guides/node-i2p-zero.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 May 2024 17:42:39 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+     Run a Monero node through I2P with I2P-zero | Monero - secure, private, untraceable
+    </title>
+  <meta name="description" content="
+  Monero, a digital currency that is secure, private, and untraceable
+  ">
+	<meta name="keywords" content="monero, xmr, bitmonero, cryptocurrency">
+
+    <meta property="og:title" content="
+    
+    
+      User Guides: Run a Monero node through I2P with I2P-zero
+    " />
+    <meta property="og:description" content="
+    Monero, a digital currency that is secure, private, and untraceable
+    ">
+    <!-- If the page specifies a dedicated image which is not an SVG file, we use that one. Otherwise we use the classic Monero logo -->
+    <meta property="og:image" content="../../../www.getmonero.org/press-kit/symbols/monero-symbol-on-white-480.png">
+    <meta property="og:site_name" content="getmonero.org, The Monero Project">
+    <meta property="og:url" content="https://www.getmonero.org//resources/user-guides/node-i2p-zero.html">
+    <meta property="og:type" content="website">
+    <meta http-equiv="onion-location" content="http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/user-guides/node-i2p-zero.html" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../meta/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../meta/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../meta/favicon-16x16.png">
+        <link rel="manifest" href="../../meta/manifest.json">
+        <link rel="mask-icon" href="../../meta/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+
+    <link href="../../css/custom.css" rel="stylesheet">
+	
+    
+    <meta name="msapplication-config" content="../../ietemplates/ieconfig.html">
+
+  <!-- Feed autodetection -->
+  <link type="application/atom+xml" rel="alternate" href="../../feed.xml" title="Monero">
+
+  </head>
+
+
+  <body>
+    <div class="page-wrapper">
+        <div class="mob-nav">
+              <input class="burger-check" id="mobile-burger" type="checkbox"><label for="mobile-burger" class="burger"></label>
+
+        <div class="slide-in-nav">
+             <div class="container slide-in">
+                 <div class="row">
+                     <div class="col-xs-12 dropdown text-center nav-item">
+                      <label for="drop1">Get Started<div class="arrow-down"></div></label>
+                      <input class="burger-checkdropdown" id="drop1" type="checkbox" tabindex="0">
+                      <div class="dropdown-content">
+                          <a href="../../get-started/what-is-monero/index.html">What is Monero?</a>
+                          <a href="../../get-started/accepting/index.html">Accepting</a>
+                          <a href="../../get-started/contributing/index.html">Contributing</a>
+                          <a href="../../get-started/mining/index.html">Mining</a>
+                          <a href="../../get-started/faq/index.html">FAQ</a>
+                  </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-12 dropdown nav-item">
+                      <a href="../../app/index.html">Downloads</a>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-12 dropdown nav-item">
+                      <a href="../../blog/index.html">Blog</a>
+                    </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12 dropdown text-center nav-item">
+                    <label for="drop2">Community<div class="arrow-down"></div></label>
+                    <input class="burger-checkdropdown" id="drop2" type="checkbox" tabindex="0">
+                    <div class="dropdown-content">
+                      <a href="../../community/workgroups/index.html">Workgroups</a>
+                      <a href="../../community/hangouts/index.html">Hangouts</a>
+                      <a href="../../community/sponsorships/index.html">Sponsorships</a>
+                      <a href="../../community/merchants/index.html">Merchants & Exchanges</a>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12 dropdown text-center nav-item">
+                    <label for="drop3">Resources<div class="arrow-down"></div></label>
+                    <input class="burger-checkdropdown" id="drop3" type="checkbox" tabindex="0">
+                    <div class="dropdown-content">
+                      <a href="../about/index.html">About</a>
+                      <a href="../roadmap/index.html">Roadmap</a>
+                      <a href="../research-lab/index.html">Research Lab</a>
+                      <a href="../moneropedia/index.html">Moneropedia</a>
+                      <a href="index.html">User Guides</a>
+                      <a href="../developer-guides/index.html">Developer Guides</a>
+                      <a href="../tools/index.html">Tools</a>
+                      <a href="../../library/index.html">Library</a>
+                      <a href="../../press-kit/index.html">Press Kit</a>
+                    </div>
+                  </div>
+               </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://ccs.getmonero.org/">Community Crowdfunding</a> 
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md">Vulnerability Response</a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://translate.getmonero.org/">Translate</a>
+                         </div>
+                     </div>
+                 </div>            
+             </div>
+          
+        </div>
+       </div>
+       
+        <div class="desktop-nav">
+            <nav class="container">
+            <div class="topnav">
+              <div class="row middle-xs">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="../../index-2.html"><img src="../../img/monero-logo.png" width="500" height="135" alt="Monero Logo" class="monero-logo"></a>
+                  </div>
+                  <div class="col-lg-8 col-md-8 col-sm-8 topnav-list end-xs">
+                      <div class="row end-xs middle-xs">
+                         <div class="col-md-12">
+                          <a href="https://ccs.getmonero.org/" class="top-link">Community Crowdfunding</a>
+                          <a href="https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md" class="top-link">Vulnerability Response</a>
+                          <a href="https://translate.getmonero.org/" class="top-link">Translate</a>
+                          <div href="#" class="dropdown top-link language-change">
+                            <input class="burger-checkdropdown" id="langdrop" type="checkbox" tabindex="0">
+                            <label for="langdrop"><img src="../../img/language.png" width="500" height="500" alt="Language selector icon" class="icon-language"/>English
+                           <div class="arrow-down"></div></label>
+                            <div class="dropdown-content text-center">
+                              
+                                
+                              
+                                
+                                  
+                                    <a href="../../es/resources/user-guides/node-i2p-zero.html" >Español</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../it/resources/user-guides/node-i2p-zero.html" >Italiano</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../pl/resources/user-guides/node-i2p-zero.html" >Polski</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../fr/resources/user-guides/node-i2p-zero.html" >Français</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../ar/resources/user-guides/node-i2p-zero.html" >العربية</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../ru/resources/user-guides/node-i2p-zero.html" >Русский</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../de/resources/user-guides/node-i2p-zero.html" >Deutsch</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../nl/resources/user-guides/node-i2p-zero.html" >Nederlands</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../pt-br/resources/user-guides/node-i2p-zero.html" >Português do Brasil</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../tr/resources/user-guides/node-i2p-zero.html" >Türkçe</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../zh-cn/resources/user-guides/node-i2p-zero.html" >简体中文</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../zh-tw/resources/user-guides/node-i2p-zero.html" >繁體中文 臺灣</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../nb-no/resources/user-guides/node-i2p-zero.html" >Norsk</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../el/resources/user-guides/node-i2p-zero.html" >ελληνική</a>
+                                  
+                                
+                              
+                            </div>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="botnav white-nav">
+                <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+                <div class="row between-xs nav-items">
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop1">Get Started<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop1" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../get-started/what-is-monero/index.html">What is Monero?</a>
+                              <a href="../../get-started/accepting/index.html">Accepting</a>
+                              <a href="../../get-started/contributing/index.html">Contributing</a>
+                              <a href="../../get-started/mining/index.html">Mining</a>
+                              <a href="../../get-started/faq/index.html">FAQ</a>
+                        </div>
+                    </div>
+                    <div class="col dropdown nav-item">
+                          <a href="../../app/index.html">Downloads</a>
+                    </div>
+                    <div class="col dropdown nav-item">
+                         <a href="../../blog/index.html">Blog</a>
+                    </div>
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop2">Community<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop2" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../community/workgroups/index.html">Workgroups</a>
+                              <a href="../../community/hangouts/index.html">Hangouts</a>
+                              <a href="../../community/sponsorships/index.html">Sponsorships</a>
+                              <a href="../../community/merchants/index.html">Merchants & Exchanges</a>
+                        </div>
+                    </div>
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop3">Resources<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop3" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../about/index.html">About</a>
+                              <a href="../roadmap/index.html">Roadmap</a>
+                              <a href="../research-lab/index.html">Research Lab</a>
+                              <a href="../moneropedia/index.html">Moneropedia</a>
+                              <a href="index.html">User Guides</a>
+                              <a href="../developer-guides/index.html">Developer Guides</a>
+                              <a href="../tools/index.html">Tools</a>
+                              <a href="../../library/index.html">Library</a>
+                              <a href="../../press-kit/index.html">Press Kit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        </div>
+        <div class="mob bot-nav white-nav">
+            <div class="row center-xs middle-xs">
+                <div class="col-xs-6">
+                    <a href="../../index-2.html"><img src="../../img/monero-logo.png" width="500" height="135" alt="Monero Logo" class="monero-logo"></a>
+                </div>
+                <div class="dropdown col-xs-6 text-center mob-language-change">
+                <input class="burger-checkdropdown" id="moblangdrop" type="checkbox" tabindex="0">
+                <label for="moblangdrop"><img src="../../img/language.png" width="500" height="500" alt="Lang" class="icon-language"/><div class="arrow-down"></div></label>
+                               <div class="mob dropdown-content text-center">
+                               <p class="mob-lang-change mob-lang-selected">English</p>
+                               
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../es/resources/user-guides/node-i2p-zero.html" >Español</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../it/resources/user-guides/node-i2p-zero.html" >Italiano</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../pl/resources/user-guides/node-i2p-zero.html" >Polski</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../fr/resources/user-guides/node-i2p-zero.html" >Français</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../ar/resources/user-guides/node-i2p-zero.html" >العربية</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../ru/resources/user-guides/node-i2p-zero.html" >Русский</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../de/resources/user-guides/node-i2p-zero.html" >Deutsch</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../nl/resources/user-guides/node-i2p-zero.html" >Nederlands</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../pt-br/resources/user-guides/node-i2p-zero.html" >Português do Brasil</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../tr/resources/user-guides/node-i2p-zero.html" >Türkçe</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../zh-cn/resources/user-guides/node-i2p-zero.html" >简体中文</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../zh-tw/resources/user-guides/node-i2p-zero.html" >繁體中文 臺灣</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../nb-no/resources/user-guides/node-i2p-zero.html" >Norsk</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../el/resources/user-guides/node-i2p-zero.html" >ελληνική</a>
+                                  
+                                
+                              
+                            </div>
+                          </div>
+            </div>     
+        </div>    
+
+            <div class="site-wrap">
+    <!-- FULL WIDTH BLOCK -->
+        <section class="container full guides">
+                <div class="info-block text-adapt">
+                    <div>
+                        <h1>How to run a node through I2P with I2P-zero</h1>
+
+<!-- If the English version is outdated, all versions (for all languages) will be outdated. No need to check the state of the translations. -->
+
+<!-- Print the disclaimer if not empty and not English -->
+
+<h2 id="steps">Steps:</h2>
+
+<ol>
+  <li>Download the <a href="../../app/index.html#cli">Monero CLI</a>.</li>
+  <li>Download and unzip the latest (non-GUI) version of I2P-zero: https://github.com/i2p-zero/i2p-zero/releases</li>
+  <li>Run I2P-zero by entering the i2p-zero unzipped directory and  typing: <code class="language-plaintext highlighter-rouge">router/bin/i2p-zero</code></li>
+  <li>(optional) Find out your randomly assigned I2P port by typing: <code class="language-plaintext highlighter-rouge">router/bin/tunnel-control.sh router.externalPort</code>. For privacy reasons, do not disclose this port number to other people. Tell your firewall to forward traffic through to this port so that your I2P node is publicly reachable. If you have no ability to allow incoming connections, everything will still work, but your I2P node will not be helping the I2P network as much as it could.</li>
+  <li>Create a socks tunnel for outgoing I2P connections by typing: <code class="language-plaintext highlighter-rouge">router/bin/tunnel-control.sh socks.create 8060</code></li>
+  <li>Create a server tunnel for incoming I2P connections by typing: <code class="language-plaintext highlighter-rouge">router/bin/tunnel-control.sh server.create 127.0.0.1 8061</code>.</li>
+  <li>The command above will result in an I2P address being printed to the command line, which will end with <code class="language-plaintext highlighter-rouge">.b32.i2p</code>. This is your new I2P address.</li>
+  <li>Run monerod by typing the following, replacing <code class="language-plaintext highlighter-rouge">XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.b32.i2p</code> with your own I2P address that was printed from step 6: <code class="language-plaintext highlighter-rouge">monerod --tx-proxy i2p,127.0.0.1:8060 --add-peer core5hzivg4v5ttxbor4a3haja6dssksqsmiootlptnsrfsgwqqa.b32.i2p --add-peer dsc7fyzzultm7y6pmx2avu6tze3usc7d27nkbzs5qwuujplxcmzq.b32.i2p --add-peer sel36x6fibfzujwvt4hf5gxolz6kd3jpvbjqg6o3ud2xtionyl2q.b32.i2p --add-peer yht4tm2slhyue42zy5p2dn3sft2ffjjrpuy7oc2lpbhifcidml4q.b32.i2p --anonymous-inbound XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.b32.i2p,127.0.0.1:8061 --detach</code></li>
+</ol>
+
+<p>That's it! Do not replace the dsc<strong>**.b32.i2p address with yours, only replace the XXXXXXX.b32.i2p one. The dsc</strong>**.b32.i2p is a seed node that will help you discover other I2P-accessible monero nodes.</p>
+
+<h2 id="setting-up-linux-services-so-that-monerod-and-i2p-zero-are-automatically-started">Setting up Linux services so that monerod and I2P-zero are automatically started</h2>
+
+<p>If you are running Linux, it would be useful to set this all up to run automatically if the machine is ever rebooted. You can do this by creating systemd service files:</p>
+
+<p>Note: take care to replace version numbers in the files below with the version numbers of monero and i2p-zero that you download. Also replace <code class="language-plaintext highlighter-rouge">&lt;username&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;usergroup&gt;</code> with your Linux user and group names (use <code class="language-plaintext highlighter-rouge">whoami</code> and <code class="language-plaintext highlighter-rouge">groups</code> commands if you don't know them).</p>
+
+<h3 id="etcsystemdsystemi2pzeroservice">/etc/systemd/system/i2pzero.service</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Unit]
+Description=i2pzero
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/&lt;username&gt;/i2p-zero-linux.v1.17/router/bin/i2p-zero
+User=&lt;username&gt;
+Group=&lt;usergroup&gt;
+
+[Install]
+WantedBy=multi-user.target
+</code></pre></div></div>
+
+<h3 id="etcsystemdsystemmonerodservice">/etc/systemd/system/monerod.service</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Unit]
+Description=monerod
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/home/&lt;username&gt;/monerod.pid
+ExecStart=/home/&lt;username&gt;/monero-x86_64-linux-gnu-v0.16.0.0/monerod --tx-proxy i2p,127.0.0.1:8060 --add-peer core5hzivg4v5ttxbor4a3haja6dssksqsmiootlptnsrfsgwqqa.b32.i2p --add-peer dsc7fyzzultm7y6pmx2avu6tze3usc7d27nkbzs5qwuujplxcmzq.b32.i2p --add-peer sel36x6fibfzujwvt4hf5gxolz6kd3jpvbjqg6o3ud2xtionyl2q.b32.i2p --add-peer yht4tm2slhyue42zy5p2dn3sft2ffjjrpuy7oc2lpbhifcidml4q.b32.i2p --anonymous-inbound XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.b32.i2p,127.0.0.1:8061 --detach --pidfile /home/&lt;username&gt;/monerod.pid
+User=&lt;username&gt;
+Group=&lt;usergroup&gt;
+
+[Install]
+WantedBy=multi-user.target
+</code></pre></div></div>
+
+<p>After creating these two files, run:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl daemon-reload
+service i2pzero start
+service monerod start
+</code></pre></div></div>
+
+<p>To see the output of these services, use <code class="language-plaintext highlighter-rouge">journalctl -u i2pzero</code> and <code class="language-plaintext highlighter-rouge">journalctl -u monerod</code></p>
+
+<h2 id="running-your-own-seed-node-mipseed">Running your own seed node (mipseed)</h2>
+
+<p>If you want to run your own seed node (known as a 'mipseed') to help other people discover I2P-accessible Monero nodes, follow instructions <a href="https://github.com/i2p-zero/i2p-zero/blob/master/mipseed.md">in the i2p-zero repo</a>.</p>
+
+<p><em>The original version of this guide was originally uploaded on the <a href="https://github.com/i2p-zero/i2p-zero/blob/master/monerod-with-i2p-zero.md">i2p-zero repository</a>.</em></p>
+
+
+                        <p style="text-align: right;">
+                            <a href="index.html">&laquo; Back to the list</a>
+                        </p>
+                    </div>
+                    <a href="node-i2p-zero.html#" class="arrow-up" aria-label="Go back to the top of the page" title="Go to top"><i></i></a>
+                </div>
+        </section>
+    <!-- END FULL WIDTH BLOCK -->
+    </div>
+    <footer class="container-fluid">
+            <div class="container">
+                <div class="row around-xs footer-wrapper">
+                     <div class="col-sm-3 col-xs-6">
+                         <h3>Resources</h3>
+                            <ul class="list-unstyled">
+                                <li><a class="white" href="../about/index.html">About Monero</a></li>
+                                <li><a class="white" href="../moneropedia/index.html">Moneropedia</a></li>
+                                <li><a class="white" href="../developer-guides/index.html">Developer Guides</a></li>
+                                <li><a class="white" href="index.html">User Guides</a></li>
+                                <li><a class="white" href="../../library/index.html">Library</a></li>
+                                <li><a class="white" href="../../app/index.html">Downloads</a></li>
+                                
+                            </ul>
+                     </div>
+                     <div class="col-sm-3 col-xs-6">
+                        <h3>Reach Out</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="../../community/team/index.html">Workgroups</a></li>
+                                 <li><a class="white" href="../../community/hangouts/index.html">Hangouts</a></li>
+                                 <li><a class="white" href="https://lists.getmonero.org/postorius/lists/monero-announce.lists.getmonero.org/">Mailing List</a></li>
+
+                            </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3>Community</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="../../community/merchants/index.html">Merchants & Exchanges</a></li>
+                                 <li><a class="white" href="https://monero.stackexchange.com/">Stack Exchange</a></li>
+                                 <li><a class="white" href="https://bitcointalk.org/index.php?topic=583449.0">BitcoinTalk</a></li>
+                                 <li><a class="white" href="https://translate.getmonero.org/">Weblate</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3>The Monero Project</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="https://openalias.org/">Open Alias</a></li>
+                                 <li><a class="white" href="../research-lab/index.html">Monero Research Lab (MRL)</a></li>
+                                 <li><a class="white" href="../../press-kit/index.html">Press Kit</a></li>
+                                 <li><a class="white" href="https://ccs.getmonero.org/">Community Crowdfunding System</a></li>
+                            </ul>
+                    </div>
+                <div class="row center-xs">
+                    <div class="footer-links">
+                        <ul class="list-unstyled list-inline">
+                            <li><a href="http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/user-guides/node-i2p-zero.html" class="white footer-link"><img class="tor" src="../../img/onion-tor.svg" alt="onion service">Tor Onion Service</a></li>
+                             <li><a href="../../legal/index.html" class="white footer-link">Legal</a></li>
+                             <li><a href="https://github.com/monero-project/monero-site" class="white footer-link">Source Code</a></li>
+                             <li><a href="../../sitemap.xml" class="white footer-link">Sitemap</a></li>
+                             <li><a class="white" href="../../feed.xml"><img src="../../img/feed.svg" width="30" height="30" alt="Feed icon">RSS Feed</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+</footer>
+<!-- page served by server N -->
+
+    </div>
+  </body>
+
+<!-- Mirrored from app.getmonero.network/resources/user-guides/node-i2p-zero.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 May 2024 17:42:39 GMT -->
+</html>

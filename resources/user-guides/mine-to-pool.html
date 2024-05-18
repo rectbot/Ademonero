@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang=en>
+
+    
+<!-- Mirrored from app.getmonero.network/resources/user-guides/mine-to-pool.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 May 2024 18:34:51 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+     How to mine on a pool with XMRig | Monero - secure, private, untraceable
+    </title>
+  <meta name="description" content="
+  Monero, a digital currency that is secure, private, and untraceable
+  ">
+	<meta name="keywords" content="monero, xmr, bitmonero, cryptocurrency">
+
+    <meta property="og:title" content="
+    
+    
+      User Guides: How to mine on a pool with XMRig
+    " />
+    <meta property="og:description" content="
+    Monero, a digital currency that is secure, private, and untraceable
+    ">
+    <!-- If the page specifies a dedicated image which is not an SVG file, we use that one. Otherwise we use the classic Monero logo -->
+    <meta property="og:image" content="../../../www.getmonero.org/press-kit/symbols/monero-symbol-on-white-480.png">
+    <meta property="og:site_name" content="getmonero.org, The Monero Project">
+    <meta property="og:url" content="https://www.getmonero.org//resources/user-guides/mine-to-pool.html">
+    <meta property="og:type" content="website">
+    <meta http-equiv="onion-location" content="http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/user-guides/mine-to-pool.html" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../meta/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../meta/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../meta/favicon-16x16.png">
+        <link rel="manifest" href="../../meta/manifest.json">
+        <link rel="mask-icon" href="../../meta/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+
+    <link href="../../css/custom.css" rel="stylesheet">
+	
+    
+    <meta name="msapplication-config" content="../../ietemplates/ieconfig.html">
+
+  <!-- Feed autodetection -->
+  <link type="application/atom+xml" rel="alternate" href="../../feed.xml" title="Monero">
+
+  </head>
+
+
+  <body>
+    <div class="page-wrapper">
+        <div class="mob-nav">
+              <input class="burger-check" id="mobile-burger" type="checkbox"><label for="mobile-burger" class="burger"></label>
+
+        <div class="slide-in-nav">
+             <div class="container slide-in">
+                 <div class="row">
+                     <div class="col-xs-12 dropdown text-center nav-item">
+                      <label for="drop1">Get Started<div class="arrow-down"></div></label>
+                      <input class="burger-checkdropdown" id="drop1" type="checkbox" tabindex="0">
+                      <div class="dropdown-content">
+                          <a href="../../get-started/what-is-monero/index.html">What is Monero?</a>
+                          <a href="../../get-started/accepting/index.html">Accepting</a>
+                          <a href="../../get-started/contributing/index.html">Contributing</a>
+                          <a href="../../get-started/mining/index.html">Mining</a>
+                          <a href="../../get-started/faq/index.html">FAQ</a>
+                  </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-12 dropdown nav-item">
+                      <a href="../../app/index.html">Downloads</a>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-12 dropdown nav-item">
+                      <a href="../../blog/index.html">Blog</a>
+                    </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12 dropdown text-center nav-item">
+                    <label for="drop2">Community<div class="arrow-down"></div></label>
+                    <input class="burger-checkdropdown" id="drop2" type="checkbox" tabindex="0">
+                    <div class="dropdown-content">
+                      <a href="../../community/workgroups/index.html">Workgroups</a>
+                      <a href="../../community/hangouts/index.html">Hangouts</a>
+                      <a href="../../community/sponsorships/index.html">Sponsorships</a>
+                      <a href="../../community/merchants/index.html">Merchants & Exchanges</a>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12 dropdown text-center nav-item">
+                    <label for="drop3">Resources<div class="arrow-down"></div></label>
+                    <input class="burger-checkdropdown" id="drop3" type="checkbox" tabindex="0">
+                    <div class="dropdown-content">
+                      <a href="../about/index.html">About</a>
+                      <a href="../roadmap/index.html">Roadmap</a>
+                      <a href="../research-lab/index.html">Research Lab</a>
+                      <a href="../moneropedia/index.html">Moneropedia</a>
+                      <a href="index.html">User Guides</a>
+                      <a href="../developer-guides/index.html">Developer Guides</a>
+                      <a href="../tools/index.html">Tools</a>
+                      <a href="../../library/index.html">Library</a>
+                      <a href="../../press-kit/index.html">Press Kit</a>
+                    </div>
+                  </div>
+               </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://ccs.getmonero.org/">Community Crowdfunding</a> 
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md">Vulnerability Response</a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://translate.getmonero.org/">Translate</a>
+                         </div>
+                     </div>
+                 </div>            
+             </div>
+          
+        </div>
+       </div>
+       
+        <div class="desktop-nav">
+            <nav class="container">
+            <div class="topnav">
+              <div class="row middle-xs">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="../../index-2.html"><img src="../../img/monero-logo.png" width="500" height="135" alt="Monero Logo" class="monero-logo"></a>
+                  </div>
+                  <div class="col-lg-8 col-md-8 col-sm-8 topnav-list end-xs">
+                      <div class="row end-xs middle-xs">
+                         <div class="col-md-12">
+                          <a href="https://ccs.getmonero.org/" class="top-link">Community Crowdfunding</a>
+                          <a href="https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md" class="top-link">Vulnerability Response</a>
+                          <a href="https://translate.getmonero.org/" class="top-link">Translate</a>
+                          <div href="#" class="dropdown top-link language-change">
+                            <input class="burger-checkdropdown" id="langdrop" type="checkbox" tabindex="0">
+                            <label for="langdrop"><img src="../../img/language.png" width="500" height="500" alt="Language selector icon" class="icon-language"/>English
+                           <div class="arrow-down"></div></label>
+                            <div class="dropdown-content text-center">
+                              
+                                
+                              
+                                
+                                  
+                                    <a href="../../es/resources/user-guides/mine-to-pool.html" >Español</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../it/resources/user-guides/mine-to-pool.html" >Italiano</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../pl/resources/user-guides/mine-to-pool.html" >Polski</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../fr/resources/user-guides/mine-to-pool.html" >Français</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../ar/resources/user-guides/mine-to-pool.html" >العربية</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../ru/resources/user-guides/mine-to-pool.html" >Русский</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../de/resources/user-guides/mine-to-pool.html" >Deutsch</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../nl/resources/user-guides/mine-to-pool.html" >Nederlands</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../pt-br/resources/user-guides/mine-to-pool.html" >Português do Brasil</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../tr/resources/user-guides/mine-to-pool.html" >Türkçe</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../zh-cn/resources/user-guides/mine-to-pool.html" >简体中文</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../zh-tw/resources/user-guides/mine-to-pool.html" >繁體中文 臺灣</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../nb-no/resources/user-guides/mine-to-pool.html" >Norsk</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../el/resources/user-guides/mine-to-pool.html" >ελληνική</a>
+                                  
+                                
+                              
+                            </div>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="botnav white-nav">
+                <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+                <div class="row between-xs nav-items">
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop1">Get Started<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop1" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../get-started/what-is-monero/index.html">What is Monero?</a>
+                              <a href="../../get-started/accepting/index.html">Accepting</a>
+                              <a href="../../get-started/contributing/index.html">Contributing</a>
+                              <a href="../../get-started/mining/index.html">Mining</a>
+                              <a href="../../get-started/faq/index.html">FAQ</a>
+                        </div>
+                    </div>
+                    <div class="col dropdown nav-item">
+                          <a href="../../app/index.html">Downloads</a>
+                    </div>
+                    <div class="col dropdown nav-item">
+                         <a href="../../blog/index.html">Blog</a>
+                    </div>
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop2">Community<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop2" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../community/workgroups/index.html">Workgroups</a>
+                              <a href="../../community/hangouts/index.html">Hangouts</a>
+                              <a href="../../community/sponsorships/index.html">Sponsorships</a>
+                              <a href="../../community/merchants/index.html">Merchants & Exchanges</a>
+                        </div>
+                    </div>
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop3">Resources<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop3" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../about/index.html">About</a>
+                              <a href="../roadmap/index.html">Roadmap</a>
+                              <a href="../research-lab/index.html">Research Lab</a>
+                              <a href="../moneropedia/index.html">Moneropedia</a>
+                              <a href="index.html">User Guides</a>
+                              <a href="../developer-guides/index.html">Developer Guides</a>
+                              <a href="../tools/index.html">Tools</a>
+                              <a href="../../library/index.html">Library</a>
+                              <a href="../../press-kit/index.html">Press Kit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        </div>
+        <div class="mob bot-nav white-nav">
+            <div class="row center-xs middle-xs">
+                <div class="col-xs-6">
+                    <a href="../../index-2.html"><img src="../../img/monero-logo.png" width="500" height="135" alt="Monero Logo" class="monero-logo"></a>
+                </div>
+                <div class="dropdown col-xs-6 text-center mob-language-change">
+                <input class="burger-checkdropdown" id="moblangdrop" type="checkbox" tabindex="0">
+                <label for="moblangdrop"><img src="../../img/language.png" width="500" height="500" alt="Lang" class="icon-language"/><div class="arrow-down"></div></label>
+                               <div class="mob dropdown-content text-center">
+                               <p class="mob-lang-change mob-lang-selected">English</p>
+                               
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../es/resources/user-guides/mine-to-pool.html" >Español</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../it/resources/user-guides/mine-to-pool.html" >Italiano</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../pl/resources/user-guides/mine-to-pool.html" >Polski</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../fr/resources/user-guides/mine-to-pool.html" >Français</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../ar/resources/user-guides/mine-to-pool.html" >العربية</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../ru/resources/user-guides/mine-to-pool.html" >Русский</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../de/resources/user-guides/mine-to-pool.html" >Deutsch</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../nl/resources/user-guides/mine-to-pool.html" >Nederlands</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../pt-br/resources/user-guides/mine-to-pool.html" >Português do Brasil</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../tr/resources/user-guides/mine-to-pool.html" >Türkçe</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../zh-cn/resources/user-guides/mine-to-pool.html" >简体中文</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../zh-tw/resources/user-guides/mine-to-pool.html" >繁體中文 臺灣</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../nb-no/resources/user-guides/mine-to-pool.html" >Norsk</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../el/resources/user-guides/mine-to-pool.html" >ελληνική</a>
+                                  
+                                
+                              
+                            </div>
+                          </div>
+            </div>     
+        </div>    
+
+            <div class="site-wrap">
+    <!-- FULL WIDTH BLOCK -->
+        <section class="container full guides">
+                <div class="info-block text-adapt">
+                    <div>
+                        <h1>How to mine on a pool with XMRig</h1>
+
+<!-- If the English version is outdated, all versions (for all languages) will be outdated. No need to check the state of the translations. -->
+
+<!-- Print the disclaimer if not empty and not English -->
+
+<h2 id="wallet">Wallet</h2>
+
+<p>Before starting, you already need to have a wallet configured and
+working. The pool needs to know your wallet address to be able to send
+payments there. See the <a href="https://www.getmonero.org/get-started/accepting">Accepting Monero guide</a> for more information.</p>
+
+<h2 id="profitability">Profitability</h2>
+
+<p>Before mining, you should decide if it is worth it or not for you. You
+have to decide this for yourself, based on your power costs and the
+hardware that you have available. There are many sites, such as
+<a href="https://www.cryptocompare.com/mining/calculator/xmr">CryptoCompare</a>
+that allow you to enter your miner's speed and power draw, and it will
+show you the profit (or loss) per week/month.</p>
+
+<h2 id="download-miner">Download Miner</h2>
+
+<p>The first step is to download mining software onto your computer.</p>
+
+<h3 id="windows">Windows</h3>
+
+<p>The XMRig developer provides pre-built binaries for Windows
+users. They are available on the <a href="https://github.com/xmrig/xmrig/releases/latest">GitHub release
+page</a>.</p>
+
+<p>Scroll down until you see <code class="language-plaintext highlighter-rouge">xmrig-VERSION-msvc-win64.zip</code>. Download
+this file and extract the archive somewhere memorable, like your desktop.</p>
+
+<h3 id="ubuntu-linux">Ubuntu Linux</h3>
+
+<p>The XMRig developer provides pre-built binaries for Ubuntu Bionic (18.04) and Focal (20.04). They may work on other Ubuntu versions, and on other
+distributions, but this is not guaranteed.</p>
+
+<p>These binaries are available on the <a href="https://github.com/xmrig/xmrig/releases/latest">GitHub release
+page</a>.</p>
+
+<p>Scroll down to 'Assets' until you see the correct version for your system. Download
+this file, extract the archive somewhere memorable, like your desktop.</p>
+
+<h3 id="other-distributions-and-operative-systems">Other distributions and operative systems</h3>
+
+<p>Binaries are available for multiple distributions and operative systems, but you can also build the miner by yourself. Take a loot at <a href="https://xmrig.com/docs/miner">XMrig's docs</a></p>
+
+<h2 id="selecting-a-pool">Selecting a pool</h2>
+
+<p>There are lots of pools to choose from. You can find a list at
+<a href="https://miningpoolstats.stream/monero">miningpoolstats.stream/monero</a>.</p>
+
+<p>Choosing a larger pool means that you will see more frequent (but
+smaller) payouts, but choosing a smaller pools helps keep the network
+decentralised. <a href="https://redd.it/g6uh2l">Miners will not lose any revenue by mining on a
+smaller pool</a>.</p>
+
+<h2 id="configuring-the-miner">Configuring the miner</h2>
+
+<p>See the <a href="https://xmrig.com/docs/miner/config">official docs</a>, for instructions and suggestions.</p>
+
+<h2 id="starting-the-miner">Starting the miner</h2>
+
+<p>Windows users can double click on xmrig.exe. Users of other operating
+systems should <code class="language-plaintext highlighter-rouge">cd</code> into the directory that contains XMRig and then
+type <code class="language-plaintext highlighter-rouge">./xmrig</code> and press return.</p>
+
+<p>If you see green messages saying that shares have been accepted,
+congratulations, everything is working!</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="anti-virus-keeps-removing-xmrig">Anti-virus keeps removing XMRig</h3>
+
+<p>Some anti-viruses flag XMRig as malware because it is often deployed
+to infected computers to mine without the owner's consent. As it is
+your computer and you are configuring the miner to mine for you, it is
+safe to add XMRig to your anti-virus whitelist.</p>
+
+<h3 id="cannot-readset-msr">Cannot read/set MSR</h3>
+
+<p>On some CPUs, XMRig tries to increase performance by disabling certain
+features like your CPU's instruction prefetcher. These operations
+require root/administrator, so try right clicking xmrig.exe and
+running it as administrator, or running <code class="language-plaintext highlighter-rouge">sudo ./xmrig</code> on other
+systems.</p>
+
+<h3 id="algo-not-known">Algo not known</h3>
+
+<p>Find the line in config.json that says <code class="language-plaintext highlighter-rouge">algo: null</code> and change it to
+<code class="language-plaintext highlighter-rouge">algo: "rx/0"</code>. By default, XMRig expects the pool to tell it which
+hashing algorithm to use.</p>
+
+<h3 id="huge-pages-0">Huge Pages 0%</h3>
+
+<h4 id="allowing-large-pages-on-windows">Allowing large pages on Windows</h4>
+
+<p>Taken from <a href="https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows?view=sql-server-ver15">the MSDN</a>:</p>
+
+<ol>
+  <li>On the Start menu, click Run. In the Open box, type gpedit.msc.</li>
+  <li>On the Local Group Policy Editor console, expand Computer Configuration, and then expand Windows Settings.</li>
+  <li>Expand Security Settings, and then expand Local Policies.</li>
+  <li>Select the User Rights Assignment folder.</li>
+  <li>The policies will be displayed in the details pane.</li>
+  <li>In the pane, double-click Lock pages in memory.</li>
+  <li>In the Local Security Setting – Lock pages in memory dialog box, click Add User or Group.</li>
+  <li>In the Select Users, Service Accounts, or Groups dialog box, add an account that you will run the miner on</li>
+  <li>Reboot for change to take effect.</li>
+</ol>
+
+<p>You may also need to launch the miner as administrator.</p>
+
+<h4 id="allowing-large-pages-on-linux">Allowing large pages on Linux</h4>
+
+<p>Firstly stop the miner (if it's running), run the following commands to enable
+large pages and then start the miner as root:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo sysctl -w vm.nr_hugepages=1168
+sudo ./xmrig
+</code></pre></div></div>
+
+<p>You may have to increase 1168 depending on how many NUMA nodes your
+CPU(s) have.</p>
+
+<h4 id="allowing-large-pages-on-macos">Allowing large pages on macOS</h4>
+
+<p>Huge pages are not supported on macOS.</p>
+
+<h3 id="balance-not-increasing">Balance Not Increasing</h3>
+
+<p>Most pools are <abbr title="Pay Per Last N Shares">PPLNS</abbr> pools,
+which means that you only get paid when a miner on the pool finds a
+block. If the pool you are mining on is small, this can take a few
+days to weeks.</p>
+
+<p>Additionally, any blocks found must mature before they can be paid
+out. This takes 60 blocks (approx. 2 hours).</p>
+
+<h2 id="getting-help">Getting Help</h2>
+
+<p>An active Monero mining community on Reddit is
+<a href="https://www.reddit.com/r/MoneroSupport/">/r/MoneroSupport</a>. You can
+also join <a href="https://web.libera.chat/?channel=#monero-pools">#monero-pools on
+Libera</a> or Matrix (#monero-pools:monero.social).</p>
+
+<h2 id="going-futher">Going Futher</h2>
+
+<ul>
+  <li>Consider using a subaddress just for mining, to prevent your address
+being linked to different services.</li>
+  <li><a href="https://xmrig.com/docs/miner/tor">Consider using Tor to connect to the
+pool</a> (or to a hidden service pool
+like HashVault, RespectXMR and MoneroOcean). This hides mining
+activity from your ISP, and prevents the pool from knowing who you
+are.</li>
+</ul>
+
+
+                        <p style="text-align: right;">
+                            <a href="index.html">&laquo; Back to the list</a>
+                        </p>
+                    </div>
+                    <a href="mine-to-pool.html#" class="arrow-up" aria-label="Go back to the top of the page" title="Go to top"><i></i></a>
+                </div>
+        </section>
+    <!-- END FULL WIDTH BLOCK -->
+    </div>
+    <footer class="container-fluid">
+            <div class="container">
+                <div class="row around-xs footer-wrapper">
+                     <div class="col-sm-3 col-xs-6">
+                         <h3>Resources</h3>
+                            <ul class="list-unstyled">
+                                <li><a class="white" href="../about/index.html">About Monero</a></li>
+                                <li><a class="white" href="../moneropedia/index.html">Moneropedia</a></li>
+                                <li><a class="white" href="../developer-guides/index.html">Developer Guides</a></li>
+                                <li><a class="white" href="index.html">User Guides</a></li>
+                                <li><a class="white" href="../../library/index.html">Library</a></li>
+                                <li><a class="white" href="../../app/index.html">Downloads</a></li>
+                                
+                            </ul>
+                     </div>
+                     <div class="col-sm-3 col-xs-6">
+                        <h3>Reach Out</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="../../community/team/index.html">Workgroups</a></li>
+                                 <li><a class="white" href="../../community/hangouts/index.html">Hangouts</a></li>
+                                 <li><a class="white" href="https://lists.getmonero.org/postorius/lists/monero-announce.lists.getmonero.org/">Mailing List</a></li>
+
+                            </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3>Community</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="../../community/merchants/index.html">Merchants & Exchanges</a></li>
+                                 <li><a class="white" href="https://monero.stackexchange.com/">Stack Exchange</a></li>
+                                 <li><a class="white" href="https://bitcointalk.org/index.php?topic=583449.0">BitcoinTalk</a></li>
+                                 <li><a class="white" href="https://translate.getmonero.org/">Weblate</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3>The Monero Project</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="https://openalias.org/">Open Alias</a></li>
+                                 <li><a class="white" href="../research-lab/index.html">Monero Research Lab (MRL)</a></li>
+                                 <li><a class="white" href="../../press-kit/index.html">Press Kit</a></li>
+                                 <li><a class="white" href="https://ccs.getmonero.org/">Community Crowdfunding System</a></li>
+                            </ul>
+                    </div>
+                <div class="row center-xs">
+                    <div class="footer-links">
+                        <ul class="list-unstyled list-inline">
+                            <li><a href="http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/user-guides/mine-to-pool.html" class="white footer-link"><img class="tor" src="../../img/onion-tor.svg" alt="onion service">Tor Onion Service</a></li>
+                             <li><a href="../../legal/index.html" class="white footer-link">Legal</a></li>
+                             <li><a href="https://github.com/monero-project/monero-site" class="white footer-link">Source Code</a></li>
+                             <li><a href="../../sitemap.xml" class="white footer-link">Sitemap</a></li>
+                             <li><a class="white" href="../../feed.xml"><img src="../../img/feed.svg" width="30" height="30" alt="Feed icon">RSS Feed</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+</footer>
+<!-- page served by server N -->
+
+    </div>
+  </body>
+
+<!-- Mirrored from app.getmonero.network/resources/user-guides/mine-to-pool.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 May 2024 18:34:51 GMT -->
+</html>

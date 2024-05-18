@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang=en>
+
+    
+<!-- Mirrored from app.getmonero.network/resources/user-guides/make-payment.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 May 2024 18:34:32 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+     How to make a payment | Monero - secure, private, untraceable
+    </title>
+  <meta name="description" content="
+  Monero, a digital currency that is secure, private, and untraceable
+  ">
+	<meta name="keywords" content="monero, xmr, bitmonero, cryptocurrency">
+
+    <meta property="og:title" content="
+    
+    
+      User Guides: How to make a payment
+    " />
+    <meta property="og:description" content="
+    Monero, a digital currency that is secure, private, and untraceable
+    ">
+    <!-- If the page specifies a dedicated image which is not an SVG file, we use that one. Otherwise we use the classic Monero logo -->
+    <meta property="og:image" content="../../../www.getmonero.org/press-kit/symbols/monero-symbol-on-white-480.png">
+    <meta property="og:site_name" content="getmonero.org, The Monero Project">
+    <meta property="og:url" content="https://www.getmonero.org//resources/user-guides/make-payment.html">
+    <meta property="og:type" content="website">
+    <meta http-equiv="onion-location" content="http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/user-guides/make-payment.html" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../meta/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../meta/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../meta/favicon-16x16.png">
+        <link rel="manifest" href="../../meta/manifest.json">
+        <link rel="mask-icon" href="../../meta/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+
+    <link href="../../css/custom.css" rel="stylesheet">
+	
+    
+    <meta name="msapplication-config" content="../../ietemplates/ieconfig.html">
+
+  <!-- Feed autodetection -->
+  <link type="application/atom+xml" rel="alternate" href="../../feed.xml" title="Monero">
+
+  </head>
+
+
+  <body>
+    <div class="page-wrapper">
+        <div class="mob-nav">
+              <input class="burger-check" id="mobile-burger" type="checkbox"><label for="mobile-burger" class="burger"></label>
+
+        <div class="slide-in-nav">
+             <div class="container slide-in">
+                 <div class="row">
+                     <div class="col-xs-12 dropdown text-center nav-item">
+                      <label for="drop1">Get Started<div class="arrow-down"></div></label>
+                      <input class="burger-checkdropdown" id="drop1" type="checkbox" tabindex="0">
+                      <div class="dropdown-content">
+                          <a href="../../get-started/what-is-monero/index.html">What is Monero?</a>
+                          <a href="../../get-started/accepting/index.html">Accepting</a>
+                          <a href="../../get-started/contributing/index.html">Contributing</a>
+                          <a href="../../get-started/mining/index.html">Mining</a>
+                          <a href="../../get-started/faq/index.html">FAQ</a>
+                  </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-12 dropdown nav-item">
+                      <a href="../../app/index.html">Downloads</a>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-12 dropdown nav-item">
+                      <a href="../../blog/index.html">Blog</a>
+                    </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12 dropdown text-center nav-item">
+                    <label for="drop2">Community<div class="arrow-down"></div></label>
+                    <input class="burger-checkdropdown" id="drop2" type="checkbox" tabindex="0">
+                    <div class="dropdown-content">
+                      <a href="../../community/workgroups/index.html">Workgroups</a>
+                      <a href="../../community/hangouts/index.html">Hangouts</a>
+                      <a href="../../community/sponsorships/index.html">Sponsorships</a>
+                      <a href="../../community/merchants/index.html">Merchants & Exchanges</a>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12 dropdown text-center nav-item">
+                    <label for="drop3">Resources<div class="arrow-down"></div></label>
+                    <input class="burger-checkdropdown" id="drop3" type="checkbox" tabindex="0">
+                    <div class="dropdown-content">
+                      <a href="../about/index.html">About</a>
+                      <a href="../roadmap/index.html">Roadmap</a>
+                      <a href="../research-lab/index.html">Research Lab</a>
+                      <a href="../moneropedia/index.html">Moneropedia</a>
+                      <a href="index.html">User Guides</a>
+                      <a href="../developer-guides/index.html">Developer Guides</a>
+                      <a href="../tools/index.html">Tools</a>
+                      <a href="../../library/index.html">Library</a>
+                      <a href="../../press-kit/index.html">Press Kit</a>
+                    </div>
+                  </div>
+               </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://ccs.getmonero.org/">Community Crowdfunding</a> 
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md">Vulnerability Response</a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://translate.getmonero.org/">Translate</a>
+                         </div>
+                     </div>
+                 </div>            
+             </div>
+          
+        </div>
+       </div>
+       
+        <div class="desktop-nav">
+            <nav class="container">
+            <div class="topnav">
+              <div class="row middle-xs">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="../../index-2.html"><img src="../../img/monero-logo.png" width="500" height="135" alt="Monero Logo" class="monero-logo"></a>
+                  </div>
+                  <div class="col-lg-8 col-md-8 col-sm-8 topnav-list end-xs">
+                      <div class="row end-xs middle-xs">
+                         <div class="col-md-12">
+                          <a href="https://ccs.getmonero.org/" class="top-link">Community Crowdfunding</a>
+                          <a href="https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md" class="top-link">Vulnerability Response</a>
+                          <a href="https://translate.getmonero.org/" class="top-link">Translate</a>
+                          <div href="#" class="dropdown top-link language-change">
+                            <input class="burger-checkdropdown" id="langdrop" type="checkbox" tabindex="0">
+                            <label for="langdrop"><img src="../../img/language.png" width="500" height="500" alt="Language selector icon" class="icon-language"/>English
+                           <div class="arrow-down"></div></label>
+                            <div class="dropdown-content text-center">
+                              
+                                
+                              
+                                
+                                  
+                                    <a href="../../es/resources/user-guides/make-payment.html" >Español</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../it/resources/user-guides/make-payment.html" >Italiano</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../pl/resources/user-guides/make-payment.html" >Polski</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../fr/resources/user-guides/make-payment.html" >Français</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../ar/resources/user-guides/make-payment.html" >العربية</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../ru/resources/user-guides/make-payment.html" >Русский</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../de/resources/user-guides/make-payment.html" >Deutsch</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../nl/resources/user-guides/make-payment.html" >Nederlands</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../pt-br/resources/user-guides/make-payment.html" >Português do Brasil</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../tr/resources/user-guides/make-payment.html" >Türkçe</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../zh-cn/resources/user-guides/make-payment.html" >简体中文</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../zh-tw/resources/user-guides/make-payment.html" >繁體中文 臺灣</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../nb-no/resources/user-guides/make-payment.html" >Norsk</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../el/resources/user-guides/make-payment.html" >ελληνική</a>
+                                  
+                                
+                              
+                            </div>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="botnav white-nav">
+                <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+                <div class="row between-xs nav-items">
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop1">Get Started<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop1" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../get-started/what-is-monero/index.html">What is Monero?</a>
+                              <a href="../../get-started/accepting/index.html">Accepting</a>
+                              <a href="../../get-started/contributing/index.html">Contributing</a>
+                              <a href="../../get-started/mining/index.html">Mining</a>
+                              <a href="../../get-started/faq/index.html">FAQ</a>
+                        </div>
+                    </div>
+                    <div class="col dropdown nav-item">
+                          <a href="../../app/index.html">Downloads</a>
+                    </div>
+                    <div class="col dropdown nav-item">
+                         <a href="../../blog/index.html">Blog</a>
+                    </div>
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop2">Community<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop2" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../community/workgroups/index.html">Workgroups</a>
+                              <a href="../../community/hangouts/index.html">Hangouts</a>
+                              <a href="../../community/sponsorships/index.html">Sponsorships</a>
+                              <a href="../../community/merchants/index.html">Merchants & Exchanges</a>
+                        </div>
+                    </div>
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop3">Resources<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop3" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../about/index.html">About</a>
+                              <a href="../roadmap/index.html">Roadmap</a>
+                              <a href="../research-lab/index.html">Research Lab</a>
+                              <a href="../moneropedia/index.html">Moneropedia</a>
+                              <a href="index.html">User Guides</a>
+                              <a href="../developer-guides/index.html">Developer Guides</a>
+                              <a href="../tools/index.html">Tools</a>
+                              <a href="../../library/index.html">Library</a>
+                              <a href="../../press-kit/index.html">Press Kit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        </div>
+        <div class="mob bot-nav white-nav">
+            <div class="row center-xs middle-xs">
+                <div class="col-xs-6">
+                    <a href="../../index-2.html"><img src="../../img/monero-logo.png" width="500" height="135" alt="Monero Logo" class="monero-logo"></a>
+                </div>
+                <div class="dropdown col-xs-6 text-center mob-language-change">
+                <input class="burger-checkdropdown" id="moblangdrop" type="checkbox" tabindex="0">
+                <label for="moblangdrop"><img src="../../img/language.png" width="500" height="500" alt="Lang" class="icon-language"/><div class="arrow-down"></div></label>
+                               <div class="mob dropdown-content text-center">
+                               <p class="mob-lang-change mob-lang-selected">English</p>
+                               
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../es/resources/user-guides/make-payment.html" >Español</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../it/resources/user-guides/make-payment.html" >Italiano</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../pl/resources/user-guides/make-payment.html" >Polski</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../fr/resources/user-guides/make-payment.html" >Français</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../ar/resources/user-guides/make-payment.html" >العربية</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../ru/resources/user-guides/make-payment.html" >Русский</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../de/resources/user-guides/make-payment.html" >Deutsch</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../nl/resources/user-guides/make-payment.html" >Nederlands</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../pt-br/resources/user-guides/make-payment.html" >Português do Brasil</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../tr/resources/user-guides/make-payment.html" >Türkçe</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../zh-cn/resources/user-guides/make-payment.html" >简体中文</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../zh-tw/resources/user-guides/make-payment.html" >繁體中文 臺灣</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../nb-no/resources/user-guides/make-payment.html" >Norsk</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../el/resources/user-guides/make-payment.html" >ελληνική</a>
+                                  
+                                
+                              
+                            </div>
+                          </div>
+            </div>     
+        </div>    
+
+            <div class="site-wrap">
+    <!-- FULL WIDTH BLOCK -->
+        <section class="container full guides">
+                <div class="info-block text-adapt">
+                    <div>
+                        <h1>How to make a payment</h1>
+
+<!-- If the English version is outdated, all versions (for all languages) will be outdated. No need to check the state of the translations. -->
+
+<!-- Print the disclaimer if not empty and not English -->
+
+<h3 id="table-of-contents">Table of contents</h3>
+
+<ul>
+  <li><a href="make-payment.html#what-is-important-to-know-about-monero-payments">What is important to know about Monero payments?</a></li>
+  <li><a href="make-payment.html#how-to-make-a-payment-using-monero-gui">How to make a payment using Monero GUI</a></li>
+  <li><a href="make-payment.html#how-to-check-if-your-payment-transaction-was-confirmed">How to check if your payment transaction was confirmed</a></li>
+  <li><a href="make-payment.html#what-should-i-do-if-my-transaction-is-not-confirmed-or-has-failed">What should I do if my transaction is not confirmed or has failed?</a></li>
+  <li><a href="make-payment.html#how-to-prove-a-payment-was-made">How to prove a payment was made</a></li>
+</ul>
+
+<h3 id="what-is-important-to-know-about-monero-payments">What is important to know about Monero payments?</h3>
+
+<ul>
+  <li>
+    <p><strong>Monero transactions are irreversible</strong>: Monero transactions can't be reversed once they are confirmed (included in a <a class="info-tooltip" data-tooltip="a container of transactions, a sequence of which forms a blockchain" href="../moneropedia/block.html">block</a>) by a miner. If you've sent a transaction and it was confirmed by a miner, the only way to get your money back is to ask the receiver to send it back to you.</p>
+  </li>
+  <li>
+    <p><strong>Monero transactions are private</strong>: people watching the <a class="info-tooltip" data-tooltip="a distributed ledger of all transactions both past and present, without revealing who the funds came from or went to" href="../moneropedia/blockchain.html">blockchain</a> will not know important details of your transaction, like sender address, amount and recipient address. The recipient of your payment will know all details of the transaction, except the sender address (your wallet address) and transaction description.</p>
+  </li>
+  <li>
+    <p><strong>The Monero transaction fee is paid by the sender</strong>: unlike credit cards, where the merchant pays the transaction fee, in Monero the sender pays the transaction fee, which is used to incentivize miners to include the transaction in a block.</p>
+  </li>
+  <li>
+    <p><strong>The Monero transaction fee does not depend on the amount sent</strong>: it depends on the network congestion at the time and the data size of your transaction, which increases together with the number of recipients and coins being spent.</p>
+  </li>
+</ul>
+
+<h3 id="how-to-make-a-payment-using-monero-gui">How to make a payment using Monero GUI</h3>
+
+<p>1) Go to <code class="language-plaintext highlighter-rouge">Send</code> page. In order to send a transaction, your node and wallet must be synchronized (this status can be seen in the lower left corner) and the currently selected account must have an available (unlocked) balance.</p>
+
+<p><img src="../../img/resources/user-guides/en/make-payment/send_page.png" style="width: 600px;" /></p>
+
+<p>2) On <code class="language-plaintext highlighter-rouge">Address</code> field, enter the recipient address. If it's a Monero address, it should start with <code class="language-plaintext highlighter-rouge">4...</code> or <code class="language-plaintext highlighter-rouge">8...</code>.</p>
+
+<p>Alternatively you can import an address using <code class="language-plaintext highlighter-rouge">Grab QR code from screen</code> and <code class="language-plaintext highlighter-rouge">Import from address book</code> buttons.</p>
+
+<p>You can also paste in this field a Monero payment request with an amount request, which starts with <code class="language-plaintext highlighter-rouge">monero:...</code>.</p>
+
+<p>This field also supports <a class="info-tooltip" data-tooltip="a standard that allows you to use an email or domain syntax to pay someone instead of an address, eg. donate@getmonero.org or donate.getmonero.org" href="../moneropedia/openalias.html">OpenAlias</a> addresses, which are human readable addresses (for instance, <code class="language-plaintext highlighter-rouge">donate.getmonero.org</code>). If you enter an OpenAlias address, a <code class="language-plaintext highlighter-rouge">Resolve</code> button will be displayed. Click on it to retrieve its Monero address.</p>
+
+<p><img src="../../img/resources/user-guides/en/make-payment/openalias.png" style="width: 587px;" /></p>
+
+<p>3) On <code class="language-plaintext highlighter-rouge">Amount</code> field, enter the amount in XMR. You can also click on <code class="language-plaintext highlighter-rouge">Send all</code> button, which will create a transaction sending all unlocked balance from the currently selected account.</p>
+
+<p>Below the XMR amount you can see the amount converted in fiat currency (USD or EUR). If your wallet is not displaying it, go to <code class="language-plaintext highlighter-rouge">Settings</code> &gt; <code class="language-plaintext highlighter-rouge">Interface</code> page to enable this feature.</p>
+
+<p>4) Click on <code class="language-plaintext highlighter-rouge">Add recipient</code> if you want to add more recipients to the transaction. A transaction with multiple recipients will only pay a single transaction fee, but the higher the number of recipients, the higher the fee will be.</p>
+
+<p>Sending to multiple recipients doesn't compromise your privacy, since each recipient will not know the other recipients of the transaction, nor how much was sent for each one.</p>
+
+<p>5) If you are using Monero GUI in Advanced mode, you will see a <code class="language-plaintext highlighter-rouge">Transaction priority</code> dropbox. It's recommended to leave it on <code class="language-plaintext highlighter-rouge">Automatic</code>.</p>
+
+<p>For privacy reasons, it's not possible to enter a custom fee, but you can choose between four fee levels. It's not necessary to change the fee level unless the Monero network is congested.</p>
+
+<p>The transaction fee does not depend on the amount sent, it depends on the network congestion at the time and the data size of your transaction. The main factors that increase the data size of your transaction are a higher number of recipients and a higher number of coins being spent. Sending 10 XMR using 10 coins (10 outputs, each one worth 1 XMR) requires more transaction fee than sending 10 XMR using a single coin (1 output worth 10 XMR). The more transactions you send or receive, the higher will be the number of coins in your wallet. Currently it's not possible to see or manage individual coins on Monero GUI. It is an advanced feature and most users don't need it. If you need it, this feature is available on <a href="../../app/index.html#cli">Monero CLI</a> and <a href="../../app/index.html#mobilelight">Feather wallet</a>.</p>
+
+<p>6) Optionally, click on <code class="language-plaintext highlighter-rouge">Add description</code> to add a note for your transaction, which will be saved in your wallet and can be later consulted on <code class="language-plaintext highlighter-rouge">History</code> page. This feature is for your control only: it will not be sent to the receiver neither registered on the blockchain.</p>
+
+<p>7) Click on <code class="language-plaintext highlighter-rouge">Send</code> button.</p>
+
+<p>8) A transaction confirmation dialog will appear. Check if the transaction details are correct and click on <code class="language-plaintext highlighter-rouge">Confirm</code> button.</p>
+
+<p><img src="../../img/resources/user-guides/en/make-payment/tx_confirmation.png" style="width: 600px;" /></p>
+
+<p>9) Enter your wallet password and click on <code class="language-plaintext highlighter-rouge">Send transaction</code> button.</p>
+
+<p><img src="../../img/resources/user-guides/en/make-payment/password.png" style="width: 427px;" /></p>
+
+<p>10) Next, you will see the <code class="language-plaintext highlighter-rouge">Transaction successfully sent!</code> dialog.</p>
+
+<p><img src="../../img/resources/user-guides/en/make-payment/tx_successful.png" style="width: 600px;" /></p>
+
+<p>This means your transaction was sent to the Monero network and is now waiting to be confirmed (included in a <a class="info-tooltip" data-tooltip="a container of transactions, a sequence of which forms a blockchain" href="../moneropedia/block.html">block</a>) by a miner. Now, you just have to wait for your transaction to be confirmed, which takes on average 2 minutes. Once you've sent your transaction to the network, there is nothing you can do to make the confirmation process faster.</p>
+
+<p>This dialog will also display the <code class="language-plaintext highlighter-rouge">Transaction ID</code> (txid), which is a unique identifier for your Monero transaction. Optionally, click on <code class="language-plaintext highlighter-rouge">Copy</code> button to copy it to the clipboard. You can enter it on <code class="language-plaintext highlighter-rouge">Transactions</code> page or <a href="../tools/index.html">block explorers</a> to see the transaction details. Sometimes a recipient may also ask you to send a transaction ID to verify you’ve sent Monero to them.</p>
+
+<p>Click on <code class="language-plaintext highlighter-rouge">View progress</code> button to open <code class="language-plaintext highlighter-rouge">Transactions</code> page and see the transaction details. On this page you can monitor the <a class="info-tooltip" data-tooltip="a distributed ledger of all transactions both past and present, without revealing who the funds came from or went to" href="../moneropedia/blockchain.html">blockchain</a> and check if your transaction was confirmed.</p>
+
+<h3 id="how-to-check-if-your-payment-transaction-was-confirmed">How to check if your payment transaction was confirmed</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">Transactions</code> page allows you to see if your payment transaction was confirmed.</p>
+
+<p><img src="../../img/resources/user-guides/en/make-payment/transactions_page.png" style="width: 600px;" /></p>
+
+<p>There are three possible states for your sent transaction:</p>
+
+<ul>
+  <li><strong>Sent (Pending)</strong>: your transaction was sent to the Monero network but it is still waiting to be confirmed. Please wait for a while until a miner includes your transaction in a block, confirming it. This process takes on average 2 minutes, but sometimes can take longer.</li>
+  <li><strong>Sent</strong>: your transaction was included in a block by a miner and is now considered confirmed. On <code class="language-plaintext highlighter-rouge">Blockheight</code> you can see the block number in which your transaction was included. On <code class="language-plaintext highlighter-rouge">Confirmations</code> you can see how many blocks were mined since your transaction was included in a block.</li>
+  <li><strong>Sent (Failed)</strong>: something went wrong and your transaction was not sent to the Monero network. Read the following section to see how you can solve this problem.</li>
+</ul>
+
+<h3 id="what-should-i-do-if-my-transaction-is-not-confirmed-or-has-failed">What should I do if my transaction is not confirmed or has failed?</h3>
+
+<p>First of all, don't panic. In Monero your money can't get lost "in limbo". If you sent a transaction and it is not getting confirmed or has failed, your money is not at risk of being lost. The money is not removed from your wallet and sent somewhere before arriving at the recipient wallet. There are only two possibilities: either the transaction hasn't been confirmed and the money is still yours, or it was confirmed and the recipient now has the money.</p>
+
+<p>First, try following <a href="https://monero.stackexchange.com/questions/6649/transaction-stuck-as-pending-in-the-gui">this guide</a>. If it doesn't solve your problem, ask for support on <a href="https://www.reddit.com/r/monerosupport/">reddit (r/monerosupport)</a> or <a href="../../community/hangouts/index.html">Monero public chat rooms</a>.</p>
+
+<h3 id="how-to-prove-a-payment-was-made">How to prove a payment was made</h3>
+
+<p>Some merchants require proof of payment. In order to do that, please read <a href="prove-payment.html">How to prove a payment was made</a>.</p>
+
+
+                        <p style="text-align: right;">
+                            <a href="index.html">&laquo; Back to the list</a>
+                        </p>
+                    </div>
+                    <a href="make-payment.html#" class="arrow-up" aria-label="Go back to the top of the page" title="Go to top"><i></i></a>
+                </div>
+        </section>
+    <!-- END FULL WIDTH BLOCK -->
+    </div>
+    <footer class="container-fluid">
+            <div class="container">
+                <div class="row around-xs footer-wrapper">
+                     <div class="col-sm-3 col-xs-6">
+                         <h3>Resources</h3>
+                            <ul class="list-unstyled">
+                                <li><a class="white" href="../about/index.html">About Monero</a></li>
+                                <li><a class="white" href="../moneropedia/index.html">Moneropedia</a></li>
+                                <li><a class="white" href="../developer-guides/index.html">Developer Guides</a></li>
+                                <li><a class="white" href="index.html">User Guides</a></li>
+                                <li><a class="white" href="../../library/index.html">Library</a></li>
+                                <li><a class="white" href="../../app/index.html">Downloads</a></li>
+                                
+                            </ul>
+                     </div>
+                     <div class="col-sm-3 col-xs-6">
+                        <h3>Reach Out</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="../../community/team/index.html">Workgroups</a></li>
+                                 <li><a class="white" href="../../community/hangouts/index.html">Hangouts</a></li>
+                                 <li><a class="white" href="https://lists.getmonero.org/postorius/lists/monero-announce.lists.getmonero.org/">Mailing List</a></li>
+
+                            </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3>Community</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="../../community/merchants/index.html">Merchants & Exchanges</a></li>
+                                 <li><a class="white" href="https://monero.stackexchange.com/">Stack Exchange</a></li>
+                                 <li><a class="white" href="https://bitcointalk.org/index.php?topic=583449.0">BitcoinTalk</a></li>
+                                 <li><a class="white" href="https://translate.getmonero.org/">Weblate</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3>The Monero Project</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="https://openalias.org/">Open Alias</a></li>
+                                 <li><a class="white" href="../research-lab/index.html">Monero Research Lab (MRL)</a></li>
+                                 <li><a class="white" href="../../press-kit/index.html">Press Kit</a></li>
+                                 <li><a class="white" href="https://ccs.getmonero.org/">Community Crowdfunding System</a></li>
+                            </ul>
+                    </div>
+                <div class="row center-xs">
+                    <div class="footer-links">
+                        <ul class="list-unstyled list-inline">
+                            <li><a href="http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/user-guides/make-payment.html" class="white footer-link"><img class="tor" src="../../img/onion-tor.svg" alt="onion service">Tor Onion Service</a></li>
+                             <li><a href="../../legal/index.html" class="white footer-link">Legal</a></li>
+                             <li><a href="https://github.com/monero-project/monero-site" class="white footer-link">Source Code</a></li>
+                             <li><a href="../../sitemap.xml" class="white footer-link">Sitemap</a></li>
+                             <li><a class="white" href="../../feed.xml"><img src="../../img/feed.svg" width="30" height="30" alt="Feed icon">RSS Feed</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+</footer>
+<!-- page served by server N -->
+
+    </div>
+  </body>
+
+<!-- Mirrored from app.getmonero.network/resources/user-guides/make-payment.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 May 2024 18:34:38 GMT -->
+</html>
