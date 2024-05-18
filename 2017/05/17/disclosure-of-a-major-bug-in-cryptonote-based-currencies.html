@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang=en>
+
+    
+<!-- Mirrored from app.getmonero.network/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 May 2024 18:56:00 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+     Disclosure of a Major Bug in CryptoNote Based Currencies | Monero - secure, private, untraceable
+    </title>
+  <meta name="description" content="
+  Patched in Monero and others, but still in the wild
+  ">
+	<meta name="keywords" content="monero, xmr, bitmonero, cryptocurrency">
+
+    <meta property="og:title" content="
+    
+    Blog: Disclosure of a Major Bug in CryptoNote Based Currencies
+    " />
+    <meta property="og:description" content="
+    Patched in Monero and others, but still in the wild
+    ">
+    <!-- If the page specifies a dedicated image which is not an SVG file, we use that one. Otherwise we use the classic Monero logo -->
+    <meta property="og:image" content="../../../../www.getmonero.org/press-kit/symbols/monero-symbol-on-white-480.png">
+    <meta property="og:site_name" content="getmonero.org, The Monero Project">
+    <meta property="og:url" content="https://www.getmonero.org//2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html">
+    <meta property="og:type" content="website">
+    <meta http-equiv="onion-location" content="http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../meta/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../meta/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../meta/favicon-16x16.png">
+        <link rel="manifest" href="../../../meta/manifest.json">
+        <link rel="mask-icon" href="../../../meta/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+
+    <link href="../../../css/custom.css" rel="stylesheet">
+	
+    
+    <meta name="msapplication-config" content="../../../ietemplates/ieconfig.html">
+
+  <!-- Feed autodetection -->
+  <link type="application/atom+xml" rel="alternate" href="../../../feed.xml" title="Monero">
+
+  </head>
+
+
+  <body>
+    <div class="page-wrapper">
+        <div class="mob-nav">
+              <input class="burger-check" id="mobile-burger" type="checkbox"><label for="mobile-burger" class="burger"></label>
+
+        <div class="slide-in-nav">
+             <div class="container slide-in">
+                 <div class="row">
+                     <div class="col-xs-12 dropdown text-center nav-item">
+                      <label for="drop1">Get Started<div class="arrow-down"></div></label>
+                      <input class="burger-checkdropdown" id="drop1" type="checkbox" tabindex="0">
+                      <div class="dropdown-content">
+                          <a href="../../../get-started/what-is-monero/index.html">What is Monero?</a>
+                          <a href="../../../get-started/accepting/index.html">Accepting</a>
+                          <a href="../../../get-started/contributing/index.html">Contributing</a>
+                          <a href="../../../get-started/mining/index.html">Mining</a>
+                          <a href="../../../get-started/faq/index.html">FAQ</a>
+                  </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-12 dropdown nav-item">
+                      <a href="../../../app/index.html">Downloads</a>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-12 dropdown nav-item">
+                      <a href="../../../blog/index.html">Blog</a>
+                    </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12 dropdown text-center nav-item">
+                    <label for="drop2">Community<div class="arrow-down"></div></label>
+                    <input class="burger-checkdropdown" id="drop2" type="checkbox" tabindex="0">
+                    <div class="dropdown-content">
+                      <a href="../../../community/workgroups/index.html">Workgroups</a>
+                      <a href="../../../community/hangouts/index.html">Hangouts</a>
+                      <a href="../../../community/sponsorships/index.html">Sponsorships</a>
+                      <a href="../../../community/merchants/index.html">Merchants & Exchanges</a>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12 dropdown text-center nav-item">
+                    <label for="drop3">Resources<div class="arrow-down"></div></label>
+                    <input class="burger-checkdropdown" id="drop3" type="checkbox" tabindex="0">
+                    <div class="dropdown-content">
+                      <a href="../../../resources/about/index.html">About</a>
+                      <a href="../../../resources/roadmap/index.html">Roadmap</a>
+                      <a href="../../../resources/research-lab/index.html">Research Lab</a>
+                      <a href="../../../resources/moneropedia/index.html">Moneropedia</a>
+                      <a href="../../../resources/user-guides/index.html">User Guides</a>
+                      <a href="../../../resources/developer-guides/index.html">Developer Guides</a>
+                      <a href="../../../resources/tools/index.html">Tools</a>
+                      <a href="../../../library/index.html">Library</a>
+                      <a href="../../../press-kit/index.html">Press Kit</a>
+                    </div>
+                  </div>
+               </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://ccs.getmonero.org/">Community Crowdfunding</a> 
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md">Vulnerability Response</a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://translate.getmonero.org/">Translate</a>
+                         </div>
+                     </div>
+                 </div>            
+             </div>
+          
+        </div>
+       </div>
+       
+        <div class="desktop-nav">
+            <nav class="container">
+            <div class="topnav">
+              <div class="row middle-xs">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="../../../index-2.html"><img src="../../../img/monero-logo.png" width="500" height="135" alt="Monero Logo" class="monero-logo"></a>
+                  </div>
+                  <div class="col-lg-8 col-md-8 col-sm-8 topnav-list end-xs">
+                      <div class="row end-xs middle-xs">
+                         <div class="col-md-12">
+                          <a href="https://ccs.getmonero.org/" class="top-link">Community Crowdfunding</a>
+                          <a href="https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md" class="top-link">Vulnerability Response</a>
+                          <a href="https://translate.getmonero.org/" class="top-link">Translate</a>
+                          <div href="#" class="dropdown top-link language-change">
+                            <input class="burger-checkdropdown" id="langdrop" type="checkbox" tabindex="0">
+                            <label for="langdrop"><img src="../../../img/language.png" width="500" height="500" alt="Language selector icon" class="icon-language"/>English
+                           <div class="arrow-down"></div></label>
+                            <div class="dropdown-content text-center">
+                              
+                                
+                              
+                                
+                                  
+                                    <a href="../../../es/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Español</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../it/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Italiano</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../pl/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Polski</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../fr/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Français</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../ar/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >العربية</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../ru/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Русский</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../de/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Deutsch</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../nl/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Nederlands</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../pt-br/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Português do Brasil</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../tr/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Türkçe</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../zh-cn/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >简体中文</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../zh-tw/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >繁體中文 臺灣</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../nb-no/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Norsk</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../el/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >ελληνική</a>
+                                  
+                                
+                              
+                            </div>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="botnav white-nav">
+                <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+                <div class="row between-xs nav-items">
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop1">Get Started<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop1" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../../get-started/what-is-monero/index.html">What is Monero?</a>
+                              <a href="../../../get-started/accepting/index.html">Accepting</a>
+                              <a href="../../../get-started/contributing/index.html">Contributing</a>
+                              <a href="../../../get-started/mining/index.html">Mining</a>
+                              <a href="../../../get-started/faq/index.html">FAQ</a>
+                        </div>
+                    </div>
+                    <div class="col dropdown nav-item">
+                          <a href="../../../app/index.html">Downloads</a>
+                    </div>
+                    <div class="col dropdown nav-item">
+                         <a href="../../../blog/index.html">Blog</a>
+                    </div>
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop2">Community<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop2" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../../community/workgroups/index.html">Workgroups</a>
+                              <a href="../../../community/hangouts/index.html">Hangouts</a>
+                              <a href="../../../community/sponsorships/index.html">Sponsorships</a>
+                              <a href="../../../community/merchants/index.html">Merchants & Exchanges</a>
+                        </div>
+                    </div>
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop3">Resources<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop3" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../../resources/about/index.html">About</a>
+                              <a href="../../../resources/roadmap/index.html">Roadmap</a>
+                              <a href="../../../resources/research-lab/index.html">Research Lab</a>
+                              <a href="../../../resources/moneropedia/index.html">Moneropedia</a>
+                              <a href="../../../resources/user-guides/index.html">User Guides</a>
+                              <a href="../../../resources/developer-guides/index.html">Developer Guides</a>
+                              <a href="../../../resources/tools/index.html">Tools</a>
+                              <a href="../../../library/index.html">Library</a>
+                              <a href="../../../press-kit/index.html">Press Kit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        </div>
+        <div class="mob bot-nav white-nav">
+            <div class="row center-xs middle-xs">
+                <div class="col-xs-6">
+                    <a href="../../../index-2.html"><img src="../../../img/monero-logo.png" width="500" height="135" alt="Monero Logo" class="monero-logo"></a>
+                </div>
+                <div class="dropdown col-xs-6 text-center mob-language-change">
+                <input class="burger-checkdropdown" id="moblangdrop" type="checkbox" tabindex="0">
+                <label for="moblangdrop"><img src="../../../img/language.png" width="500" height="500" alt="Lang" class="icon-language"/><div class="arrow-down"></div></label>
+                               <div class="mob dropdown-content text-center">
+                               <p class="mob-lang-change mob-lang-selected">English</p>
+                               
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../es/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Español</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../it/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Italiano</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../pl/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Polski</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../fr/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Français</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../ar/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >العربية</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../ru/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Русский</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../de/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Deutsch</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../nl/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Nederlands</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../pt-br/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Português do Brasil</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../tr/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Türkçe</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../zh-cn/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >简体中文</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../zh-tw/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >繁體中文 臺灣</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../nb-no/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >Norsk</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../el/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" >ελληνική</a>
+                                  
+                                
+                              
+                            </div>
+                          </div>
+            </div>     
+        </div>    
+
+        
+
+<div class="site-wrap post">
+    
+    <section class="container">
+            <div class="row">
+                <!-- left two-thirds block-->
+                <div class="left two-thirds col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="info-block">
+                               <h2>Disclosure of a Major Bug in CryptoNote Based Currencies</h2> 
+                                <p class="author">Posted by: luigi1111 and Riccardo "fluffypony" Spagni</p>
+                                <p class="post-date">May 17, 2017</p>
+                                <h3 id="overview">Overview</h3>
+
+<p>In Monero we've discovered and patched a critical bug that affects all CryptoNote-based cryptocurrencies, and allows for the creation of an unlimited number of coins in a way that is undetectable to an observer unless they know about the fatal flaw and can search for it.</p>
+
+<p>We patched it quite some time ago, and confirmed that the Monero blockchain had NEVER been exploited using this, but until the hard fork that we had a few weeks ago we were unsure as to whether or not the entire network had updated.</p>
+
+<p>Once we were certain that the network had updated, we notified all active and affected CryptoNote coins, including CryptoNote themselves, Bytecoin, Forknote, Boolberry, DashCoin, and DigitalNote.</p>
+
+<p><strong><em>Note that, at this time, only Monero, Aeon, Boolberry, and Forknote have updated.</em></strong> We have given the other currencies as much time as possible, but cannot hold back disclosure any longer.</p>
+
+<p><strong><em>We strongly caution against anyone using, trading, exchanging, or running services involving the following currencies affected by this issue: Bytecoin, DashCoin, DigitalNote</em></strong></p>
+
+<h3 id="timeline">Timeline</h3>
+
+<p>2017-02-19: A member of the Monero Research Lab discovers the exploit, triggered by a detailed discussion of the <a href="https://whispersystems.org/docs/specifications/xeddsa/">XEdDSA signature schemes</a> on the <a href="https://moderncrypto.org/mail-archive/curves/2017/000846.html">Curves mailing list</a><br />
+2017-02-20: The Monero blockchain is scanned to see if this had ever been exploited; thankfully it had not and the blockchain is intact.<br />
+2017-02-21: The patch is surreptitiously snuck into the Monero codebase in <a href="https://github.com/monero-project/monero/pull/1744">pull request #1744</a>. It is kept secret to prevent it being used to attack other CryptoNote coins.<br />
+2017-02-22: A <a href="https://github.com/monero-project/monero/releases/tag/v0.10.2">point release of Monero is rushed out</a> so that exchanges and mining pools can update, under the guise of it preventing a RingCT DoS attack (such attack did not exist, but it seemed a fair explanation).<br />
+2017-03-15: The hash of the details of the problem is committed to the Monero blockchain in tx dff7a79e44f9392e19fe5205c389d3e799f89c62d90d624219618d754b806e04<br />
+2017-03-26: A further <a href="https://github.com/monero-project/monero/releases/tag/v0.10.3.1">point release of Monero</a> is put out to prepare for a hard fork in April.<br />
+2017-04-14: The Monero network hard forks to increase the dynamic block size minimum median, but this has the added bonus of ensuring the entire network is protected.<br />
+2017-04-17: All CryptoNote coins are contacted, and told that they have until mid-May to patch their coins, before there will be a public disclosure of the issue.<br />
+2017-04-17: As noted by <a href="https://twitter.com/fluffyponyza/status/854029169667309569">Riccardo "fluffypony" Spagni on Twitter</a>, the hash of the message sent to the various CryptoNote currencies is committed to the Monero blockchain.</p>
+
+<h3 id="problem">Problem</h3>
+
+<p>The so-called "key image" as used in CryptoNote coins utilising elliptic curve ed25519 can be modified in a special way, allowing double-spends. This effectively allows someone to create an infinite amount of coins in a way that is impossible to detect without knowing about the exploit and explicitly writing code to check for it.</p>
+
+<h3 id="mitigation">Mitigation</h3>
+
+<p>Several options exist for mitigation. The simplest, least invasive is noted below.</p>
+
+<p>To mitigate, check key images for correctness by multiplying by the curve order l. Check that the result is the identity element.</p>
+
+<p>Hexadecimal values of each:</p>
+
+<p>Identity element = "0100000000000000000000000000000000000000000000000000000000000000"</p>
+
+<p>Curve order (little endian) = "edd3f55c1a631258d69cf7a2def9de1400000000000000000000000000000010"</p>
+
+<p>For each transaction key image, check ((key image * curve order) == (identity element)); reject transaction if false.</p>
+
+<h3 id="appendix-commitment-text-1">Appendix: Commitment Text #1</h3>
+
+<p>As committed via the payment ID in Monero transaction ID dff7a79e44f9392e19fe5205c389d3e799f89c62d90d624219618d754b806e04, the text below has a sha3-256 (ie. keccak-256) hash of 21f0216fbbdc3dc590903b579282878705ed2adab7d8213328d962c76e806d84:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Problem:
+The so-called "key image" as used in Cryptonote coins utilizing elliptic curve ed25519 can be modified in a special way, allowing double-spends. I leave out exact details in this draft to give some time for mitigation.
+
+Hash (keccak-256) of details, to be released later: &lt;4402e902f1ac8cec96a17453dcae307d21a7995a94b76e9c3eb7ca7baeffb8c8&gt; 
+
+
+Mitigation:
+Several options exist for mitigation; I include the simplest, least invasive here.
+
+To mitigate, check key images for correctness by multiplying by the curve order l. Check that the result is the identity element.
+
+I include hexadecimal values of each:
+Identity element = "0100000000000000000000000000000000000000000000000000000000000000"
+Curve order (little endian) = "edd3f55c1a631258d69cf7a2def9de1400000000000000000000000000000010"
+
+For each transaction key image, check ((key image * curve order) == (identity element)); reject transaction if false.
+</code></pre></div></div>
+
+<h3 id="appendix-commitment-text-2">Appendix: Commitment Text #2</h3>
+
+<p>As noted in the previous commitment, the text below has a sha3-256 (ie. keccak-256) hash of 4402e902f1ac8cec96a17453dcae307d21a7995a94b76e9c3eb7ca7baeffb8c8:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dirty Details:
+Adding one of the (non-idenitity) "torsion", or small subgroup, points to a key image allows up to 7 double spends to be performed per output (8 total spends). The reason this is possible is that multiplying any of these small subgroup
+points by 8 returns the identity element (a kind of zero point). This means that multiplying the sum of a "normal" point and a torsion point by 8 (or a multiple of 8) will return the same point as multiplying the normal point by 8;
+the small subgroup point is "factored out". This allows a signature to verify on an alternate key image *so long as* the relevant scalars are multiples of 8. Cryptonote does not use scalars that are automatically multiples of 8 (whereas
+vanilla EdDSA does), but this is only a slight hurdle. An attacker need only choose the relevant scalars to be a multiple of 8 (in certain cases he cannot choose, and must instead create trial scalars until getting the desired result).
+
+Alternate mitigations:
+1. Multiply each key image by 8, then the result by 8^-1 (mod l), to get the proper key image in the correct subgroup. Reject double spends, or if the result is not the same as the input. Unwieldy.
+2. Mutliply each key image by 8 before storing in the key image list/checking for double spends. Quite invasive, as it requires redoing the existing key image list.
+
+
+Extra details:
+Monero's (and all CryptoNote coins') elliptic curve, ed25519, has a basepoint group cofactor of 8. There are 8 subgroups in ed25519, of the following sizes:
+1 ----|
+2     | --- small subgroups
+4     |
+8 ----|
+l (basepoint subgroup) ---|
+2*l                       | --- large subgroups
+4*l                       |
+8*l (all curve points) ---|
+
+Each small subgroup point is contained in the next larger small subgroup, and also in the corresponding large subgroup (superimpose small/large). Each large subgroup is contained in the next larger one as well. The only small subgroup
+point contained in subgroup 1 and l (basepoint subgroup) is the identity element, which works as a kind of zero (no effect on point addition). Mutliplying any point by its subgroup order will return the idenitity element (same as multiplying
+by 0). Mutliplying any point by 2, 4, or 8 will move it to the corresponding most exclusive subgroup (e.g., a point in 8*l subgroup multiplied by 4 would move to the 2*l subgroup, a point in the 8 subgroup multiplied by 2 would move the 4
+subgroup, and so on). Adding a small subgroup (non idenitity) point to a key image in the basepoint subgroup "knocks" it out of that subgroup and into one of the larger ones. Since the order of that subgroup is not l but some multiple,
+multiplying as in the proposed mitigation above does not return the identity element.
+</code></pre></div></div>
+
+                                <hr>
+                                <p id="post-meta">Post tags <i class="fa fa-tags"></i>: <a href="../../../blog/tags/core.html">Monero Core</a>, <a href="../../../blog/tags/crypto.html">Cryptography</a>, <a href="../../../blog/tags/research.html">Monero Research Lab</a>, <a href="../../../blog/tags/urgent.html">Urgent</a></p>
+                    </div>
+                </div>
+                <!-- end left two-thirds block-->
+                
+                <!-- right one-third block-->
+                <div class="right one-third col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="sidebar col-sm-12 col-xs-12">   
+                            <div class="info-block">
+                                <div class="row center-xs">
+                                    <div class="col"><h2>Recent Posts</h2></div>
+                                </div>
+                                
+                                <div class="row start-xs info-block-row">
+                                    <div class="col">
+                                         <p><a href="../../../2022/09/19/monero-GUI-0.18.1.1-released.html">Monero GUI 0.18.1.1 'Fluorine Fermi' released</a></p>
+                                     </div>
+                                </div>
+                                
+                                <div class="row start-xs info-block-row">
+                                    <div class="col">
+                                         <p><a href="../../../2022/09/19/monero-0.18.1.1-released.html">Monero 0.18.1.1 'Fluorine Fermi' released</a></p>
+                                     </div>
+                                </div>
+                                
+                                <div class="row start-xs info-block-row">
+                                    <div class="col">
+                                         <p><a href="../../../2022/08/11/monero-GUI-0.18.1.0-released.html">Monero GUI 0.18.1.0 'Fluorine Fermi' released</a></p>
+                                     </div>
+                                </div>
+                                
+                                <div class="row start-xs info-block-row">
+                                    <div class="col">
+                                         <p><a href="../../../2022/08/11/monero-0.18.1.0-released.html">Monero 0.18.1.0 'Fluorine Fermi' released</a></p>
+                                     </div>
+                                </div>
+                                
+                            </div>
+                            <div class="info-block">
+                                <div class="row center-xs">
+                                    <div class="col">
+                                        <h2>Popular Tags</h2>
+                                    </div>
+                                </div>
+                                    
+                                    <div class="row start-xs">
+                                        <div class="col">
+                                             <p><a href="../../../blog/tags/monero%20missives.html">Monero Missives</a></p>
+                                         </div>
+                                     </div>
+                                     
+                                    <div class="row start-xs">
+                                        <div class="col">
+                                             <p><a href="../../../blog/tags/community.html">Community</a></p>
+                                         </div>
+                                     </div>
+                                     
+                                    <div class="row start-xs">
+                                        <div class="col">
+                                             <p><a href="../../../blog/tags/conferences.html">Conferences</a></p>
+                                         </div>
+                                     </div>
+                                     
+                                    <div class="row start-xs">
+                                        <div class="col">
+                                             <p><a href="../../../blog/tags/exchanges.html">Exchanges</a></p>
+                                         </div>
+                                     </div>
+                                     
+
+
+                            </div>
+                        </div> 
+                </div>
+                <!-- end right one-third block-->
+            </div>
+        </section>
+    </div>
+
+    <footer class="container-fluid">
+            <div class="container">
+                <div class="row around-xs footer-wrapper">
+                     <div class="col-sm-3 col-xs-6">
+                         <h3>Resources</h3>
+                            <ul class="list-unstyled">
+                                <li><a class="white" href="../../../resources/about/index.html">About Monero</a></li>
+                                <li><a class="white" href="../../../resources/moneropedia/index.html">Moneropedia</a></li>
+                                <li><a class="white" href="../../../resources/developer-guides/index.html">Developer Guides</a></li>
+                                <li><a class="white" href="../../../resources/user-guides/index.html">User Guides</a></li>
+                                <li><a class="white" href="../../../library/index.html">Library</a></li>
+                                <li><a class="white" href="../../../app/index.html">Downloads</a></li>
+                                
+                            </ul>
+                     </div>
+                     <div class="col-sm-3 col-xs-6">
+                        <h3>Reach Out</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="../../../community/team/index.html">Workgroups</a></li>
+                                 <li><a class="white" href="../../../community/hangouts/index.html">Hangouts</a></li>
+                                 <li><a class="white" href="https://lists.getmonero.org/postorius/lists/monero-announce.lists.getmonero.org/">Mailing List</a></li>
+
+                            </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3>Community</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="../../../community/merchants/index.html">Merchants & Exchanges</a></li>
+                                 <li><a class="white" href="https://monero.stackexchange.com/">Stack Exchange</a></li>
+                                 <li><a class="white" href="https://bitcointalk.org/index.php?topic=583449.0">BitcoinTalk</a></li>
+                                 <li><a class="white" href="https://translate.getmonero.org/">Weblate</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3>The Monero Project</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="https://openalias.org/">Open Alias</a></li>
+                                 <li><a class="white" href="../../../resources/research-lab/index.html">Monero Research Lab (MRL)</a></li>
+                                 <li><a class="white" href="../../../press-kit/index.html">Press Kit</a></li>
+                                 <li><a class="white" href="https://ccs.getmonero.org/">Community Crowdfunding System</a></li>
+                            </ul>
+                    </div>
+                <div class="row center-xs">
+                    <div class="footer-links">
+                        <ul class="list-unstyled list-inline">
+                            <li><a href="http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html" class="white footer-link"><img class="tor" src="../../../img/onion-tor.svg" alt="onion service">Tor Onion Service</a></li>
+                             <li><a href="../../../legal/index.html" class="white footer-link">Legal</a></li>
+                             <li><a href="https://github.com/monero-project/monero-site" class="white footer-link">Source Code</a></li>
+                             <li><a href="../../../sitemap.xml" class="white footer-link">Sitemap</a></li>
+                             <li><a class="white" href="../../../feed.xml"><img src="../../../img/feed.svg" width="30" height="30" alt="Feed icon">RSS Feed</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+</footer>
+<!-- page served by server N -->
+
+    </div>
+  </body>
+
+<!-- Mirrored from app.getmonero.network/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 May 2024 18:56:12 GMT -->
+</html>

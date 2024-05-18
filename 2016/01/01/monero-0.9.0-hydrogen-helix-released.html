@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang=en>
+
+    
+<!-- Mirrored from app.getmonero.network/2016/01/01/monero-0.9.0-hydrogen-helix-released.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 May 2024 18:09:14 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+     Monero 0.9.0 "Hydrogen Helix" Released | Monero - secure, private, untraceable
+    </title>
+  <meta name="description" content="
+  A major release in Monero's history, too much to summarise!
+  ">
+	<meta name="keywords" content="monero, xmr, bitmonero, cryptocurrency">
+
+    <meta property="og:title" content="
+    
+    Blog: Monero 0.9.0 "Hydrogen Helix" Released
+    " />
+    <meta property="og:description" content="
+    A major release in Monero's history, too much to summarise!
+    ">
+    <!-- If the page specifies a dedicated image which is not an SVG file, we use that one. Otherwise we use the classic Monero logo -->
+    <meta property="og:image" content="../../../../www.getmonero.org/press-kit/symbols/monero-symbol-on-white-480.png">
+    <meta property="og:site_name" content="getmonero.org, The Monero Project">
+    <meta property="og:url" content="https://www.getmonero.org//2016/01/01/monero-0.9.0-hydrogen-helix-released.html">
+    <meta property="og:type" content="website">
+    <meta http-equiv="onion-location" content="http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../meta/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../meta/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../meta/favicon-16x16.png">
+        <link rel="manifest" href="../../../meta/manifest.json">
+        <link rel="mask-icon" href="../../../meta/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+
+    <link href="../../../css/custom.css" rel="stylesheet">
+	
+    
+    <meta name="msapplication-config" content="../../../ietemplates/ieconfig.html">
+
+  <!-- Feed autodetection -->
+  <link type="application/atom+xml" rel="alternate" href="../../../feed.xml" title="Monero">
+
+  </head>
+
+
+  <body>
+    <div class="page-wrapper">
+        <div class="mob-nav">
+              <input class="burger-check" id="mobile-burger" type="checkbox"><label for="mobile-burger" class="burger"></label>
+
+        <div class="slide-in-nav">
+             <div class="container slide-in">
+                 <div class="row">
+                     <div class="col-xs-12 dropdown text-center nav-item">
+                      <label for="drop1">Get Started<div class="arrow-down"></div></label>
+                      <input class="burger-checkdropdown" id="drop1" type="checkbox" tabindex="0">
+                      <div class="dropdown-content">
+                          <a href="../../../get-started/what-is-monero/index.html">What is Monero?</a>
+                          <a href="../../../get-started/accepting/index.html">Accepting</a>
+                          <a href="../../../get-started/contributing/index.html">Contributing</a>
+                          <a href="../../../get-started/mining/index.html">Mining</a>
+                          <a href="../../../get-started/faq/index.html">FAQ</a>
+                  </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-12 dropdown nav-item">
+                      <a href="../../../app/index.html">Downloads</a>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-12 dropdown nav-item">
+                      <a href="../../../blog/index.html">Blog</a>
+                    </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12 dropdown text-center nav-item">
+                    <label for="drop2">Community<div class="arrow-down"></div></label>
+                    <input class="burger-checkdropdown" id="drop2" type="checkbox" tabindex="0">
+                    <div class="dropdown-content">
+                      <a href="../../../community/workgroups/index.html">Workgroups</a>
+                      <a href="../../../community/hangouts/index.html">Hangouts</a>
+                      <a href="../../../community/sponsorships/index.html">Sponsorships</a>
+                      <a href="../../../community/merchants/index.html">Merchants & Exchanges</a>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-xs-12 dropdown text-center nav-item">
+                    <label for="drop3">Resources<div class="arrow-down"></div></label>
+                    <input class="burger-checkdropdown" id="drop3" type="checkbox" tabindex="0">
+                    <div class="dropdown-content">
+                      <a href="../../../resources/about/index.html">About</a>
+                      <a href="../../../resources/roadmap/index.html">Roadmap</a>
+                      <a href="../../../resources/research-lab/index.html">Research Lab</a>
+                      <a href="../../../resources/moneropedia/index.html">Moneropedia</a>
+                      <a href="../../../resources/user-guides/index.html">User Guides</a>
+                      <a href="../../../resources/developer-guides/index.html">Developer Guides</a>
+                      <a href="../../../resources/tools/index.html">Tools</a>
+                      <a href="../../../library/index.html">Library</a>
+                      <a href="../../../press-kit/index.html">Press Kit</a>
+                    </div>
+                  </div>
+               </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://ccs.getmonero.org/">Community Crowdfunding</a> 
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md">Vulnerability Response</a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <div class="text-center nav-item mob">
+                            <a href="https://translate.getmonero.org/">Translate</a>
+                         </div>
+                     </div>
+                 </div>            
+             </div>
+          
+        </div>
+       </div>
+       
+        <div class="desktop-nav">
+            <nav class="container">
+            <div class="topnav">
+              <div class="row middle-xs">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="../../../index-2.html"><img src="../../../img/monero-logo.png" width="500" height="135" alt="Monero Logo" class="monero-logo"></a>
+                  </div>
+                  <div class="col-lg-8 col-md-8 col-sm-8 topnav-list end-xs">
+                      <div class="row end-xs middle-xs">
+                         <div class="col-md-12">
+                          <a href="https://ccs.getmonero.org/" class="top-link">Community Crowdfunding</a>
+                          <a href="https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md" class="top-link">Vulnerability Response</a>
+                          <a href="https://translate.getmonero.org/" class="top-link">Translate</a>
+                          <div href="#" class="dropdown top-link language-change">
+                            <input class="burger-checkdropdown" id="langdrop" type="checkbox" tabindex="0">
+                            <label for="langdrop"><img src="../../../img/language.png" width="500" height="500" alt="Language selector icon" class="icon-language"/>English
+                           <div class="arrow-down"></div></label>
+                            <div class="dropdown-content text-center">
+                              
+                                
+                              
+                                
+                                  
+                                    <a href="../../../es/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Español</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../it/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Italiano</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../pl/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Polski</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../fr/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Français</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../ar/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >العربية</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../ru/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Русский</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../de/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Deutsch</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../nl/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Nederlands</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../pt-br/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Português do Brasil</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../tr/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Türkçe</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../zh-cn/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >简体中文</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../zh-tw/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >繁體中文 臺灣</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../nb-no/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Norsk</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a href="../../../el/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >ελληνική</a>
+                                  
+                                
+                              
+                            </div>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="botnav white-nav">
+                <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+                <div class="row between-xs nav-items">
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop1">Get Started<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop1" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../../get-started/what-is-monero/index.html">What is Monero?</a>
+                              <a href="../../../get-started/accepting/index.html">Accepting</a>
+                              <a href="../../../get-started/contributing/index.html">Contributing</a>
+                              <a href="../../../get-started/mining/index.html">Mining</a>
+                              <a href="../../../get-started/faq/index.html">FAQ</a>
+                        </div>
+                    </div>
+                    <div class="col dropdown nav-item">
+                          <a href="../../../app/index.html">Downloads</a>
+                    </div>
+                    <div class="col dropdown nav-item">
+                         <a href="../../../blog/index.html">Blog</a>
+                    </div>
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop2">Community<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop2" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../../community/workgroups/index.html">Workgroups</a>
+                              <a href="../../../community/hangouts/index.html">Hangouts</a>
+                              <a href="../../../community/sponsorships/index.html">Sponsorships</a>
+                              <a href="../../../community/merchants/index.html">Merchants & Exchanges</a>
+                        </div>
+                    </div>
+                    <div class="col dropdown nav-item">
+                        <label for="desktopdrop3">Resources<div class="arrow-down"></div></label>
+                        <input class="burger-checkdropdown" id="desktopdrop3" type="checkbox" tabindex="0">
+                        <div class="dropdown-content">
+                              <a href="../../../resources/about/index.html">About</a>
+                              <a href="../../../resources/roadmap/index.html">Roadmap</a>
+                              <a href="../../../resources/research-lab/index.html">Research Lab</a>
+                              <a href="../../../resources/moneropedia/index.html">Moneropedia</a>
+                              <a href="../../../resources/user-guides/index.html">User Guides</a>
+                              <a href="../../../resources/developer-guides/index.html">Developer Guides</a>
+                              <a href="../../../resources/tools/index.html">Tools</a>
+                              <a href="../../../library/index.html">Library</a>
+                              <a href="../../../press-kit/index.html">Press Kit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        </div>
+        <div class="mob bot-nav white-nav">
+            <div class="row center-xs middle-xs">
+                <div class="col-xs-6">
+                    <a href="../../../index-2.html"><img src="../../../img/monero-logo.png" width="500" height="135" alt="Monero Logo" class="monero-logo"></a>
+                </div>
+                <div class="dropdown col-xs-6 text-center mob-language-change">
+                <input class="burger-checkdropdown" id="moblangdrop" type="checkbox" tabindex="0">
+                <label for="moblangdrop"><img src="../../../img/language.png" width="500" height="500" alt="Lang" class="icon-language"/><div class="arrow-down"></div></label>
+                               <div class="mob dropdown-content text-center">
+                               <p class="mob-lang-change mob-lang-selected">English</p>
+                               
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../es/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Español</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../it/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Italiano</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../pl/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Polski</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../fr/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Français</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../ar/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >العربية</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../ru/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Русский</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../de/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Deutsch</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../nl/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Nederlands</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../pt-br/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Português do Brasil</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../tr/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Türkçe</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../zh-cn/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >简体中文</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../zh-tw/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >繁體中文 臺灣</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../nb-no/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >Norsk</a>
+                                  
+                                
+                              
+                                
+                                  
+                                    <a class="mob-lang-change" href="../../../el/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" >ελληνική</a>
+                                  
+                                
+                              
+                            </div>
+                          </div>
+            </div>     
+        </div>    
+
+        
+
+<div class="site-wrap post">
+    
+    <section class="container">
+            <div class="row">
+                <!-- left two-thirds block-->
+                <div class="left two-thirds col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="info-block">
+                               <h2>Monero 0.9.0 "Hydrogen Helix" Released</h2> 
+                                <p class="author">Posted by: Riccardo Spagni (fluffypony)</p>
+                                <p class="post-date">January 01, 2016</p>
+                                <h2 id="summary-of-changes">Summary of Changes</h2>
+
+<p>Too much to describe. Represents a major release in Monero's history, over a year-and-a-half in the making. Some highlights:</p>
+
+<ul>
+  <li>moved from in-RAM database to a backend-agnostic blockchain database</li>
+  <li>created an LMDB blockchainDB implementation (with the help of Howard Chu, the creator of LMDB)</li>
+  <li>created a BerkeleyDB blockchainDB implementation</li>
+  <li>created an OS-agnostic raw blockchain format</li>
+  <li>built tools to convert between blockchain implementations, as well as import and export them</li>
+  <li>added ARM support</li>
+  <li>brought back 32-bit support (WIP)</li>
+  <li>added QoS (bandwidth control)</li>
+  <li>added <a href="https://openalias.org/">OpenAlias</a> support</li>
+  <li>fixed all (previously broken) unit tests and core tests</li>
+  <li>implemented daemonize for proper backgrounding of the Monero daemon</li>
+  <li>drastically increased sync speed</li>
+  <li>included block headers in the source</li>
+  <li>designed and implemented a stealth payment ID scheme</li>
+  <li>designed and implemented a unified address+payment ID scheme</li>
+  <li>implemented a hard fork mechanism</li>
+  <li>changed the block time to 2 minutes</li>
+  <li>implemented the <a href="https://lab.getmonero.org/pubs/MRL-0001.pdf">MRL-0001</a> and <a href="https://lab.getmonero.org/pubs/MRL-0004.pdf">MRL-0004</a> recommendations</li>
+  <li>added tons of simplewallet / rpcwallet / daemon commands</li>
+  <li>added a dust handler to simplewallet</li>
+  <li>created a multilanguage mechanism, implemented in simplewallet</li>
+  <li>bug fixes, bug fixes, bug fixes</li>
+  <li>completely overhauled the CMake (with the help of Kitware, the creators of CMake)</li>
+  <li>added a bad peer auto-banning mechanism</li>
+  <li>refactored a ton of code, added a ton of comments</li>
+  <li>added a core crypto implementation based on SUPERCOP ref10</li>
+  <li>switched to a triangular distribution for output selection</li>
+  <li>added multiple new mnemonic wordlists, including Russian and Italian</li>
+  <li>created a "trusted daemon" system for remote daemon use</li>
+</ul>
+
+<p>In total this represents 922 commits worth of work by 9 contributors. This will probably be the biggest release in Monero's history, everything from here on out can be done as faster point releases.</p>
+
+<h2 id="updating-blockchain-conversion">Updating: Blockchain Conversion</h2>
+
+<p>It is highly recommended that you delete the contents of your Monero working directory and sync from scratch. This directory can be found in <code class="language-plaintext highlighter-rouge">~/.bitmonero</code> on Linux and OS X, and on Windows in <code class="language-plaintext highlighter-rouge">\Users\username\AppData\Roaming\bitmonero</code> or <code class="language-plaintext highlighter-rouge">\ProgramData\bitmonero</code>.</p>
+
+<p>Syncing from scratch is EXTREMELY fast in this version, pretty much at bittorrent speeds, and will leave you with a fully verified blockchain.</p>
+
+<p><em>Alternatively</em>: if you want to grab the bootstrap (NOTE: there is a new bootstrap format!) off the website then you can get it at https://downloads.getmonero.org/blockchain.raw - once downloaded you can import it with <code class="language-plaintext highlighter-rouge">blockchain_import --input-file /path/to/your/download.raw</code>. If you're particularly brave you can pass the <code class="language-plaintext highlighter-rouge">--verify 0</code> flag to skip verification during import.</p>
+
+<p><em>If you REALLY want to convert your old blockchain</em>: you can either use the <code class="language-plaintext highlighter-rouge">blockchain_converter</code> tool, or you can use <code class="language-plaintext highlighter-rouge">blockchain_export</code> to create a blockchain.raw, followed by <code class="language-plaintext highlighter-rouge">blockchain_import</code> to import it into the new LMDB format.</p>
+
+<h2 id="official-download-links">Official Download Links</h2>
+
+<ul>
+  <li><a href="https://downloads.getmonero.org/monero.win.x64.v0-9-0-0.zip">Windows, 64-bit</a></li>
+  <li><a href="https://downloads.getmonero.org/monero.mac.x64.v0-9-0-0.tar.bz2">OS X, 64-bit</a></li>
+  <li><a href="https://downloads.getmonero.org/monero.linux.x64.v0-9-0-0.tar.bz2">Linux, 64-bit</a></li>
+</ul>
+
+<h2 id="download-hashes">Download Hashes</h2>
+
+<p>If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:</p>
+
+<ul>
+  <li>monero.win.x64.v0-9-0-0.zip, c61284c4d5f78db2bc2072bef76f2b539293cca74bdd3fb9536a35ca54b4fd2e</li>
+  <li>monero.linux.x64.v0-9-0-0.tar.bz2, 655875a899aded6d63f99c5dfea6a45b3e77533bb2173e63612646ec7ac97100</li>
+  <li>monero.mac.x64.v0-9-0-0.tar.bz2, fce5140d9cb38d62ad1b9f1b0d06feaa209433f9ec542b8d368ef9e0da431b78</li>
+</ul>
+
+                                <hr>
+                                <p id="post-meta">Post tags <i class="fa fa-tag"></i>: <a href="../../../blog/tags/releases.html">Monero Software Releases</a></p>
+                    </div>
+                </div>
+                <!-- end left two-thirds block-->
+                
+                <!-- right one-third block-->
+                <div class="right one-third col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="sidebar col-sm-12 col-xs-12">   
+                            <div class="info-block">
+                                <div class="row center-xs">
+                                    <div class="col"><h2>Recent Posts</h2></div>
+                                </div>
+                                
+                                <div class="row start-xs info-block-row">
+                                    <div class="col">
+                                         <p><a href="../../../2022/09/19/monero-GUI-0.18.1.1-released.html">Monero GUI 0.18.1.1 'Fluorine Fermi' released</a></p>
+                                     </div>
+                                </div>
+                                
+                                <div class="row start-xs info-block-row">
+                                    <div class="col">
+                                         <p><a href="../../../2022/09/19/monero-0.18.1.1-released.html">Monero 0.18.1.1 'Fluorine Fermi' released</a></p>
+                                     </div>
+                                </div>
+                                
+                                <div class="row start-xs info-block-row">
+                                    <div class="col">
+                                         <p><a href="../../../2022/08/11/monero-GUI-0.18.1.0-released.html">Monero GUI 0.18.1.0 'Fluorine Fermi' released</a></p>
+                                     </div>
+                                </div>
+                                
+                                <div class="row start-xs info-block-row">
+                                    <div class="col">
+                                         <p><a href="../../../2022/08/11/monero-0.18.1.0-released.html">Monero 0.18.1.0 'Fluorine Fermi' released</a></p>
+                                     </div>
+                                </div>
+                                
+                            </div>
+                            <div class="info-block">
+                                <div class="row center-xs">
+                                    <div class="col">
+                                        <h2>Popular Tags</h2>
+                                    </div>
+                                </div>
+                                    
+                                    <div class="row start-xs">
+                                        <div class="col">
+                                             <p><a href="../../../blog/tags/monero%20missives.html">Monero Missives</a></p>
+                                         </div>
+                                     </div>
+                                     
+                                    <div class="row start-xs">
+                                        <div class="col">
+                                             <p><a href="../../../blog/tags/community.html">Community</a></p>
+                                         </div>
+                                     </div>
+                                     
+                                    <div class="row start-xs">
+                                        <div class="col">
+                                             <p><a href="../../../blog/tags/conferences.html">Conferences</a></p>
+                                         </div>
+                                     </div>
+                                     
+                                    <div class="row start-xs">
+                                        <div class="col">
+                                             <p><a href="../../../blog/tags/exchanges.html">Exchanges</a></p>
+                                         </div>
+                                     </div>
+                                     
+
+
+                            </div>
+                        </div> 
+                </div>
+                <!-- end right one-third block-->
+            </div>
+        </section>
+    </div>
+
+    <footer class="container-fluid">
+            <div class="container">
+                <div class="row around-xs footer-wrapper">
+                     <div class="col-sm-3 col-xs-6">
+                         <h3>Resources</h3>
+                            <ul class="list-unstyled">
+                                <li><a class="white" href="../../../resources/about/index.html">About Monero</a></li>
+                                <li><a class="white" href="../../../resources/moneropedia/index.html">Moneropedia</a></li>
+                                <li><a class="white" href="../../../resources/developer-guides/index.html">Developer Guides</a></li>
+                                <li><a class="white" href="../../../resources/user-guides/index.html">User Guides</a></li>
+                                <li><a class="white" href="../../../library/index.html">Library</a></li>
+                                <li><a class="white" href="../../../app/index.html">Downloads</a></li>
+                                
+                            </ul>
+                     </div>
+                     <div class="col-sm-3 col-xs-6">
+                        <h3>Reach Out</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="../../../community/team/index.html">Workgroups</a></li>
+                                 <li><a class="white" href="../../../community/hangouts/index.html">Hangouts</a></li>
+                                 <li><a class="white" href="https://lists.getmonero.org/postorius/lists/monero-announce.lists.getmonero.org/">Mailing List</a></li>
+
+                            </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3>Community</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="../../../community/merchants/index.html">Merchants & Exchanges</a></li>
+                                 <li><a class="white" href="https://monero.stackexchange.com/">Stack Exchange</a></li>
+                                 <li><a class="white" href="https://bitcointalk.org/index.php?topic=583449.0">BitcoinTalk</a></li>
+                                 <li><a class="white" href="https://translate.getmonero.org/">Weblate</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3>The Monero Project</h3>
+                            <ul class="list-unstyled">
+                                 <li><a class="white" href="https://openalias.org/">Open Alias</a></li>
+                                 <li><a class="white" href="../../../resources/research-lab/index.html">Monero Research Lab (MRL)</a></li>
+                                 <li><a class="white" href="../../../press-kit/index.html">Press Kit</a></li>
+                                 <li><a class="white" href="https://ccs.getmonero.org/">Community Crowdfunding System</a></li>
+                            </ul>
+                    </div>
+                <div class="row center-xs">
+                    <div class="footer-links">
+                        <ul class="list-unstyled list-inline">
+                            <li><a href="http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/2016/01/01/monero-0.9.0-hydrogen-helix-released.html" class="white footer-link"><img class="tor" src="../../../img/onion-tor.svg" alt="onion service">Tor Onion Service</a></li>
+                             <li><a href="../../../legal/index.html" class="white footer-link">Legal</a></li>
+                             <li><a href="https://github.com/monero-project/monero-site" class="white footer-link">Source Code</a></li>
+                             <li><a href="../../../sitemap.xml" class="white footer-link">Sitemap</a></li>
+                             <li><a class="white" href="../../../feed.xml"><img src="../../../img/feed.svg" width="30" height="30" alt="Feed icon">RSS Feed</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+</footer>
+<!-- page served by server N -->
+
+    </div>
+  </body>
+
+<!-- Mirrored from app.getmonero.network/2016/01/01/monero-0.9.0-hydrogen-helix-released.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 May 2024 18:09:27 GMT -->
+</html>
