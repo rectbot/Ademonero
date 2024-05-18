@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://www.getmonero.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.getmonero.org/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-09-23T14:16:00+00:00</updated><id>https://www.getmonero.org/feed.xml</id><title type="html">Monero</title><subtitle>Monero is a digital currency that is secure, private, and untraceable.</subtitle><entry><title type="html">Monero 0.18.1.1 'Fluorine Fermi' released</title><link href="https://www.getmonero.org/2022/09/19/monero-0.18.1.1-released.html" rel="alternate" type="text/html" title="Monero 0.18.1.1 'Fluorine Fermi' released" /><published>2022-09-19T00:00:00+00:00</published><updated>2022-09-19T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/09/19/monero-0.18.1.1-released</id><content type="html" xml:base="https://www.getmonero.org/2022/09/19/monero-0.18.1.1-released.html">&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.18.1.1 release of the Monero software. This release has bugfixes related to output import/export and multisig seed restore.&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Wallet: fix unicode file path support on Windows (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8548&quot;&gt;8548&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: fix multisig seed restore (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8545&quot;&gt;8545&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: fixes to output import/export, allow exporting in chunks (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8555&quot;&gt;8555&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: skip bootstrap nodes that are lower than last checkpoint (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8552&quot;&gt;8552&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: check wallet compatibility with daemon's hard fork version (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8544&quot;&gt;8544&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes and improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero/compare/v0.18.1.0...v0.18.1.1&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero/tree/v0.18.1.1&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 6 people who worked, largely unpaid and altruistically, to put out 25 commits containing 802 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;sethforprivacy&lt;/li&gt;
+  &lt;li&gt;moneromooo&lt;/li&gt;
+  &lt;li&gt;j-berman&lt;/li&gt;
+  &lt;li&gt;tobtoht&lt;/li&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#cli&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x64-v0.18.1.1.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x86-v0.18.1.1.zip&quot;&gt;Windows, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-mac-x64-v0.18.1.1.tar.bz2&quot;&gt;macOS, Intel&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-mac-armv8-v0.18.1.1.tar.bz2&quot;&gt;macOS, ARM&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x64-v0.18.1.1.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x86-v0.18.1.1.tar.bz2&quot;&gt;Linux, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv7-v0.18.1.1.tar.bz2&quot;&gt;Linux, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv8-v0.18.1.1.tar.bz2&quot;&gt;Linux, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv7-v0.18.1.1.tar.bz2&quot;&gt;Android, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv8-v0.18.1.1.tar.bz2&quot;&gt;Android, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-freebsd-x64-v0.18.1.1.tar.bz2&quot;&gt;FreeBSD, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;hashes&quot;&gt;Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-win-x64-v0.18.1.1.zip, 14eb0d7111b478a0adcde2254dabb8612a8f0b21f0dc3d5d673d851fd7039094
+monero-win-x86-v0.18.1.1.zip, bae1688502882cdfc293cff55460b38a1906ce41416628c6d9b6a38120de6fb4
+monero-mac-x64-v0.18.1.1.tar.bz2, 60fc466655ab4d1ae32b471c25c8c0160304f97499f2424e7514ca61c7c08991
+monero-mac-armv8-v0.18.1.1.tar.bz2, 3c806061ed56a8b84b134d918f9c6bc101e3dd67d321e6cbbecfd2acc297b50f
+monero-linux-x64-v0.18.1.1.tar.bz2, 937dfcc48d91748dd2e8f58714dfc45d17a0959dff33fc7385bbe06344ff2c16
+monero-linux-x86-v0.18.1.1.tar.bz2, 43fe3a76f1fa13d1ac57095d4e32fe2b31bf20dde67ba1de7335a7c0fcdd03b1
+monero-linux-armv8-v0.18.1.1.tar.bz2, e9b7e1dd0e70309d52be66240a43bddadc64eac1ed3a5aad17cfa1609ea424c1
+monero-linux-armv7-v0.18.1.1.tar.bz2, c8cbf9cdfb89f1b2c5f6599ceb715ece69bd99f9ce669953d6768d7c7aa6963b
+monero-android-armv8-v0.18.1.1.tar.bz2, e521a881e146530b4c2af35153e49c755cb31139c06bfa62e3f5b0dd91cc9602
+monero-android-armv7-v0.18.1.1.tar.bz2, 696db3a95d541569375c3dab331bbd08e8c6acd30cb1c74f2ebae8c377cba6fd
+monero-freebsd-x64-v0.18.1.1.tar.bz2, 5372efd08180485ce24cd69d036365b43d1c2f4bd2b506d5e51c5795cffd6d26
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero GUI 0.18.1.1 'Fluorine Fermi' released</title><link href="https://www.getmonero.org/2022/09/19/monero-GUI-0.18.1.1-released.html" rel="alternate" type="text/html" title="Monero GUI 0.18.1.1 'Fluorine Fermi' released" /><published>2022-09-19T00:00:00+00:00</published><updated>2022-09-19T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/09/19/monero-GUI-0.18.1.1-released</id><content type="html" xml:base="https://www.getmonero.org/2022/09/19/monero-GUI-0.18.1.1-released.html">&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.18.1.1 release of the Monero GUI software. This release adds improvements to simple mode.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2022/09/19/monero-0.18.1.1-released.html&quot;&gt;The latest CLI release notes can be found on the precedent blog post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Skip nodes that are behind last checkpoint in Simple Mode&lt;/li&gt;
+  &lt;li&gt;Warn when connecting to an outdated node&lt;/li&gt;
+  &lt;li&gt;Update Qt to 5.15.6 on Windows and Linux (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/4025&quot;&gt;4025&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Allow to use Windows Installer on ARM64 systems (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/4026&quot;&gt;4026&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Update translations (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/4031&quot;&gt;4031&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes and UI improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero-gui/compare/v0.18.1.0...v0.18.1.1&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero-gui/tree/v0.18.1.1&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 24 people who worked, largely unpaid and altruistically, to put out 16 commits containing 6549 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;tobtoht&lt;/li&gt;
+  &lt;li&gt;netrik182&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A special thanks to translators&lt;/p&gt;
+
+&lt;p&gt;castorp, foresle, 12, W4ikiky, juanda-097, Miguel Medina, John Lee, vaa red, MahtiAnkka, Jiri, Tony Nguyen, Tabula Rasa, Lafudoci, cryptoouob, awdfffr, v1docq47, tedtei, ZeoZ, Kareem, ZeoZ&lt;/p&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#gui&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-win-x64-v0.18.1.1.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-install-win-x64-v0.18.1.1.exe&quot;&gt;Windows, 64-bit (Installer)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-mac-x64-v0.18.1.1.dmg&quot;&gt;macOS, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.18.1.1.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A complete guide for the GUI wallet is included in the archives, but &lt;a href=&quot;https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/monero-GUI-guide.md&quot;&gt;an online version is available&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;download-hashes&quot;&gt;Download Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-gui-win-x64-v0.18.1.1.zip, 4efb0009e97c3a4d97139f3a4ba9b149e5707695569bc60b465a943741a64aa0
+monero-gui-install-win-x64-v0.18.1.1.exe, bf1261059ad0086cc3fd5cdaa47afef12508a70d4eae144e1e40ca36e047551c
+monero-gui-mac-x64-v0.18.1.1.dmg, ed2a74739e2a01185712af5f898a3341f09d58195e22f03a6e4630e8e1e17fc0
+monero-gui-linux-x64-v0.18.1.1.tar.bz2, 2dedc03de5c3d77aaf9be2ea19786c603db1f9596e4b38beeef4b7eb0acd473c
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero 0.18.1.0 'Fluorine Fermi' released</title><link href="https://www.getmonero.org/2022/08/11/monero-0.18.1.0-released.html" rel="alternate" type="text/html" title="Monero 0.18.1.0 'Fluorine Fermi' released" /><published>2022-08-11T00:00:00+00:00</published><updated>2022-08-11T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/08/11/monero-0.18.1.0-released</id><content type="html" xml:base="https://www.getmonero.org/2022/08/11/monero-0.18.1.0-released.html">&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.18.1.0 release of the Monero software. This release adds v0.18 network upgrade compatibility for Ledger and Trezor hardware wallets.&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Wallet: add Ledger support for v0.18, requires app v1.8.0 (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8466&quot;&gt;8466&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8463&quot;&gt;8463&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: add Trezor support for v0.18, requires firmware v2.5.2 (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8483&quot;&gt;8483&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: publish submitted transactions via ZMQ (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8451&quot;&gt;8451&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: fix a potential crash (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8454&quot;&gt;8454&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: fix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get_block_template_backlog&lt;/code&gt; performance (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8455&quot;&gt;8455&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: fix a RandomX related bug on old macOS versions (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8492&quot;&gt;8492&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes and improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero/compare/v0.18.0.0...v0.18.1.0&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero/tree/v0.18.1.0&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 6 people who worked, largely unpaid and altruistically, to put out 18 commits containing 626 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;hyc&lt;/li&gt;
+  &lt;li&gt;ph4r05&lt;/li&gt;
+  &lt;li&gt;j-berman&lt;/li&gt;
+  &lt;li&gt;SChernykh&lt;/li&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#cli&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x64-v0.18.1.0.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x86-v0.18.1.0.zip&quot;&gt;Windows, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-mac-x64-v0.18.1.0.tar.bz2&quot;&gt;macOS, Intel&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-mac-armv8-v0.18.1.0.tar.bz2&quot;&gt;macOS, ARM&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x64-v0.18.1.0.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x86-v0.18.1.0.tar.bz2&quot;&gt;Linux, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv7-v0.18.1.0.tar.bz2&quot;&gt;Linux, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv8-v0.18.1.0.tar.bz2&quot;&gt;Linux, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv7-v0.18.1.0.tar.bz2&quot;&gt;Android, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv8-v0.18.1.0.tar.bz2&quot;&gt;Android, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-freebsd-x64-v0.18.1.0.tar.bz2&quot;&gt;FreeBSD, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;hashes&quot;&gt;Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-win-x64-v0.18.1.0.zip, d0e2b3255163ec0499de42639cc86cf4ddae0bc5fa65aa7377ff9c40305da8fd
+monero-win-x86-v0.18.1.0.zip, ed18233503b6135a29732a79b261b50aced24b99686843bc11e7e9fb2d50cf42
+monero-mac-x64-v0.18.1.0.tar.bz2, da87ac5c713f17985cd57bcd007ec76ffe75123cb546cd655edb14fdd8c3d745
+monero-mac-armv8-v0.18.1.0.tar.bz2, 065766f5799c6b972145e2b27830a584c18f64bdd276f31801493b7ef9e51b3c
+monero-linux-x64-v0.18.1.0.tar.bz2, 9318e522a5cf95bc856772f15d7507fdef2c028e01f70d020078ad5e208f1304
+monero-linux-x86-v0.18.1.0.tar.bz2, 3d54dc813116955537a4a5ae4a0a3943d9d32842e076c223ea096551db438158
+monero-linux-armv8-v0.18.1.0.tar.bz2, 69e2bba6d5bd8fcf4986f59f232fdfd33b4ae2ce0959fd59567b153b923e057e
+monero-linux-armv7-v0.18.1.0.tar.bz2, ecba059a2dbbef9f059e37c0f329df037501752dd871719b41104c5d4c6d358b
+monero-android-armv8-v0.18.1.0.tar.bz2, ca8c9daeaee758d482d5cde94912d33b2f62656719c821b2a496fd81c0d52a79
+monero-android-armv7-v0.18.1.0.tar.bz2, 0ea5ddb0630d6657810d38b1968ae76ba8e54806f46a2cc9bd02602f999aa741
+monero-freebsd-x64-v0.18.1.0.tar.bz2, 1076d260b8b8fe513653916dabfa3c3790030836750d3af6bca56fc138a06af1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero GUI 0.18.1.0 'Fluorine Fermi' released</title><link href="https://www.getmonero.org/2022/08/11/monero-GUI-0.18.1.0-released.html" rel="alternate" type="text/html" title="Monero GUI 0.18.1.0 'Fluorine Fermi' released" /><published>2022-08-11T00:00:00+00:00</published><updated>2022-08-11T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/08/11/monero-GUI-0.18.1.0-released</id><content type="html" xml:base="https://www.getmonero.org/2022/08/11/monero-GUI-0.18.1.0-released.html">&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.18.1.0 release of the Monero GUI software. This release adds v0.18 network upgrade compatibility for Ledger and Trezor hardware wallets.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2022/08/11/monero-0.18.1.0-released.html&quot;&gt;The latest CLI release notes can be found on the precedent blog post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add Ledger support for v0.18, requires app v1.8.0&lt;/li&gt;
+  &lt;li&gt;Add Trezor support for v0.18, requires firmware v2.5.2&lt;/li&gt;
+  &lt;li&gt;Speed up time between wallet opening and refresh (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3994&quot;&gt;3994&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add option to skip stop local node screen (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3734&quot;&gt;3734&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes and UI improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero-gui/compare/v0.18.0.0...v0.18.1.0&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero-gui/tree/v0.18.1.0&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 7 people who worked, largely unpaid and altruistically, to put out 18 commits containing 27 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;reemuru&lt;/li&gt;
+  &lt;li&gt;tobtoht&lt;/li&gt;
+  &lt;li&gt;garth-xmr&lt;/li&gt;
+  &lt;li&gt;plowsof&lt;/li&gt;
+  &lt;li&gt;rbrunner7&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#gui&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-win-x64-v0.18.1.0.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-install-win-x64-v0.18.1.0.exe&quot;&gt;Windows, 64-bit (Installer)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-mac-x64-v0.18.1.0.dmg&quot;&gt;macOS, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.18.1.0.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A complete guide for the GUI wallet is included in the archives, but &lt;a href=&quot;https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/monero-GUI-guide.md&quot;&gt;an online version is available&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;download-hashes&quot;&gt;Download Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-gui-win-x64-v0.18.1.0.zip, 39c4290a01072cc8fe8eabaa2c61598421a72eac6011eccd16a2a63e89323fa2
+monero-gui-install-win-x64-v0.18.1.0.exe, 9b2c8978f96e8c9662373b427ef320ccd9d652d346435a8487a756bf55cf43ff
+monero-gui-mac-x64-v0.18.1.0.dmg, 0b06351b370863dce8fff9d8659a8235b98505c61c7e4f5af23843b161d92186
+monero-gui-linux-x64-v0.18.1.0.tar.bz2, 6c993b622516d85555d8962767b39c79a3b3614cbdf0ab9f62fa07e3826498d0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero 0.18.0.0 'Fluorine Fermi' released</title><link href="https://www.getmonero.org/2022/07/19/monero-0.18.0.0-released.html" rel="alternate" type="text/html" title="Monero 0.18.0.0 'Fluorine Fermi' released" /><published>2022-07-19T00:00:00+00:00</published><updated>2022-07-19T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/07/19/monero-0.18.0.0-released</id><content type="html" xml:base="https://www.getmonero.org/2022/07/19/monero-0.18.0.0-released.html">&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.18.0.0 release of the Monero software. This major release is due to the August 13th network upgrade, which in turn adds support for Bulletproofs+, view tags, ring size increase to 16, and fee changes.&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Consensus: add Bulletproofs+ to decrease transactions size and verification time (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7170&quot;&gt;7170&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Consensus: add view tags to outputs to reduce wallet scanning time (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8061&quot;&gt;8061&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Consensus: increase ring size to 16 (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8178&quot;&gt;8178&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: fee changes, adjusted dynamic block weight algorithm (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7819&quot;&gt;7819&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: multisig security fixes (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8149&quot;&gt;8149&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8220&quot;&gt;8220&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8432&quot;&gt;8432&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: disable multisig by default, enable with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--enable-multisig-experimental&lt;/code&gt; (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8328&quot;&gt;8328&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: speed up transaction construction (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8046&quot;&gt;8046&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: avoid unnecessary DNS call, significantly speed up transaction construction in some cases (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8408&quot;&gt;8408&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: avoid hitting restricted /gettransactions RPC limit (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8388&quot;&gt;8388&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: decrease the amount of data exchanged for output export (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8179&quot;&gt;8179&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: fix spurious reorg detection with untrusted nodes (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8331&quot;&gt;8331&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: attempt to carve the fee from a partial payment early (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7342&quot;&gt;7342&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: try empty passphrase first when using Trezor (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7793&quot;&gt;7793&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: add new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scan_tx&lt;/code&gt; command to scan for a list of transaction ids (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7312&quot;&gt;7312&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: add option to display wallet name, network mode to inactivity lock (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7153&quot;&gt;7153&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: add option for exporting tx keys (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8180&quot;&gt;8180&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: connection code rewrite, improve connectivity with SSL enabled (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8426&quot;&gt;8426&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: Tor / I2P tx-proxy connectivity fixes (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8324&quot;&gt;8324&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8330&quot;&gt;8330&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: fix a bug that causes transactions to not get re-relayed (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8326&quot;&gt;8326&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: improve cryptonote (block and tx) binary read performance (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7661&quot;&gt;7661&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: store RPC SSL key/cert for consistent authentication between runs (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7366&quot;&gt;7366&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: add support for storing database on a raw device/partition (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7774&quot;&gt;7774&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: add –max-connections-per-ip daemon option (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/6877&quot;&gt;6877&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: full tx revalidation on fork boundaries (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7169&quot;&gt;7169&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: add proxy configuration support for bootstrap daemon (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7326&quot;&gt;7326&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;RPC: fix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;describe_transfer&lt;/code&gt; for multiple transactions in a txset (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7767&quot;&gt;7767&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;RPC: prevent &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--password-file&lt;/code&gt; from being used with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--wallet-dir&lt;/code&gt; (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7823&quot;&gt;7823&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;RPC: send confirmations in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get_transactions&lt;/code&gt; result (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7662&quot;&gt;7662&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;RPC: support regex for tags in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get_accounts&lt;/code&gt; (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8215&quot;&gt;8215&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Optimized keccak implementation (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8262&quot;&gt;8262&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Mac ARM64 release binaries (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8312&quot;&gt;8312&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes and improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero/compare/v0.17.3.2...v0.18.0.0&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero/tree/v0.18.0.0&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 71 people who worked, largely unpaid and altruistically, to put out 420 commits containing 25749 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;lxop&lt;/li&gt;
+  &lt;li&gt;dewyatt&lt;/li&gt;
+  &lt;li&gt;OrvilleRed&lt;/li&gt;
+  &lt;li&gt;ph4r05&lt;/li&gt;
+  &lt;li&gt;erciccione&lt;/li&gt;
+  &lt;li&gt;wirrickelliot&lt;/li&gt;
+  &lt;li&gt;hMihaiDavid&lt;/li&gt;
+  &lt;li&gt;hyc&lt;/li&gt;
+  &lt;li&gt;JoeHCQ1&lt;/li&gt;
+  &lt;li&gt;reemuru&lt;/li&gt;
+  &lt;li&gt;drlef&lt;/li&gt;
+  &lt;li&gt;suriyaa&lt;/li&gt;
+  &lt;li&gt;ralphmapper&lt;/li&gt;
+  &lt;li&gt;rating89us&lt;/li&gt;
+  &lt;li&gt;tmoravec&lt;/li&gt;
+  &lt;li&gt;TheCharlatan&lt;/li&gt;
+  &lt;li&gt;timosarkar&lt;/li&gt;
+  &lt;li&gt;rbrunner7&lt;/li&gt;
+  &lt;li&gt;hinto.janaiyo&lt;/li&gt;
+  &lt;li&gt;Xeonacid&lt;/li&gt;
+  &lt;li&gt;gdmojo&lt;/li&gt;
+  &lt;li&gt;perfect-daemon&lt;/li&gt;
+  &lt;li&gt;benevanoff&lt;/li&gt;
+  &lt;li&gt;xiphon&lt;/li&gt;
+  &lt;li&gt;cabelo&lt;/li&gt;
+  &lt;li&gt;codesoap&lt;/li&gt;
+  &lt;li&gt;donkeydonkey&lt;/li&gt;
+  &lt;li&gt;IceCruelStuff&lt;/li&gt;
+  &lt;li&gt;glv2&lt;/li&gt;
+  &lt;li&gt;gingeropolous&lt;/li&gt;
+  &lt;li&gt;georgeleege&lt;/li&gt;
+  &lt;li&gt;rex4539&lt;/li&gt;
+  &lt;li&gt;fdov&lt;/li&gt;
+  &lt;li&gt;AkritW&lt;/li&gt;
+  &lt;li&gt;garth-xmr&lt;/li&gt;
+  &lt;li&gt;Luxter77&lt;/li&gt;
+  &lt;li&gt;im&lt;/li&gt;
+  &lt;li&gt;kayabaNerve&lt;/li&gt;
+  &lt;li&gt;normoes&lt;/li&gt;
+  &lt;li&gt;iamamyth&lt;/li&gt;
+  &lt;li&gt;00-matt&lt;/li&gt;
+  &lt;li&gt;mj-xmr&lt;/li&gt;
+  &lt;li&gt;malbit&lt;/li&gt;
+  &lt;li&gt;MoneroArbo&lt;/li&gt;
+  &lt;li&gt;ndorf&lt;/li&gt;
+  &lt;li&gt;zer-far&lt;/li&gt;
+  &lt;li&gt;serhack&lt;/li&gt;
+  &lt;li&gt;sethforprivacy&lt;/li&gt;
+  &lt;li&gt;SomaticFanatic&lt;/li&gt;
+  &lt;li&gt;LeoNero&lt;/li&gt;
+  &lt;li&gt;SamsungGalaxyPlayer&lt;/li&gt;
+  &lt;li&gt;malinero&lt;/li&gt;
+  &lt;li&gt;Jkat&lt;/li&gt;
+  &lt;li&gt;DangerOnTheRanger&lt;/li&gt;
+  &lt;li&gt;kevinbarbour&lt;/li&gt;
+  &lt;li&gt;kaythomas0&lt;/li&gt;
+  &lt;li&gt;lza_menace&lt;/li&gt;
+  &lt;li&gt;agowa338&lt;/li&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;woodser&lt;/li&gt;
+  &lt;li&gt;jeffro256&lt;/li&gt;
+  &lt;li&gt;sarangnoether&lt;/li&gt;
+  &lt;li&gt;unseddd&lt;/li&gt;
+  &lt;li&gt;SChernykh&lt;/li&gt;
+  &lt;li&gt;moneromooo&lt;/li&gt;
+  &lt;li&gt;loqs&lt;/li&gt;
+  &lt;li&gt;tobtoht&lt;/li&gt;
+  &lt;li&gt;UkoeHB&lt;/li&gt;
+  &lt;li&gt;j-berman&lt;/li&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;vtnerd&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#cli&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x64-v0.18.0.0.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x86-v0.18.0.0.zip&quot;&gt;Windows, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-mac-x64-v0.18.0.0.tar.bz2&quot;&gt;macOS, Intel&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-mac-armv8-v0.18.0.0.tar.bz2&quot;&gt;macOS, ARM&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x64-v0.18.0.0.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x86-v0.18.0.0.tar.bz2&quot;&gt;Linux, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv7-v0.18.0.0.tar.bz2&quot;&gt;Linux, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv8-v0.18.0.0.tar.bz2&quot;&gt;Linux, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv7-v0.18.0.0.tar.bz2&quot;&gt;Android, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv8-v0.18.0.0.tar.bz2&quot;&gt;Android, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-freebsd-x64-v0.18.0.0.tar.bz2&quot;&gt;FreeBSD, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;hashes&quot;&gt;Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-win-x64-v0.18.0.0.zip, 0b94088db62d0ded1d62d02a631b93978984acce337e01a802edd87e521dfcd1
+monero-win-x86-v0.18.0.0.zip, d55e86e1434a7e1cebd6931d21063e82c25a7126ddad8704f15501bb9a6e64a4
+monero-mac-x64-v0.18.0.0.tar.bz2, 6278a16ec64e2f261c2023c7be9bf904627bec58f8e4237b609eb4c842d9ff68
+monero-mac-armv8-v0.18.0.0.tar.bz2, 5f2261fe821e0fe88c193ad6251e68aeb7639e9b529952df823706d424a513d7
+monero-linux-x64-v0.18.0.0.tar.bz2, 74c440aa1e38a41ded0c4844b50f094146170ef83f1bd79d7e23d0d69b589faf
+monero-linux-x86-v0.18.0.0.tar.bz2, 14f8e658750b9301de3e4923355adf4bdfb33348d905b74a02191fa8147c247d
+monero-linux-armv8-v0.18.0.0.tar.bz2, 15cf4db8810d39104dbc230a985c7819ee96f9a7264d3f65e012b4bc36dc9f40
+monero-linux-armv7-v0.18.0.0.tar.bz2, 9af9842b6725f070e568b7bbf02277e6da2ae7a5a544b4b214c60125bab5c93b
+monero-android-armv8-v0.18.0.0.tar.bz2, 2656f968293b32cccf9daed36976e9331386950ad291f10f8061fc7bc87f8508
+monero-android-armv7-v0.18.0.0.tar.bz2, 8c6bb7df79e350275252967f08461eda6dfcd161c0d898722af467efa114f6d6
+monero-freebsd-x64-v0.18.0.0.tar.bz2, f556259345ac6e5c95421156693ec5011914355ebdc7d0d1bb97a0e6cdb29b5a
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero GUI 0.18.0.0 'Fluorine Fermi' released</title><link href="https://www.getmonero.org/2022/07/19/monero-GUI-0.18.0.0-released.html" rel="alternate" type="text/html" title="Monero GUI 0.18.0.0 'Fluorine Fermi' released" /><published>2022-07-19T00:00:00+00:00</published><updated>2022-07-19T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/07/19/monero-GUI-0.18.0.0-released</id><content type="html" xml:base="https://www.getmonero.org/2022/07/19/monero-GUI-0.18.0.0-released.html">&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.18.0.0 release of the Monero GUI software. This major release is due to the August 13th network upgrade, which in turn adds support for Bulletproofs+, view tags, ring size increase to 16, and fee changes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2022/07/19/monero-0.18.0.0-released.html&quot;&gt;The latest CLI release notes can be found on the precedent blog post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add support for v0.18 network upgrade (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3972&quot;&gt;3972&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add scan transaction option (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3932&quot;&gt;3932&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix payment proof button (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3910&quot;&gt;3910&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix restoring from default restore height (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3902&quot;&gt;3902&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Display wallet files with a dot in name #&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3968&quot;&gt;3968&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add separate Ledger Nano S+ entry (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3903&quot;&gt;3903&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix stagenet approximated block height (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3846&quot;&gt;3846&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Update Mac icon (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3560&quot;&gt;3560&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Update p2pool to v2.2.1 (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3966&quot;&gt;3966&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Only kill p2pool when we started it (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3917&quot;&gt;3917&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes and UI improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero-gui/compare/v0.17.3.2...v0.18.0.0&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero-gui/tree/v0.18.0.0&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 55 people who worked, largely unpaid and altruistically, to put out 67 commits containing 20610 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;rating89us&lt;/li&gt;
+  &lt;li&gt;reemuru&lt;/li&gt;
+  &lt;li&gt;ComputeryPony&lt;/li&gt;
+  &lt;li&gt;SChernykh&lt;/li&gt;
+  &lt;li&gt;netrik182&lt;/li&gt;
+  &lt;li&gt;plowsof&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A special thanks to translators&lt;/p&gt;
+
+&lt;p&gt;Agent LvM, TheFuzzStone, foresle, reketen, Josep Mengual, Miguel Medina, Peter Liska, Júlia Forgáčová, Boris Sipos, Carlo, tomas, alreadyburnt, Nima Ghotbi, Parsa Abbasi, E-Moji, MasFlam, Gregg S, Gilberto F da Silva, v1docq47, snipeTR, xmoreee, darckme, Simon Fouilleul, Julian Fouquet, nightwolf3, tedtei, Casimir, CryptoMonero, jindouyunz, Muge Niu, TaoHuachen, MaxQiu0108, Winslow Hee, Lekton Zhang, kingoflove, netrik182, Pozsonyi Péter, liimee, siptruk, I. Musthafa, Wobole, PauleBertt, Marta Kozera, Crusty, GreenPiece, Lennard Merten, Paul Janowitz&lt;/p&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#gui&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-win-x64-v0.18.0.0.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-install-win-x64-v0.18.0.0.exe&quot;&gt;Windows, 64-bit (Installer)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-mac-x64-v0.18.0.0.dmg&quot;&gt;macOS, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.18.0.0.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A complete guide for the GUI wallet is included in the archives, but &lt;a href=&quot;https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/monero-GUI-guide.md&quot;&gt;an online version is available&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;download-hashes&quot;&gt;Download Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-gui-win-x64-v0.18.0.0.zip, 41446de539a20c5f5e1c5098ebaebd77009347b7263bdfc61587d27b6b2ff13f
+monero-gui-install-win-x64-v0.18.0.0.exe, a42ea47f6cc128e428ed115b0496d5d9817542dcf29807c2b674e518864418b5
+monero-gui-mac-x64-v0.18.0.0.dmg, c1beab6aa2351a940bfa585d5bff558babb983a8a70600e5166aacf0c47cc2eb
+monero-gui-linux-x64-v0.18.0.0.tar.bz2, a0680b4fcd4b5b75db9a903d17a8216cd250eff91ecbce769e6b920825c9a4c9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2022-07-19-monero-0.18.0.0-released/fluorine-fermi.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero 0.17.3.2 'Oxygen Orion' Point Release</title><link href="https://www.getmonero.org/2022/04/29/monero-0.17.3.2-released.html" rel="alternate" type="text/html" title="Monero 0.17.3.2 'Oxygen Orion' Point Release" /><published>2022-04-29T00:00:00+00:00</published><updated>2022-04-29T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/04/29/monero-0.17.3.2-released</id><content type="html" xml:base="https://www.getmonero.org/2022/04/29/monero-0.17.3.2-released.html">&lt;div align=&quot;center&quot;&gt;
+   &lt;img src=&quot;/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png&quot; width=&quot;350px&quot; /&gt;
+ &lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.17.3.2 point release of the Monero software. This release contains support for Ledger Nano S Plus.&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this point release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Wallet: add support for Ledger Nano S Plus (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8239&quot;&gt;8239&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: balance includes unconfirmed payments (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8154&quot;&gt;8154&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8159&quot;&gt;8159&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: rename duplicate amount headers in CSV export (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8177&quot;&gt;8177&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: multisig key exchange update and code refactor (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8190&quot;&gt;8190&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: fix stagenet restore height estimation (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8196&quot;&gt;8196&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: replace outdated seed nodes (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8222&quot;&gt;8222&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8131&quot;&gt;8131&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: don't require &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--rpc-login&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--rpc-access-control-origins&lt;/code&gt; (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8227&quot;&gt;8227&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: add a sanity check to RPC input data size (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8276&quot;&gt;8276&lt;/a&gt;) [Reported by m31007]&lt;/li&gt;
+  &lt;li&gt;RPC: support authentication with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;set_daemon&lt;/code&gt; command (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8166&quot;&gt;8166&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix compilation on OpenBSD RISC-V (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8241&quot;&gt;8241&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero/compare/v0.17.3.0...v0.17.3.2&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero/tree/v0.17.3.2&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 10 people who worked, largely unpaid and altruistically, to put out 28 commits containing 2294 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;Gingeropolous&lt;/li&gt;
+  &lt;li&gt;woodser&lt;/li&gt;
+  &lt;li&gt;jeffro256&lt;/li&gt;
+  &lt;li&gt;hbs&lt;/li&gt;
+  &lt;li&gt;moneromooo&lt;/li&gt;
+  &lt;li&gt;reemuru&lt;/li&gt;
+  &lt;li&gt;UkoeHB&lt;/li&gt;
+  &lt;li&gt;erciccione&lt;/li&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#cli&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x64-v0.17.3.2.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x86-v0.17.3.2.zip&quot;&gt;Windows, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-mac-x64-v0.17.3.2.tar.bz2&quot;&gt;macOS, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x64-v0.17.3.2.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x86-v0.17.3.2.tar.bz2&quot;&gt;Linux, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv7-v0.17.3.2.tar.bz2&quot;&gt;Linux, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv8-v0.17.3.2.tar.bz2&quot;&gt;Linux, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv7-v0.17.3.2.tar.bz2&quot;&gt;Android, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv8-v0.17.3.2.tar.bz2&quot;&gt;Android, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-freebsd-x64-v0.17.3.2.tar.bz2&quot;&gt;FreeBSD, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;hashes&quot;&gt;Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-win-x64-v0.17.3.2.zip, 4912d97040af32c14a99e3db1357fc2516e4ed9a8bbf828fc636bcf558b03a65
+monero-win-x86-v0.17.3.2.zip, d2a2475943f75d33ec448844166a2cefe4b5fbbec63d3662682491fc32b2257b
+monero-mac-x64-v0.17.3.2.tar.bz2, 3631f84739ef73d0105d902639c75d66921da6c8dff5487e01a11bf523dd0cae
+monero-linux-x64-v0.17.3.2.tar.bz2, 1e54acd749265d9439d3733441c645d9b058316283c8f21cca2a333c1238cd16
+monero-linux-x86-v0.17.3.2.tar.bz2, 2b3365b740b5f35a42db1b032e9401b5e2ed4e6d9266eea4f5e01ea747952cb5
+monero-linux-armv8-v0.17.3.2.tar.bz2, 8e311714e97f2ac87bfd818abd5c4c605ca19ebda84a1edea93ec00a89d07e2e
+monero-linux-armv7-v0.17.3.2.tar.bz2, 76c101db6df7d923ab4cff074a0368e41dbc532b65f99ac983da2f1a199b4423
+monero-android-armv8-v0.17.3.2.tar.bz2, c9cfb2eaace60a2436f9b8db8a0fa6f2ae4318016d4e3fce1bd7ba5def2aeb97
+monero-android-armv7-v0.17.3.2.tar.bz2, 4dab5307d4635d2f18278fff09e54c24d89f5e4582fb77a2e5dea9733868c092
+monero-freebsd-x64-v0.17.3.2.tar.bz2, 097e72be2eca2944414ee0551ae9d9b560605ce208cd016cc3db24944407db91
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero GUI 0.17.3.2 'Oxygen Orion' released</title><link href="https://www.getmonero.org/2022/04/29/monero-GUI-0.17.3.2-released.html" rel="alternate" type="text/html" title="Monero GUI 0.17.3.2 'Oxygen Orion' released" /><published>2022-04-29T00:00:00+00:00</published><updated>2022-04-29T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/04/29/monero-GUI-0.17.3.2-released</id><content type="html" xml:base="https://www.getmonero.org/2022/04/29/monero-GUI-0.17.3.2-released.html">&lt;div align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.17.3.2 point release of the Monero GUI software. This release contains support for P2Pool mining and Ledger Nano S Plus.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2022/04/29/monero-0.17.3.2-released.html&quot;&gt;The latest CLI release notes can be found on the precedent blog post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Integrate experimental support for P2Pool mining (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3829&quot;&gt;3829&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Warn against high fees during transaction creation (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3897&quot;&gt;3897&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Improvements against wallet getting stuck on exit (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3890&quot;&gt;3890&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3889&quot;&gt;3889&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add support for Ledger Nano S Plus&lt;/li&gt;
+  &lt;li&gt;Add support for reserve proof (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3828&quot;&gt;3828&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add a lock wallet button to the title bar (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3859&quot;&gt;3859&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix offline signing (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3862&quot;&gt;3862&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix adding a new address book entry (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3865&quot;&gt;3865&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Update translations, add support for 5 new languages (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3832&quot;&gt;3832&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes and UI improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero-gui/compare/v0.17.3.1...v0.17.3.2&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero-gui/tree/v0.17.3.2&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 22 who worked, largely unpaid and altruistically, to put out 76 commits containing 31625 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;rating89us&lt;/li&gt;
+  &lt;li&gt;netrik182&lt;/li&gt;
+  &lt;li&gt;devhyper&lt;/li&gt;
+  &lt;li&gt;mj-xmr&lt;/li&gt;
+  &lt;li&gt;jeffro256&lt;/li&gt;
+  &lt;li&gt;reemuru&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A special thanks to translators&lt;/p&gt;
+
+&lt;p&gt;Miguel Medina, jaime diaz, Dynse Clyde Sacote, Robbie Monero, Gilberto F da Silva, Malek Atwiz, nanostos, ambercookie, Patix0331, Paul Janowitz, Trendyne, siptruk, tuknag, Marta Kozera&lt;/p&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#gui&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-win-x64-v0.17.3.2.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-install-win-x64-v0.17.3.2.exe&quot;&gt;Windows, 64-bit (Installer)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-mac-x64-v0.17.3.2.dmg&quot;&gt;macOS, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.17.3.2.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A complete guide for the GUI wallet is included in the archives, but &lt;a href=&quot;https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/monero-GUI-guide.md&quot;&gt;an online version is available&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;download-hashes&quot;&gt;Download Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-gui-win-x64-v0.17.3.2.zip, a0fa78c62a97b91db3d225c37c33d8185891600930dddd694d01635b825c2bff
+monero-gui-install-win-x64-v0.17.3.2.exe, 92541cc74ac7afbe771292f6a94127dfaf5163627a750226bff10abd431e5086
+monero-gui-mac-x64-v0.17.3.2.dmg, acaabe36002ae66bee4d4ded1fbcca4b34688cb702231aea26afe49f3f284fbe
+monero-gui-linux-x64-v0.17.3.2.tar.bz2, ad4b4be60548cddcade3cf8874579256805559d61a68e6102e4dde71284a2039
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero will undergo a network upgrade on 13th August, 2022</title><link href="https://www.getmonero.org/2022/04/20/network-upgrade-july-2022.html" rel="alternate" type="text/html" title="Monero will undergo a network upgrade on 13th August, 2022" /><published>2022-04-20T00:00:00+00:00</published><updated>2022-04-20T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/04/20/network-upgrade-july-2022</id><content type="html" xml:base="https://www.getmonero.org/2022/04/20/network-upgrade-july-2022.html">&lt;div align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/blog/assets/2022-04-20-network-upgrade-july-2022/upgrades.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This blog post has been updated to reflect the new hard-fork date of the 13th of August, 2022, as the release was delayed due to required multi-sig security fixes and hardware wallet-related delays.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The next network upgrade will take place on &lt;strong&gt;~13th August, 2022&lt;/strong&gt; (block 2,688,888). Network upgrades are technically hard-forks and require all participants in the Monero network to update their software. The new software (&lt;strong&gt;v0.18 &quot;Fluorine Fermi&quot;&lt;/strong&gt;) will be released one month before the network upgrade, on the &lt;strong&gt;~13th of July&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;This network upgrade will introduce important new features like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A ring-size increase from 11 to 16 – &lt;strong&gt;the largest ever absolute increase in the base anonymity set&lt;/strong&gt; (read: plausible deniability, or base privacy) – of every transaction on the network&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.getmonero.org/2020/12/24/Bulletproofs+-in-Monero.html&quot;&gt;Upgraded Bulletproofs algorithm, &quot;Bulletproofs+&quot;&lt;/a&gt;, which will &lt;strong&gt;reduce the typical transaction size by ~5-7%&lt;/strong&gt; and &lt;strong&gt;improve typical verification performance by ~5-7%&lt;/strong&gt;, making every transaction lighter and faster&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://localmonero.co/knowledge/view-tags-reduce-monero-sync-time&quot;&gt;View tags, a brilliant way to &lt;strong&gt;reduce wallet sync times by 30-40%&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fee changes, &lt;strong&gt;improving the security and resilience of the network&lt;/strong&gt; to rapid changes in the fee market or attacks by malicious entities&lt;/li&gt;
+  &lt;li&gt;Major multi-sig fixes and improvements, including critical security patches&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes and improvements will be released along with the new binaries.&lt;/p&gt;
+
+&lt;p&gt;The logs of the meeting where the dates of the network upgrade were decided &lt;a href=&quot;https://github.com/monero-project/meta/issues/684&quot;&gt;are available on Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To learn more about how Monero uses hard-forks to upgrade the network, you can read this article from LocalMonero: &lt;a href=&quot;https://localmonero.co/knowledge/network-upgrades&quot;&gt;&quot;How Monero Uses Hard-Forks to Upgrade the Network&quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;common-questions&quot;&gt;Common questions&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Hard-fork? Does this mean there will be a split and a new coin will be created?&lt;br /&gt;
+&lt;strong&gt;A:&lt;/strong&gt; &lt;em&gt;No. Hard-forks in Monero are made to improve the base protocol, and are non-contentious. There will be no split and no new coin will be created.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; What do I have to do to be prepared for this upgrade?&lt;br /&gt;
+&lt;strong&gt;A:&lt;/strong&gt; &lt;em&gt;A new release will be announced before the network upgrade (around the 13th of July). You will only have to be using the updated software by the time the network upgrade occurs (13th August). To the end user, it will be like a simple software update.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; How do I update my wallet/node?&lt;br /&gt;
+&lt;strong&gt;A:&lt;/strong&gt; &lt;em&gt;Detailed instructions will be posted along with the software update, but basically users will need to simply replace their previous software (monerod, monero-wallet-cli, monero-wallet-gui) with the new version. That's it.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; If I have my coins on a paper wallet, do I have to do something?&lt;br /&gt;
+&lt;strong&gt;A:&lt;/strong&gt; &lt;em&gt;No. You will simply have to use an updated version of the Monero software when you will decide to move your coins.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; If I have my coins on a hardware wallet, do I have to do something?&lt;br /&gt;
+&lt;strong&gt;A:&lt;/strong&gt; &lt;em&gt;Yes, you will need to update the Monero app or device firmware from the manufacturer once the appropriate update is available. Always be sure you go straight to the official website of the manufacturer to get these updates!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Will there be any changes to the PoW algorithm?&lt;br /&gt;
+&lt;strong&gt;A:&lt;/strong&gt; &lt;em&gt;No. The PoW algorithm will not be affected. Mining will work as before and miners won't need to update their software.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have further questions about the hard-fork, please reach out in &lt;a href=&quot;https://www.reddit.com/r/monerosupport&quot;&gt;r/MoneroSupport&lt;/a&gt; or via &lt;a href=&quot;/community/hangouts/&quot;&gt;#monero on IRC or Matrix&lt;/a&gt;.&lt;/p&gt;</content><author><name>sethforprivacy</name></author><category term="community" /><category term="protocol upgrade" /><category term="core" /><category term="crypto" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2022-04-20-network-upgrade-july-2022/upgrades.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2022-04-20-network-upgrade-july-2022/upgrades.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">This Year in Monero - 2022</title><link href="https://www.getmonero.org/2022/04/18/this-year-in-monero.html" rel="alternate" type="text/html" title="This Year in Monero - 2022" /><published>2022-04-18T00:00:00+00:00</published><updated>2022-04-18T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/04/18/this-year-in-monero</id><content type="html" xml:base="https://www.getmonero.org/2022/04/18/this-year-in-monero.html">&lt;div align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/blog/assets/2022-04-01-this-year-in-monero/8years.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As a way to celebrate and show the growth that has happened for Monero across the past year on this, the 8th anniversary of the Monero project, I wanted to take a snapshot of statistics and social media posts to highlight this growth.&lt;/p&gt;
+
+&lt;p&gt;This is by no means an exhaustive list of ways in which Monero grew, and some of the most important growth came in increased acceptance and adoption of Monero for donations and payments:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.getmonero.org/community/merchants/&quot;&gt;Merchants accepting Monero for payment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sethforprivacy.com/posts/foss-donations/&quot;&gt;FOSS Projects and Pro-Privacy Organizations accepting Monero for donations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/CoinCards/status/1508324025256202246?cxt=HHwWjMCqubSt0u4pAAAA&quot;&gt;Coincards Monero Volume&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;statistics&quot;&gt;Statistics&lt;/h1&gt;
+
+&lt;p&gt;One of the most important ways we can deduce what has been happening in Monero is to look at the (thankfully, sparse) blockchain data available publicly.&lt;/p&gt;
+
+&lt;p&gt;Each section will highlight the previous year (04/2020 through 04/2021) as well as the current year (04/2021 through 04/2022) to give year-over-year comparisons and perspective.&lt;/p&gt;
+
+&lt;h2 id=&quot;transactions&quot;&gt;Transactions&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2020 through 04/2021:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero transactions grew from ~10,000tx per day to ~23,000tx per day&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;5,868,096&lt;/em&gt;&lt;/strong&gt; total transactions, for an average of &lt;strong&gt;&lt;em&gt;16,076&lt;/em&gt;&lt;/strong&gt; transactions per day for the year&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2021-04-18-this-year-in-monero/monero-7y-transactions.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2021 through 04/2022:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero transactions grew from ~23,000tx per day to ~40,000tx per day&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;9,087,482&lt;/em&gt;&lt;/strong&gt; total transactions, for an average of &lt;strong&gt;&lt;em&gt;23,542&lt;/em&gt;&lt;/strong&gt; transactions per day for the year&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2022-04-01-this-year-in-monero/monero-8y-transactions.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;year-over-year-growth&quot;&gt;Year over Year Growth&lt;/h3&gt;
+
+&lt;p&gt;Monero's on-chain usage grew &lt;strong&gt;&lt;em&gt;154%&lt;/em&gt;&lt;/strong&gt; YoY! Every one of these transactions was done via private-by-default transactions that protect sender, receiver, and amounts.&lt;/p&gt;
+
+&lt;h2 id=&quot;blockchain-growth&quot;&gt;Blockchain Growth&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2020 through 04/2021:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's blockchain grew &lt;strong&gt;&lt;em&gt;13.34GB&lt;/em&gt;&lt;/strong&gt; in a year.&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;262,588&lt;/em&gt;&lt;/strong&gt; total blocks, for an average size of &lt;strong&gt;&lt;em&gt;53.30KB&lt;/em&gt;&lt;/strong&gt; per block for the year.&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;5,868,096&lt;/em&gt;&lt;/strong&gt; total transactions, for an average of &lt;strong&gt;&lt;em&gt;2.38KB&lt;/em&gt;&lt;/strong&gt; per transaction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2021-04-18-this-year-in-monero/monero-7y-blockchain.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2021 through 04/2022:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's blockchain grew &lt;strong&gt;&lt;em&gt;19.24GB&lt;/em&gt;&lt;/strong&gt; in a year.&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;262,567&lt;/em&gt;&lt;/strong&gt; total blocks, for an average size of &lt;strong&gt;&lt;em&gt;73.27KB&lt;/em&gt;&lt;/strong&gt; per block for the year.&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;9,087,482&lt;/em&gt;&lt;/strong&gt; total transactions, for an average of &lt;strong&gt;&lt;em&gt;2.11KB&lt;/em&gt;&lt;/strong&gt; per transaction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2022-04-01-this-year-in-monero/monero-8y-blockchain.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;year-over-year-growth-1&quot;&gt;Year over Year Growth&lt;/h3&gt;
+
+&lt;p&gt;Monero's blockchain size grew &lt;strong&gt;&lt;em&gt;144%&lt;/em&gt;&lt;/strong&gt; faster YoY.&lt;/p&gt;
+
+&lt;h2 id=&quot;emissions&quot;&gt;Emissions&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2020 through 04/2021:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's block subsidy (emission) created &lt;strong&gt;&lt;em&gt;362,406.83XMR&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;262,588&lt;/em&gt;&lt;/strong&gt; total blocks, for an average block subsidy of &lt;strong&gt;&lt;em&gt;1.38XMR&lt;/em&gt;&lt;/strong&gt; per block for the year.&lt;/li&gt;
+  &lt;li&gt;Monero's emission per day dropped from &lt;strong&gt;&lt;em&gt;~1,200XMR&lt;/em&gt;&lt;/strong&gt; to &lt;strong&gt;&lt;em&gt;~750XMR&lt;/em&gt;&lt;/strong&gt; over the course of the year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2021-04-18-this-year-in-monero/monero-7y-emissions.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2021 through 04/2022:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's block subsidy (emission) created &lt;strong&gt;&lt;em&gt;237,822.80XMR&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;262,567&lt;/em&gt;&lt;/strong&gt; total blocks, for an average block subsidy of &lt;strong&gt;&lt;em&gt;0.90XMR&lt;/em&gt;&lt;/strong&gt; per block for the year.&lt;/li&gt;
+  &lt;li&gt;Monero's emission per day dropped from &lt;strong&gt;&lt;em&gt;~803XMR&lt;/em&gt;&lt;/strong&gt; to &lt;strong&gt;&lt;em&gt;~458XMR&lt;/em&gt;&lt;/strong&gt; over the course of the year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2022-04-01-this-year-in-monero/monero-8y-emissions.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;year-over-year-change&quot;&gt;Year over Year Change&lt;/h3&gt;
+
+&lt;p&gt;Monero's annual inflation decreased &lt;strong&gt;&lt;em&gt;34.3%&lt;/em&gt;&lt;/strong&gt; YoY while daily emission dropped &lt;strong&gt;&lt;em&gt;42.96%&lt;/em&gt;&lt;/strong&gt; and is rapidly approaching the &lt;a href=&quot;https://localmonero.co/knowledge/monero-tail-emission&quot;&gt;tail emission&lt;/a&gt; of &lt;strong&gt;&lt;em&gt;0.6XMR&lt;/em&gt;&lt;/strong&gt; per block!&lt;/p&gt;
+
+&lt;h2 id=&quot;fees&quot;&gt;Fees&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2020 through 04/2021:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's participants spent &lt;strong&gt;&lt;em&gt;1,884.77XMR&lt;/em&gt;&lt;/strong&gt; on fees in a year.&lt;/li&gt;
+  &lt;li&gt;Monero averaged &lt;strong&gt;&lt;em&gt;5.16XMR&lt;/em&gt;&lt;/strong&gt; in fees spent per day.&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;262,588&lt;/em&gt;&lt;/strong&gt; total blocks, for an average total fees to miners of &lt;strong&gt;&lt;em&gt;0.00717767XMR&lt;/em&gt;&lt;/strong&gt; per block for the year.&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;5,868,096&lt;/em&gt;&lt;/strong&gt; total transactions, for an average of &lt;strong&gt;&lt;em&gt;0.000321189XMR&lt;/em&gt;&lt;/strong&gt; per transaction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2021-04-18-this-year-in-monero/monero-7y-fees.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2021 through 04/2022:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's participants spent &lt;strong&gt;&lt;em&gt;1,510.77XMR&lt;/em&gt;&lt;/strong&gt; on fees in a year.&lt;/li&gt;
+  &lt;li&gt;Monero averaged &lt;strong&gt;&lt;em&gt;4.12XMR&lt;/em&gt;&lt;/strong&gt; in fees spent per day.&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;262,567&lt;/em&gt;&lt;/strong&gt; total blocks, for an average total fees to miners of &lt;strong&gt;&lt;em&gt;0.00575384XMR&lt;/em&gt;&lt;/strong&gt; per block for the year.&lt;/li&gt;
+  &lt;li&gt;There were &lt;strong&gt;&lt;em&gt;9,087,482&lt;/em&gt;&lt;/strong&gt; total transactions, for an average of &lt;strong&gt;&lt;em&gt;0.000166247XMR&lt;/em&gt;&lt;/strong&gt; per transaction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2022-04-01-this-year-in-monero/monero-8y-fees.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;year-over-year-growth-2&quot;&gt;Year over Year Growth&lt;/h3&gt;
+
+&lt;p&gt;Monero's fees spent decreased &lt;strong&gt;&lt;em&gt;19.84%&lt;/em&gt;&lt;/strong&gt; YoY while the average transaction fee dropped &lt;strong&gt;&lt;em&gt;48.24%&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mining&quot;&gt;Mining&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2020 through 04/2021:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's network hashrate increased from &lt;strong&gt;&lt;em&gt;1.21GH/s&lt;/em&gt;&lt;/strong&gt; to &lt;strong&gt;&lt;em&gt;2.29GH/s&lt;/em&gt;&lt;/strong&gt; over the year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2021-04-18-this-year-in-monero/monero-hashrate-2021.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2021 through 04/2022:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's network hashrate increased from &lt;strong&gt;&lt;em&gt;2.29GH/s&lt;/em&gt;&lt;/strong&gt; to &lt;strong&gt;&lt;em&gt;3.51GH/s&lt;/em&gt;&lt;/strong&gt; over the year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2022-04-01-this-year-in-monero/monero-hashrate-2022.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;year-over-year-growth-3&quot;&gt;Year over Year Growth&lt;/h3&gt;
+
+&lt;p&gt;Monero's network hashrate increased &lt;strong&gt;&lt;em&gt;53.27%&lt;/em&gt;&lt;/strong&gt; YoY&lt;/p&gt;
+
+&lt;h2 id=&quot;reddit&quot;&gt;Reddit&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2020 through 04/2021:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's main subreddit, &lt;a href=&quot;https://www.reddit.com/r/Monero&quot;&gt;r/Monero&lt;/a&gt; gained &lt;strong&gt;&lt;em&gt;~43,000&lt;/em&gt;&lt;/strong&gt; subscribers, going from &lt;strong&gt;&lt;em&gt;~168,000&lt;/em&gt;&lt;/strong&gt; to &lt;strong&gt;&lt;em&gt;~211,000&lt;/em&gt;&lt;/strong&gt; subscribers over the year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2021-04-18-this-year-in-monero/subreddit_2021.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2021 through 04/2022:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's main subreddit, &lt;a href=&quot;https://www.reddit.com/r/Monero&quot;&gt;r/Monero&lt;/a&gt; gained &lt;strong&gt;&lt;em&gt;~46,000&lt;/em&gt;&lt;/strong&gt; subscribers, going from &lt;strong&gt;&lt;em&gt;~211,000&lt;/em&gt;&lt;/strong&gt; to &lt;strong&gt;&lt;em&gt;257,000&lt;/em&gt;&lt;/strong&gt; subscribers over the year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2022-04-01-this-year-in-monero/subreddit_2022.png&quot; position=&quot;center&quot; style=&quot;border-radius: 8px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;year-over-year-growth-4&quot;&gt;Year over Year Growth&lt;/h3&gt;
+
+&lt;p&gt;Monero's subreddit subscriber count grew &lt;strong&gt;&lt;em&gt;21.80%&lt;/em&gt;&lt;/strong&gt; YoY&lt;/p&gt;
+
+&lt;h2 id=&quot;twitter&quot;&gt;Twitter&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2020 through 04/2021:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's main Twitter account, &lt;a href=&quot;https://twitter.com/monero&quot;&gt;@monero&lt;/a&gt; gained &lt;strong&gt;&lt;em&gt;69,209&lt;/em&gt;&lt;/strong&gt; followers.&lt;/li&gt;
+  &lt;li&gt;The @monero Twitter account went from &lt;strong&gt;&lt;em&gt;319,884&lt;/em&gt;&lt;/strong&gt; to &lt;strong&gt;&lt;em&gt;389,093&lt;/em&gt;&lt;/strong&gt; followers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;04/2021 through 04/2022:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monero's main Twitter account, &lt;a href=&quot;https://twitter.com/monero&quot;&gt;@monero&lt;/a&gt; gained &lt;strong&gt;&lt;em&gt;84,397&lt;/em&gt;&lt;/strong&gt; followers.&lt;/li&gt;
+  &lt;li&gt;The @monero Twitter account went from &lt;strong&gt;&lt;em&gt;389,093&lt;/em&gt;&lt;/strong&gt; to &lt;strong&gt;&lt;em&gt;473,490&lt;/em&gt;&lt;/strong&gt; followers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;year-over-year-growth-5&quot;&gt;Year over Year Growth&lt;/h3&gt;
+
+&lt;p&gt;Monero's Twitter follower count grew &lt;strong&gt;&lt;em&gt;21.69%&lt;/em&gt;&lt;/strong&gt; YoY&lt;/p&gt;
+
+&lt;h1 id=&quot;highlighted-ccs-campaigns&quot;&gt;Highlighted CCS Campaigns&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ccs.getmonero.org/proposals/haveno-frontend.html&quot;&gt;Haveno Frontend Development&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ccs.getmonero.org/proposals/MoneroKon-2022-CCS.html&quot;&gt;Monerokon 2022&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ccs.getmonero.org/proposals/seraphis-wallet-poc.html&quot;&gt;Seraphis POC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ccs.getmonero.org/proposals/noot-eth-xmr-atomic-swap.html&quot;&gt;ETH XMR Atomic Swaps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ccs.getmonero.org/proposals/Rucknium-OSPEAD-Fortifying-Monero-Against-Statistical-Attack.html&quot;&gt;OSPEAD&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;major-upgrades&quot;&gt;Major Upgrades&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/monero-project/monero/pull/7170&quot;&gt;Bulletproof+&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/monero-project/monero/pull/7964&quot;&gt;P2Pool Support&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/monero-project/monero/pull/8179&quot;&gt;Output Export Optimization&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;something-missing&quot;&gt;Something Missing?&lt;/h1&gt;
+
+&lt;p&gt;If you see something missing from this post that was a major highlight of the year, please feel free to open an issue on &lt;a href=&quot;https://github.com/monero-project/monero-site&quot;&gt;Github&lt;/a&gt; and tag @reemuru, and I will update ASAP.&lt;/p&gt;
+
+&lt;h1 id=&quot;resources-used&quot;&gt;Resources Used&lt;/h1&gt;
+
+&lt;p&gt;Here is a quick list of the sources and tools I used to gather these statistics:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;monero-blockchain-stats&lt;/code&gt;, using some hints from the following link for plotting:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/monero-project/monero/pull/4694&quot;&gt;https://github.com/monero-project/monero/pull/4694&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gnuplot.info/&quot;&gt;Gnuplot&lt;/a&gt; for the graphs from data pulled via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;monero-blockchain-stats&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://miningpoolstats.stream/monero&quot;&gt;https://miningpoolstats.stream/monero&lt;/a&gt; for hashrate graph and current miner count&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://subredditstats.com/r/monero&quot;&gt;https://subredditstats.com/r/monero&lt;/a&gt; for subreddit-related statistics and graphs&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/oduwsdl/FollowerCountHistory&quot;&gt;https://github.com/oduwsdl/FollowerCountHistory&lt;/a&gt; for Twitter follower count history for @monero&lt;/li&gt;
+  &lt;li&gt;8 years logo by u/Wataru_Watanabe&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>reemuru</name></author><category term="community" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2022-04-01-this-year-in-monero/8years.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2022-04-01-this-year-in-monero/8years.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero GUI 0.17.3.1 'Oxygen Orion' released</title><link href="https://www.getmonero.org/2022/01/06/monero-GUI-0.17.3.1-released.html" rel="alternate" type="text/html" title="Monero GUI 0.17.3.1 'Oxygen Orion' released" /><published>2022-01-06T00:00:00+00:00</published><updated>2022-01-06T00:00:00+00:00</updated><id>https://www.getmonero.org/2022/01/06/monero-GUI-0.17.3.1-released</id><content type="html" xml:base="https://www.getmonero.org/2022/01/06/monero-GUI-0.17.3.1-released.html">&lt;div align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.17.3.1 point release of the Monero GUI software.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2021/12/04/monero-0.17.3.0-released.html&quot;&gt;The latest CLI release notes can be found on the precedent blog post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix startup crash on Apple Silicon (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3804&quot;&gt;3804&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix wizard password not resetting after wallet creation (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3795&quot;&gt;3795&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Update translations (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3811&quot;&gt;3811&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes and UI improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero-gui/compare/v0.17.3.0...v0.17.3.1&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero-gui/tree/v0.17.3.1&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 5 people who worked, largely unpaid and altruistically, to put out 26 commits containing 1319 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;rating89us&lt;/li&gt;
+  &lt;li&gt;netrik182&lt;/li&gt;
+  &lt;li&gt;selamba&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#gui&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-win-x64-v0.17.3.1.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-install-win-x64-v0.17.3.1.exe&quot;&gt;Windows, 64-bit (Installer)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-mac-x64-v0.17.3.1.dmg&quot;&gt;macOS, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.17.3.1.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A complete guide for the GUI wallet is included in the archives, but &lt;a href=&quot;https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/monero-GUI-guide.md&quot;&gt;an online version is available&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;download-hashes&quot;&gt;Download Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-gui-win-x64-v0.17.3.1.zip, 70f658d499c6fc0f232c4f5fd89f8f93e9c851465e02cdc206eb89fe6e8e897d
+monero-gui-install-win-x64-v0.17.3.1.exe, d71099d2f4f0b3c223de3f6e2d47cff7da94b7a61e7ed4ecc11ac52dc482c044
+monero-gui-mac-x64-v0.17.3.1.dmg, e54616064681a3ea147298b9006fbac56d80e13c5764158743a226e298a5a017
+monero-gui-linux-x64-v0.17.3.1.tar.bz2, 02e8e32455383cf32030e33511656492a352788a619a0c9220ec360c2e863ef9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">What is Seraphis, and Why Should You Care?</title><link href="https://www.getmonero.org/2021/12/22/what-is-seraphis.html" rel="alternate" type="text/html" title="What is Seraphis, and Why Should You Care?" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>https://www.getmonero.org/2021/12/22/what-is-seraphis</id><content type="html" xml:base="https://www.getmonero.org/2021/12/22/what-is-seraphis.html">&lt;p&gt;Seraphis is a 'transaction protocol abstraction' that I have been working on (WIP draft paper available &lt;a href=&quot;https://github.com/UkoeHB/Seraphis&quot;&gt;here&lt;/a&gt;). As an 'abstraction', Seraphis defines rules about how you can design a real (privacy-focused) &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;a cryptographically signed container that details the transfer of Monero to a recipient (or recipients)&quot; href=&quot;/resources/moneropedia/transaction.html&quot;&gt;transaction&lt;/a&gt; protocol without specifying concrete algorithms. For example, &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;a way to hide the amount sent in a Monero transaction&quot; href=&quot;/resources/moneropedia/ringCT.html&quot;&gt;RingCT&lt;/a&gt; is another protocol abstraction (more or less), and there are different 'real' versions corresponding to signature schemes MLSAG and &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;Monero's efficient way of building ring signatures&quot; href=&quot;/resources/moneropedia/clsag.html&quot;&gt;CLSAG&lt;/a&gt;. Seraphis is a candidate model for Monero's next transaction protocol.&lt;/p&gt;
+
+&lt;p&gt;Privacy-focused transaction protocols have two core structural rules.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;How are amounts represented?&lt;/li&gt;
+  &lt;li&gt;How are key images (a.k.a. 'linking tags') constructed?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Ever since RingCT was introduced, transaction protocols have had 'hidden amounts' by adopting the Confidential Transactions technique (the CT in RingCT). Key images, however, have seen recent innovations.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://eprint.iacr.org/2020/018&quot;&gt;Triptych&lt;/a&gt; is a fourth-generation privacy-focused transaction protocol (following the Bitcoin, CryptoNote, and then RingCT models) with a new key image construction that permits 'one-of-many proofs' (which behave the same as ring signatures) with significantly better performance for large reference sets (large numbers of decoys) compared to what is possible with CryptoNote/RingCT-style key images. Note that, while the Triptych paper doesn't make a distinction between a 'transaction protocol' and a 'transaction protocol abstraction', Triptych represents a new abstract model following after RingCT.&lt;/p&gt;
+
+&lt;p&gt;Seraphis is, similarly, a fourth-generation privacy-focused transaction protocol (abstraction). Also like Triptych, it defines a new key image construction that permits efficient one-of-many proofs. However, there are a number of notable differences between Triptych and Seraphis.&lt;/p&gt;
+
+&lt;h3 id=&quot;triptych-vs-seraphis&quot;&gt;Triptych vs. Seraphis&lt;/h3&gt;
+
+&lt;h4 id=&quot;triptych&quot;&gt;Triptych&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pros
+    &lt;ul&gt;
+      &lt;li&gt;Compatible with CryptoNote user &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;either an alias, such as donate.getmonero.org, or a set of 95 characters starting with a 4&quot; href=&quot;/resources/moneropedia/address.html&quot;&gt;addresses&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Cons
+    &lt;ul&gt;
+      &lt;li&gt;Multisig is &lt;a href=&quot;https://github.com/cypherstack/triptych-multisig&quot;&gt;much harder&lt;/a&gt; with Triptych-style key images than with either CryptoNote or Seraphis key images.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;seraphis&quot;&gt;Seraphis&lt;/h4&gt;
+
+&lt;p&gt;When thinking about a possible implementation…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pros
+    &lt;ul&gt;
+      &lt;li&gt;Multisig can be simple, comparable to multisig with MLSAG/CLSAG.&lt;/li&gt;
+      &lt;li&gt;'Membership proof delegation' is possible without leaking users' private keys. This potentially allows the following:
+        &lt;ul&gt;
+          &lt;li&gt;Transaction chaining (required for full-featured atomic swaps).&lt;/li&gt;
+          &lt;li&gt;Offload membership proof construction to a third party, or a view-only &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;A wallet stores the information necessary to send and receive Monero&quot; href=&quot;/resources/moneropedia/wallet.html&quot;&gt;wallet&lt;/a&gt; (possibly useful for spend-only hardware wallets where it is expensive/difficult to implement complex algorithms).&lt;/li&gt;
+          &lt;li&gt;Ignore 10-block lock time when transacting with a &lt;strong&gt;trusted party&lt;/strong&gt; (i.e. allow them to make your tx's membership proofs and submit the tx to the network on your behalf).&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Flexible multi-tier address schemes. The following features can be designed into a Seraphis user address scheme (there are at least 7 design variations, half of which require 3-key addresses [a 50% increase in address length over current addresses]):
+        &lt;ul&gt;
+          &lt;li&gt;View-only wallet that can see spent outputs. Especially helpful for multisig and hardware wallets, since in RingCT and CryptoNote it is necessary to constantly 'export key images'.&lt;/li&gt;
+          &lt;li&gt;View-only wallet that can see received outputs but not amounts (and optionally also see spent outputs but not amounts). Useful for delegated chain scanning, where a third party or insecure machine scans for outputs, then sends them to a more secure 2nd tier view-only wallet (or spend wallet) that can read the amounts.&lt;/li&gt;
+          &lt;li&gt;View-only wallet that can detect the Janus attack.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Modular core design. This will hopefully make it easier to upgrade different pieces of a Seraphis implementation as innovations appear (or maybe we will be stuck for the next 20 years… who knows?).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Cons
+    &lt;ul&gt;
+      &lt;li&gt;Not compatible with CryptoNote user addresses. If Seraphis is used to upgrade a cryptocurrency that has CryptoNote-style addresses, then users would have to replace all their public CryptoNote-style addresses with Seraphis-style addresses (they would not need new private keys or wallets).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-about-lelantus-spark&quot;&gt;What about Lelantus-Spark?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://eprint.iacr.org/2021/1173&quot;&gt;Lelantus-Spark&lt;/a&gt; is a transaction protocol (but not an abstraction - like how Triptych is not an abstraction) very similar to Seraphis, with the same pros/cons relative to Triptych. It was developed independently from Seraphis, for the most part.&lt;/p&gt;
+
+&lt;p&gt;Since they were developed at the same time, the question 'why Seraphis and not Lelantus-Spark?' can just as easily be stated 'why Lelantus-Spark and not Seraphis?' Practically speaking, the authors of Lelantus-Spark have focused their attention on design details appropriate for the Firo cryptocurrency, while my design recommendations for Seraphis (in the paper) have focused on details appropriate for a cryptocurrency that currently uses standard RingCT (like Monero or MobileCoin&lt;sup id=&quot;fnref:mobilecoin-footnote&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:mobilecoin-footnote&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:mobilecoin-footnote&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;I first conceived of Seraphis, and wrote the paper's first draft, while an employee at MobileCoin. &lt;a href=&quot;#fnref:mobilecoin-footnote&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>koe</name></author><category term="protocol" /><category term="cryptography" /><category term="research" /><category term="community" /><summary type="html">@lang_tag_en</summary></entry><entry><title type="html">Vulnerabilities identified in Monero multisignature wallet code</title><link href="https://www.getmonero.org/2021/12/06/vulnerability-multisig.html" rel="alternate" type="text/html" title="Vulnerabilities identified in Monero multisignature wallet code" /><published>2021-12-06T00:00:00+00:00</published><updated>2021-12-06T00:00:00+00:00</updated><id>https://www.getmonero.org/2021/12/06/vulnerability-multisig</id><content type="html" xml:base="https://www.getmonero.org/2021/12/06/vulnerability-multisig.html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Dear Monero users and participants of the Monero ecosystem,
+
+Some vulnerabilities have been identified in the implementation of
+Monero multisignature wallets.
+These vulnerabilities do not affect the theory supporting multisigs,
+but affect the current wallet code implementing them.
+
+Initially disclosed and discussed via the vulnerability response
+process*, the discussion has been enlarged to other key developers and
+MRL contributors. We agreed together that a public announcement had to
+be made.
+
+These vulnerabilities affect (i) multisignature wallet creation and
+(ii) multisignature transaction signing.
+They can lead to funds being stolen by one of the signing parties.
+
+Until a fix is released, we strongly recommend not to perform any
+multisignature transaction unless all signing parties can be trusted.
+If all signing parties cannot be trusted, no transaction should be
+attempted. Funds are not at risk if they are not moved and if the
+wallet-creation process was not abused.
+
+A fix is currently being reviewed. At this stage we hope to have a
+pull request ready within a week, together with a more detailed
+description of the issues.
+
+Regards,
+
+binaryFate
+
+
+* https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEgaxZH+nEtlxYBq/D8K9NRioL35IFAmGtGA0ACgkQ8K9NRioL
+35JLBw//fZ4tcOCFRgoM+kiLVNVgziqio1PJl7w73BGjP7A3I0ieGPZtHfDk28ua
+okSRzWVKqm94Ruy7qAaDHwASxwmJ4MELaBzufx5WqMjhKWhYi87P6ZLEP2n1eVee
+TXmQ2lIy5JfKBXRI+wtmZsXLjWLajgztP0MCJGF1+QW9RawpsIuTkfyDPkrHsK32
+0u3oC5XsdxETP8wu9LAsGVAsQ+xISZ//zkWlyqOWEkRxXhFUOLBmJ8OOPJ96WZ4x
+RMqijDjE2ZcOXPT5pLKwX+A+p9wHEpe7tDLe6F179F+rkWda3Cy6wqBztR8+LtI0
+yPBDqI5k1eu4kwTke7WcNKBjwzkd8qxvPo1kQ1btj4PukxrlDLPcJc2g4vCvuSkb
+XkYzZB6fcT64bXqVnJJdeWYTBI3mDAQgOMGnU63zIA3pqYpPG44hXpFH9KXeFOwq
+O60xuKd7uYVkCRA0FckkSWABy2008/qk9APwKCWwg9Md07advkCAOlNVqjF9CrTE
+CZvyL3tywbbCpQsV1qeM29WM+yU5mjkz4Q3NvtHdL+c0jWElOmJDgs7RRz2bmsiX
+ZCfbR78Y4fTnUMOdBVqU1yLDUg7nZYRnTyD6ORhpgEc12BJV4nDc+mkBqPiR2hTe
+DLh4ZNqeIRFgX2M1Q1w9Kap2xXLV5dRMe0e/3amASKf2KJ8WBSY=
+=HZgv
+-----END PGP SIGNATURE-----
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>binaryFate (Core Team)</name></author><category term="urgent" /><summary type="html">@lang_tag_en</summary></entry><entry><title type="html">Monero 0.17.3.0 'Oxygen Orion' Point Release</title><link href="https://www.getmonero.org/2021/12/04/monero-0.17.3.0-released.html" rel="alternate" type="text/html" title="Monero 0.17.3.0 'Oxygen Orion' Point Release" /><published>2021-12-04T00:00:00+00:00</published><updated>2021-12-04T00:00:00+00:00</updated><id>https://www.getmonero.org/2021/12/04/monero-0.17.3.0-released</id><content type="html" xml:base="https://www.getmonero.org/2021/12/04/monero-0.17.3.0-released.html">&lt;div align=&quot;center&quot;&gt;
+   &lt;img src=&quot;/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png&quot; width=&quot;350px&quot; /&gt;
+ &lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.17.3.0 point release of the Monero software. This release contains support for &lt;a href=&quot;/2021/10/05/p2pool-released.html&quot;&gt;P2Pool&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this point release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add P2Pool support (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7964&quot;&gt;7964&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: allow socks5 proxy configuration with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--proxy&lt;/code&gt; flag (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7326&quot;&gt;7326&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/7616&quot;&gt;7616&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: fix race condition (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7873&quot;&gt;7873&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: fix spurious rejection of downloaded blocks (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8022&quot;&gt;8022&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Daemon: disable restricted RPC from getting output dist. for pre-rct outputs, fix DoS (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8084&quot;&gt;8084&lt;/a&gt;) [Reported by xfang/Haven]&lt;/li&gt;
+  &lt;li&gt;Daemon: add seed nodes (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7664&quot;&gt;7664&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/7753&quot;&gt;7753&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: fix key encryption when changing ask-password from 0/1 to 2 (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8014&quot;&gt;8014&lt;/a&gt;) [Reported by xfang/Haven]&lt;/li&gt;
+  &lt;li&gt;Wallet: fix precision when selecting decoys (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7798&quot;&gt;7798&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: decrease the &quot;recent spend window&quot; in decoy selection (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7993&quot;&gt;7993&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: don't truncate integrated address in CSV history export (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7961&quot;&gt;7961&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: chunk get_outs.bin RPC calls to avoid sanity limits (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7796&quot;&gt;7796&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Wallet: add human-readable error messages to Ledger (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8039&quot;&gt;8039&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;RPC: fix get_transactions failing when not found (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7959&quot;&gt;7959&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;RPC: add calcpow method (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8075&quot;&gt;8075&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Support wildcard CORS (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7952&quot;&gt;7952&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix missing logs (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7929&quot;&gt;7929&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Mac: fix compilation on ARM (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7435&quot;&gt;7435&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Mac: don't blow out stack on ARM64 in slow-hash (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8032&quot;&gt;8032&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;LMDB: fix deadlock in resized detection (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7958&quot;&gt;7958&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Detect AES support dynamically to support ARMv8 binaries on Raspberry Pi (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/8005&quot;&gt;8005&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Update following dependencies: OpenSSL, RandomX, unwind, hidapi, zeromq (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7933&quot;&gt;7933&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8002&quot;&gt;8002&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8037&quot;&gt;8037&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8049&quot;&gt;8049&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8056&quot;&gt;8056&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/8072&quot;&gt;8072&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes and performance improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero/compare/v0.17.2.3...v0.17.3.0&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero/tree/v0.17.3.0&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 18 people who worked, largely unpaid and altruistically, to put out 96 commits containing 1842 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;hyc&lt;/li&gt;
+  &lt;li&gt;jtgrassie&lt;/li&gt;
+  &lt;li&gt;tevador&lt;/li&gt;
+  &lt;li&gt;woodser&lt;/li&gt;
+  &lt;li&gt;xiphon&lt;/li&gt;
+  &lt;li&gt;moneromooo&lt;/li&gt;
+  &lt;li&gt;tobtoht&lt;/li&gt;
+  &lt;li&gt;SChernykh&lt;/li&gt;
+  &lt;li&gt;ndorf&lt;/li&gt;
+  &lt;li&gt;anon&lt;/li&gt;
+  &lt;li&gt;vtnerd&lt;/li&gt;
+  &lt;li&gt;j-berman&lt;/li&gt;
+  &lt;li&gt;UkoeHB&lt;/li&gt;
+  &lt;li&gt;mj-xmr&lt;/li&gt;
+  &lt;li&gt;rbrunner7&lt;/li&gt;
+  &lt;li&gt;lalanza808&lt;/li&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#cli&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x64-v0.17.3.0.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x86-v0.17.3.0.zip&quot;&gt;Windows, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-mac-x64-v0.17.3.0.tar.bz2&quot;&gt;macOS, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x64-v0.17.3.0.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x86-v0.17.3.0.tar.bz2&quot;&gt;Linux, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv7-v0.17.3.0.tar.bz2&quot;&gt;Linux, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv8-v0.17.3.0.tar.bz2&quot;&gt;Linux, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv7-v0.17.3.0.tar.bz2&quot;&gt;Android, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv8-v0.17.3.0.tar.bz2&quot;&gt;Android, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-freebsd-x64-v0.17.3.0.tar.bz2&quot;&gt;FreeBSD, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;hashes&quot;&gt;Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-win-x64-v0.17.3.0.zip, a956d0c3ab77ebfc1d6229b77d68b739661b564d9a4115e5a549c3af146d6034
+monero-win-x86-v0.17.3.0.zip, 541189f5635f479605eda306a36d2beef1fbe68d6fdbfabce671d6e4c8970158
+monero-mac-x64-v0.17.3.0.tar.bz2, 53b7ed67f7077f27f470b4411478bef8b2bb9cf2cf480055dd1802a935983387
+monero-linux-x64-v0.17.3.0.tar.bz2, ac18ce3d1189410a5c175984827d5d601974733303411f6142296d647f6582ce
+monero-linux-x86-v0.17.3.0.tar.bz2, 586b9967d848eb31dd66bdb6d828bd3a640098434595a5933374d129b76958eb
+monero-linux-armv8-v0.17.3.0.tar.bz2, 8fdb5761f6f4345dc670d184144ce8c2fa56eeb1609ed169e79b202fcca20f7d
+monero-linux-armv7-v0.17.3.0.tar.bz2, da49d85ce2d52fc07846c58d0c58d6412f454f9d389bfa31eab9c1d49a1a13ed
+monero-android-armv8-v0.17.3.0.tar.bz2, 1fa1ba8a1e4c6a0e56d8f7afd788205ff0916a3670b9bf7992f1db0f9d7dec3e
+monero-android-armv7-v0.17.3.0.tar.bz2, a152c765386ee6ed670dbbfe1e90a8505040d5240a1c7c449bfa9845c4eb3e0d
+monero-freebsd-x64-v0.17.3.0.tar.bz2, d496811ee4687db0c448d30086700f485bf30512c38b50441e5cb5e76b6011a7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero GUI 0.17.3.0 'Oxygen Orion' released</title><link href="https://www.getmonero.org/2021/12/04/monero-GUI-0.17.3.0-released.html" rel="alternate" type="text/html" title="Monero GUI 0.17.3.0 'Oxygen Orion' released" /><published>2021-12-04T00:00:00+00:00</published><updated>2021-12-04T00:00:00+00:00</updated><id>https://www.getmonero.org/2021/12/04/monero-GUI-0.17.3.0-released</id><content type="html" xml:base="https://www.getmonero.org/2021/12/04/monero-GUI-0.17.3.0-released.html">&lt;div align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.17.3.0 point release of the Monero GUI software.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2021/12/04/monero-0.17.3.0-released.html&quot;&gt;The latest CLI release notes can be found on the precedent blog post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add import / export output function (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3435&quot;&gt;3435&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Export all key images by default (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3282&quot;&gt;3282&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Update translations (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3773&quot;&gt;3773&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add description to CSV export (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3572&quot;&gt;3572&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add colors to password strength meter (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3682&quot;&gt;3682&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add Cut, Copy, Delete and Select All to context menu (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3689&quot;&gt;3689&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix buffer overflow in zxcvbn library (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3735&quot;&gt;3735&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix font issue on Arch Linux (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3753&quot;&gt;3753&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix compilation for Apple ARM (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3697&quot;&gt;3697&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3723&quot;&gt;3723&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3731&quot;&gt;3731&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Mining page design tweaks (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3742&quot;&gt;3742&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero-gui/compare/v0.17.2.3...v0.17.3.0&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero-gui/tree/v0.17.3.0&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 65 people who worked, largely unpaid and altruistically, to put out 93 commits containing 31902 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;maltejur&lt;/li&gt;
+  &lt;li&gt;free-as-in-beer&lt;/li&gt;
+  &lt;li&gt;netrik182&lt;/li&gt;
+  &lt;li&gt;rex4539&lt;/li&gt;
+  &lt;li&gt;JeremyRand&lt;/li&gt;
+  &lt;li&gt;kinghat&lt;/li&gt;
+  &lt;li&gt;tobtoht&lt;/li&gt;
+  &lt;li&gt;MoneroArbo&lt;/li&gt;
+  &lt;li&gt;dsc&lt;/li&gt;
+  &lt;li&gt;benevanoff&lt;/li&gt;
+  &lt;li&gt;rating89us&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A special thanks to translators&lt;/p&gt;
+
+&lt;p&gt;TheFuzzStone, reketen, castorp, Alex Osinniy, nemecis rojas, Samuel, Josep Mengual, jaime diaz, Dynse Clyde Sacote, devuana, mihaipe, v1docq47. L. P. Pereira, netrik182, Gilberto F da Silva, Zsolt András Kovács, Pozsonyi Péter, Közepes Gábor, anonym szeretnék maradni, Nicolas, Martin, MortiZ, GreenPiece, Crusty, Paul Janowitz&lt;/p&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#gui&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-win-x64-v0.17.3.0.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-install-win-x64-v0.17.3.0.exe&quot;&gt;Windows, 64-bit (Installer)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-mac-x64-v0.17.3.0.dmg&quot;&gt;macOS, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.17.3.0.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A complete guide for the GUI wallet is included in the archives, but &lt;a href=&quot;https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/monero-GUI-guide.md&quot;&gt;an online version is available&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;download-hashes&quot;&gt;Download Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-gui-win-x64-v0.17.3.0.zip, 995704160e754dc826c84ba8edaeefdc30984d40ad4cbd2e7c043005923eb6e5
+monero-gui-install-win-x64-v0.17.3.0.exe, 2c6ed3f183bb8a84f7a88542045ea45f9c53b069339974da9a843e30150533ac
+monero-gui-mac-x64-v0.17.3.0.dmg, d94bd49df6076c79207d38b0e33ec5add0ba0e582ebdc476062026ab9560b360
+monero-gui-linux-x64-v0.17.3.0.tar.bz2, ca41cc213b3e1a82e375030bba1f46bf154b6c2ec7f858d207cf1f6dee233cd4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero P2Pool is now live</title><link href="https://www.getmonero.org/2021/10/05/p2pool-released.html" rel="alternate" type="text/html" title="Monero P2Pool is now live" /><published>2021-10-05T00:00:00+00:00</published><updated>2021-10-05T00:00:00+00:00</updated><id>https://www.getmonero.org/2021/10/05/p2pool-released</id><content type="html" xml:base="https://www.getmonero.org/2021/10/05/p2pool-released.html">&lt;p&gt;We are happy to announce that Monero P2Pool is live on the Monero network and binaries have been &lt;a href=&quot;https://github.com/SChernykh/p2pool/releases&quot;&gt;released&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-monero-p2pool&quot;&gt;What is Monero P2Pool?&lt;/h3&gt;
+
+&lt;p&gt;Monero P2Pool is a peer-to-peer Monero mining pool developed from scratch by SChernykh (also known as sech1). P2Pool combines the advantages of pool and solo &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;the process of cryptographically computing a mathematical proof for a block, containing a number of transactions, which is then added to the blockchain&quot; href=&quot;/resources/moneropedia/mining.html&quot;&gt;mining&lt;/a&gt;; you still fully control your Monero &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;A device on the Internet running the Monero software, with a full copy of the Monero blockchain. It can be local or remote&quot; href=&quot;/resources/moneropedia/node.html&quot;&gt;node&lt;/a&gt; and what it mines, but you get frequent payouts like on a regular pool.
+P2Pool as a concept was first developed for the Bitcoin blockchain but was never fully realized due to certain limitations, mainly because it had a problem with orphaned blocks which is solved in Monero P2Pool with uncle blocks.&lt;/p&gt;
+
+&lt;p&gt;P2Pool has no central server that can be shutdown/blocked because it uses a separate blockchain to merge mine with Monero. There's no pool admin that can control what your hashrate is used for or decide who can mine on the pool and who can't; It's permissionless!&lt;/p&gt;
+
+&lt;p&gt;All pool blocks pay out to miners immediately. Because there is no pool wallet, funds are never in custody; It's trustless.&lt;/p&gt;
+
+&lt;p&gt;P2Pool uses PPLNS payout scheme, has 0% fee and 0 XMR payout fee (by design, fees can't be added). Everyone in the PPLNS window is rewarded directly via the coinbase transaction reward. Minimum payout is less than 0.0004 XMR due to the very efficient miner reward &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;a cryptographically signed container that details the transfer of Monero to a recipient (or recipients)&quot; href=&quot;/resources/moneropedia/transaction.html&quot;&gt;transaction&lt;/a&gt; format; each individual miner payout takes only 38 bytes on the Monero blockchain!&lt;/p&gt;
+
+&lt;h3 id=&quot;why-monero-p2pool&quot;&gt;Why Monero P2Pool?&lt;/h3&gt;
+
+&lt;p&gt;There's been some worry about mining pool centralization and the possibility of 51% attacks. Since atomic swaps went live (solving exchange delisting/KYC threat), mining is now the most centralized part of the Monero ecosystem.
+Currently, one pool accounts for almost 40% of Monero's network hashrate. This is not a stable situation long-term because a pool admin can be pressured to do malicious things, shutdown their pool, or expropriate funds without paying miners.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-does-it-work&quot;&gt;How does it work?&lt;/h3&gt;
+
+&lt;p&gt;P2Pool is a sidechain to Monero, and P2Pool blocks are potentially Monero &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;a container of transactions, a sequence of which forms a blockchain&quot; href=&quot;/resources/moneropedia/block.html&quot;&gt;blocks&lt;/a&gt;. Each miner submits block templates that include a payout for all of the miners that currently have shares in the PPLNS window.
+High quality block templates are added to the P2Pool blockchain as blocks which count as &quot;shares&quot; for the miner who found them.&lt;/p&gt;
+
+&lt;p&gt;If a block is good enough to be a Monero block it is also submitted to the Monero network to be included in its blockchain. Once the Monero block is confirmed by the network, those miners are directly paid in the &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;a special type of transaction included in each block, which contains a small amount of Monero sent to the miner as a reward for their mining work&quot; href=&quot;/resources/moneropedia/coinbase.html&quot;&gt;coinbase transaction&lt;/a&gt; because they were included already in the block.
+If P2Pool &quot;shares&quot; are found at the same block height as an existing share, it is included as an uncle block (worth 20% less than a normal share) so you can still get paid for it (uncle blocks can be submitted up to 3 blocks behind the current height and still be included).&lt;/p&gt;
+
+&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Decentralized: no central server that can be shutdown/blocked.&lt;/li&gt;
+  &lt;li&gt;Permissionless: there is no one to decide who can mine on the pool and who can't.&lt;/li&gt;
+  &lt;li&gt;Trustless: there is no pool wallet; funds are never in custody. All pool blocks pay out to miners immediately.&lt;/li&gt;
+  &lt;li&gt;PPLNS payout scheme&lt;/li&gt;
+  &lt;li&gt;0% fee and no payout fee&lt;/li&gt;
+  &lt;li&gt;Less than 0.0004 XMR minimum payout&lt;/li&gt;
+  &lt;li&gt;Fast block times, down to 1 second&lt;/li&gt;
+  &lt;li&gt;Uncle blocks are supported to avoid orphans - all your shares will be accounted for!&lt;/li&gt;
+  &lt;li&gt;Advanced mempool picking algorithm, it creates blocks with better reward than what monerod solo mining does&lt;/li&gt;
+  &lt;li&gt;Password protected private pools&lt;/li&gt;
+  &lt;li&gt;Configurable PPLNS window size and block time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;NOTE: Setting a password or changing any settings in config.json will create a separate sidechain. Only do this if you know what you're doing.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/SChernykh/p2pool/releases&quot;&gt;P2Pool Download&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/SChernykh/p2pool&quot;&gt;P2Pool GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://p2pool.io/&quot;&gt;P2Pool Monitoring Page&lt;/a&gt; &lt;em&gt;Note since P2Pool is decentralized, this is only a monitoring page.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;P2Pool &lt;a href=&quot;https://libera.chat/&quot;&gt;Libera.Chat&lt;/a&gt; IRC and Matrix channels: #monero-pow and #p2pool-log&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;donations&quot;&gt;Donations&lt;/h3&gt;
+
+&lt;p&gt;If you'd like to support further development of Monero P2Pool, SChernykh has a donation address on his &lt;a href=&quot;https://github.com/SChernykh/p2pool#donations&quot;&gt;GitHub page&lt;/a&gt;.&lt;/p&gt;</content><author><name>QuickBASIC</name></author><category term="community" /><summary type="html">@lang_tag_en</summary></entry><entry><title type="html">Post-Mortem of Decoy Selection Bugs</title><link href="https://www.getmonero.org/2021/09/20/post-mortem-of-decoy-selection-bugs.html" rel="alternate" type="text/html" title="Post-Mortem of Decoy Selection Bugs" /><published>2021-09-20T00:00:00+00:00</published><updated>2021-09-20T00:00:00+00:00</updated><id>https://www.getmonero.org/2021/09/20/post-mortem-of-decoy-selection-bugs</id><content type="html" xml:base="https://www.getmonero.org/2021/09/20/post-mortem-of-decoy-selection-bugs.html">&lt;p&gt;When constructing a new &lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;a cryptographically signed container that details the transfer of Monero to a recipient (or recipients)&quot; href=&quot;/resources/moneropedia/transaction.html&quot;&gt;transaction&lt;/a&gt;, a Monero wallet references a past output a user received in a prior transaction, and uses it as an input to the new transaction. Today, the wallet mixes this output with a set of 10 decoy outputs selected from other people's transactions from across the blockchain (&lt;a class=&quot;info-tooltip&quot; data-tooltip=&quot;a group of cryptographic signatures with at least one real participant, but no way to tell which in the group is the real one as they all appear valid&quot; href=&quot;/resources/moneropedia/ringsignatures.html&quot;&gt;ring signature&lt;/a&gt;). Thus, an observer cannot tell which among the 11 total outputs is the real one a user spends in a transaction, obfuscating the link from the user's new transaction to their prior transaction. The decoy selection algorithm specifically handles the selection process for choosing which decoys to mix real outputs with when constructing a transaction.&lt;/p&gt;
+
+&lt;p&gt;Between Monero versions v0.14.1.0 and v0.17.2.2, the core wallet code had two bugs in the decoy selection algorithm that impacted Monero users' privacy:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;The algorithm sometimes ignored very recent spendable outputs for consideration as decoys, thus rendering it clearer when users spent outputs immediately after the outputs were able to be spent.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If transaction volume were to increase substantially over a sustained period of time, then wallets would eventually construct transactions that reveal real outputs in the vast majority of cases.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Both have been patched in &lt;a href=&quot;/2021/08/31/monero-0.17.2.3-released.html&quot;&gt;v0.17.2.3&lt;/a&gt; and it is highly recommended to upgrade as soon as able.&lt;/p&gt;
+
+&lt;p&gt;Users should also be aware that the implications of the first bug are not as severe as previously reported. It was &lt;a href=&quot;https://decrypt.co/76938/monero-developers-disclose-significant-bug-privacy-algorithm&quot;&gt;widely publicized&lt;/a&gt; that as a result of the first bug, some very newly spent outputs observed on chain were guaranteed identifiable as real outputs spent in a transaction, however, &lt;em&gt;this is not actually the case&lt;/em&gt;. Since publication, we learned that at least one popular light wallet (&lt;a href=&quot;https://mymonero.com/&quot;&gt;MyMonero&lt;/a&gt;) has been using a &lt;a href=&quot;https://github.com/vtnerd/monero-lws/blob/faa51780f3f8e6c5c0c4235499b95c246e074f29/src/util/gamma_picker.cpp&quot;&gt;separate implementation&lt;/a&gt; of the decoy selection algorithm that &lt;em&gt;did not have the bug&lt;/em&gt;. Therefore, MyMonero users could have feasibly constructed transactions that selected newly spendable outputs as decoys, which means newly spent outputs observed on chain were not guaranteed identifiable as real outputs.&lt;/p&gt;
+
+&lt;p&gt;Note that having distinct implementations of the decoy selection algorithm is not ideal. Ideally, all wallets would conform to the same spec of the decoy selection algorithm to ensure transaction uniformity, so that transactions on-chain cannot be tied to a particular wallet implementation.&lt;/p&gt;
+
+&lt;h2 id=&quot;technical-explanations&quot;&gt;Technical Explanations&lt;/h2&gt;
+
+&lt;h3 id=&quot;applying-the-algorithm-incorrectly-bug-1&quot;&gt;Applying the algorithm incorrectly (Bug 1)&lt;/h3&gt;
+
+&lt;p&gt;The decoy selection algorithm is designed to select outputs from across the blockchain based on observed spending patterns, as recommended in &lt;a href=&quot;https://arxiv.org/pdf/1704.04299/&quot;&gt;Möser et al&lt;/a&gt;. The paper's analysis uses spending patterns from earlier versions of Monero — where in some cases, the real outputs used in transactions could be deduced with certainty — in order to arrive at a distribution of Monero user spending patterns. The paper highlights that users were more likely to spend outputs received relatively quickly than they were to spend outputs held for a long time. The paper then recommends factoring in the observed spending patterns when selecting outputs from across the blockchain to use as decoys, rather than apply an equal probability to the entire set of outputs from across the blockchain. This way, newer outputs would be more likely to be selected as decoys than older outputs, thus better obfuscating which output is real in users' transactions.&lt;/p&gt;
+
+&lt;p&gt;When the paper's recommendation &lt;a href=&quot;https://github.com/monero-project/monero/pull/3528&quot;&gt;was first implemented in Monero v0.13.0.0&lt;/a&gt;, the wallet correctly applied the observed spending pattern from the tip of the blockchain when selecting decoys. However, when the algorithm &lt;a href=&quot;https://github.com/monero-project/monero/pull/5389&quot;&gt;was upgraded in v0.14.1.0&lt;/a&gt;, the algorithm applied the observed spending pattern from 10 blocks prior to the chain tip. This was done because outputs younger than 10 blocks old are locked and cannot be spent, therefore it seemed logical to apply the distribution starting 10 blocks prior to the chain tip so as to only consider spendable outputs. However, the implementation ended up ignoring some very recent spendable outputs for consideration as decoys. Additionally, it caused the algorithm to select marginally fewer decoy outputs roughly 10 to 20 blocks old.&lt;/p&gt;
+
+&lt;p&gt;This bug was patched in PR &lt;a href=&quot;https://github.com/monero-project/monero/pull/7821&quot;&gt;#7821&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;divide-by-0-bug-2&quot;&gt;Divide by 0 (Bug 2)&lt;/h3&gt;
+
+&lt;p&gt;The upgrade to the decoy selection algorithm in v0.14.1.0 factored in block size variance in order to better match spending patterns and reduce bias toward selecting coinbase outputs as decoys. When selecting a decoy, the algorithm first determines the age in seconds that the decoy output should be (by using the distribution of known spending patterns, as discussed above). Then, the algorithm divides the expected output age in seconds by the average seconds spaced between each output observed over the trailing year, in order to arrive at the output in the chain that should be used as a decoy. If the number of outputs in a year is equivalent to the number of seconds in a year, then the average seconds spaced between each output over the year is 1.&lt;/p&gt;
+
+&lt;p&gt;The calculation of average seconds per output had a bug where it would &lt;a href=&quot;https://en.wikipedia.org/wiki/Truncation&quot;&gt;truncate&lt;/a&gt; the result. If the average seconds per output were to fall below 1, the result would have truncated to 0. When the algorithm divides the expected output age in seconds by 0, it ends up selecting decoys exclusively from the most recent spendable block on most systems. Thus, if output volume were to increase substantially over a sustained period, such that the seconds spaced between each output over the trailing year were to fall below 1 (i.e. the number of outputs over the trailing year exceeds the number of seconds in a year), then the algorithm would have selected decoys from the most recent spendable block in the vast majority of cases. At the time of this publication, the average seconds per output is around 1.7.&lt;/p&gt;
+
+&lt;p&gt;This divide by 0 bug was patched in PR &lt;a href=&quot;https://github.com/monero-project/monero/pull/7845&quot;&gt;#7845&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Work to improve the decoy selection algorithm is &lt;a href=&quot;https://github.com/monero-project/research-lab/issues/86&quot;&gt;ongoing&lt;/a&gt;. It has room for improvement to provide stronger protection to users under a wider set of circumstances. A call to arms: anyone with a background in statistics and probability theory is encouraged to join in discussions geared toward improving the algorithm. Discussions are frequent in the #monero-research-lab and #monero-dev IRC/Matrix channels. While innovative research to improve Monero's cryptography continues in parallel in order to substantially increase the number of decoys mixed with real outputs in a transaction (i.e. increase the ring size), research to improve the decoy selection algorithm's statistical obfuscation techniques is also receiving more attention. If you feel you have the requisite skills, keep in mind there is &lt;a href=&quot;https://www.reddit.com/r/Monero/comments/pkg3d6/the_monero_project_should_actively_recruit/&quot;&gt;growing interest&lt;/a&gt; from the Monero community to actively recruit you to the Monero project. If you are interested, consider contacting &lt;a href=&quot;/community/workgroups/&quot;&gt;a Monero workgroup&lt;/a&gt;.&lt;/p&gt;</content><author><name>Justin Berman (j-berman)</name></author><category term="core" /><category term="crypto" /><category term="dev" /><category term="community" /><summary type="html">@lang_tag_en</summary></entry><entry><title type="html">Monero 0.17.2.3 'Oxygen Orion' Point Release</title><link href="https://www.getmonero.org/2021/08/31/monero-0.17.2.3-released.html" rel="alternate" type="text/html" title="Monero 0.17.2.3 'Oxygen Orion' Point Release" /><published>2021-08-31T00:00:00+00:00</published><updated>2021-08-31T00:00:00+00:00</updated><id>https://www.getmonero.org/2021/08/31/monero-0.17.2.3-released</id><content type="html" xml:base="https://www.getmonero.org/2021/08/31/monero-0.17.2.3-released.html">&lt;div align=&quot;center&quot;&gt;
+   &lt;img src=&quot;/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png&quot; width=&quot;350px&quot; /&gt;
+ &lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.17.2.3 point release of the Monero software. This release contains a decoy selection bug fix that improves privacy.&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this point release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Apply gamma distribution from chain tip when selecting decoys (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7822&quot;&gt;7822&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Protect wallet from divide by 0 caused by integer truncation (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7846&quot;&gt;7846&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Ledger: speed up wallet generation, sync, and subaddress generation (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7744&quot;&gt;7744&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/7745&quot;&gt;7745&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero/pull/7788&quot;&gt;7788&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix optimize-coinbase for p2pool payouts (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7894&quot;&gt;7894&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Provide key images of spent outputs in wallet rpc (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7839&quot;&gt;7839&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Support freeze, thaw, and frozen in wallet rpc (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7838&quot;&gt;7838&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Remove blocked addresses/hosts from peerlist (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7810&quot;&gt;7810&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Stop adding more outputs than bulletproof allows, split transaction (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7825&quot;&gt;7825&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Set correct Ledger minimum version (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7789&quot;&gt;7789&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix crash with Trezor passphrase entered on computer (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7781&quot;&gt;7781&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Update randomx to v1.1.9 (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7734&quot;&gt;7734&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix boost 1.76.0 compatibility (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7736&quot;&gt;7736&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix rescan_bc keep_ki option (#&lt;a href=&quot;https://github.com/monero-project/monero/pull/7680&quot;&gt;7680&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero/compare/v0.17.2.0...v0.17.2.3&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero/tree/v0.17.2.3&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 16 people who worked, largely unpaid and altruistically, to put out 87 commits containing 838 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;dsc&lt;/li&gt;
+  &lt;li&gt;xiphon&lt;/li&gt;
+  &lt;li&gt;benevanoff&lt;/li&gt;
+  &lt;li&gt;moneromooo&lt;/li&gt;
+  &lt;li&gt;anon&lt;/li&gt;
+  &lt;li&gt;tobtoht&lt;/li&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;mj-xmr&lt;/li&gt;
+  &lt;li&gt;sech1&lt;/li&gt;
+  &lt;li&gt;hyc&lt;/li&gt;
+  &lt;li&gt;ndorf&lt;/li&gt;
+  &lt;li&gt;woodser&lt;/li&gt;
+  &lt;li&gt;ph4r05&lt;/li&gt;
+  &lt;li&gt;j-berman&lt;/li&gt;
+  &lt;li&gt;rbrunner7&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#cli&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x64-v0.17.2.3.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-win-x86-v0.17.2.3.zip&quot;&gt;Windows, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-mac-x64-v0.17.2.3.tar.bz2&quot;&gt;macOS, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x64-v0.17.2.3.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-x86-v0.17.2.3.tar.bz2&quot;&gt;Linux, 32-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv7-v0.17.2.3.tar.bz2&quot;&gt;Linux, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-linux-armv8-v0.17.2.3.tar.bz2&quot;&gt;Linux, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv7-v0.17.2.3.tar.bz2&quot;&gt;Android, armv7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-android-armv8-v0.17.2.3.tar.bz2&quot;&gt;Android, armv8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/cli/monero-freebsd-x64-v0.17.2.3.tar.bz2&quot;&gt;FreeBSD, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;hashes&quot;&gt;Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-win-x64-v0.17.2.3.zip, ba3f4ec7429aacf3e712bdf21d1ceb800eb94e1e376be8b2360a01d88bb862be
+monero-win-x86-v0.17.2.3.zip, 460ac8722d713022c13970d96f9098eb04b5ca4f59cc9dc929cc2dd590045a1e
+monero-mac-x64-v0.17.2.3.tar.bz2, e479668f37a623691c75a9e4ec04f69af8fae0faaae5790760eb758f3955b1f7
+monero-linux-x64-v0.17.2.3.tar.bz2, 8069012ad5e7b35f79e35e6ca71c2424efc54b61f6f93238b182981ba83f2311
+monero-linux-x86-v0.17.2.3.tar.bz2, a93788591bd56753369a3f3171fbefb09387758c1e3a219e9265473031f0a35d
+monero-linux-armv8-v0.17.2.3.tar.bz2, bbff804dc6fe7d54895ae073f0abfc45ed8819d0585fe00e32080ed2268dc250
+monero-linux-armv7-v0.17.2.3.tar.bz2, 9100704b7d98d7bffbf7f72804c0c048f5e60f1dc9f6d4830c633dda3687c419
+monero-android-armv8-v0.17.2.3.tar.bz2, 20c32e90c7486bd1fb6948ebb8ee4802be26c902f96b12958429c8aa1c6579b5
+monero-android-armv7-v0.17.2.3.tar.bz2, 62f6172e3ebdc1266d5d882b8be4507cb3c8270b92ea6f06330077f6ef4f43e8
+monero-freebsd-x64-v0.17.2.3.tar.bz2, 6a2d7ae4303d4eca4fd6df3b230f4624ffa743629e85ad1b0c862326395ca93e
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monero GUI 0.17.2.3 'Oxygen Orion' released</title><link href="https://www.getmonero.org/2021/08/31/monero-GUI-0.17.2.3-released.html" rel="alternate" type="text/html" title="Monero GUI 0.17.2.3 'Oxygen Orion' released" /><published>2021-08-31T00:00:00+00:00</published><updated>2021-08-31T00:00:00+00:00</updated><id>https://www.getmonero.org/2021/08/31/monero-GUI-0.17.2.3-released</id><content type="html" xml:base="https://www.getmonero.org/2021/08/31/monero-GUI-0.17.2.3-released.html">&lt;div align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png&quot; width=&quot;350px&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This is the v0.17.2.3 minor point release of the Monero GUI software. This release contains a decoy selection bug fix that improves privacy.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2021/08/31/monero-0.17.2.3-released.html&quot;&gt;The latest CLI release notes can be found on the precedent blog post.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some highlights of this minor release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add payment request functionality to receive page (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3650&quot;&gt;3650&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Display images on create hardware wallet page (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3618&quot;&gt;3618&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Reenable password strength meter in release binaries (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3562&quot;&gt;3562&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Automatically correct incorrectly typed restore dates (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3564&quot;&gt;3564&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add tooltips to all buttons (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3490&quot;&gt;3490&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add search transactions button on receive and account page (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3216&quot;&gt;3216&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3546&quot;&gt;3546&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Set an unused wallet name in wizard (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3544&quot;&gt;3544&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix bug not accepting new restore height (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3563&quot;&gt;3563&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix get / check proof on Sign / Verify page (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3674&quot;&gt;3674&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix scanning QR codes that miss an URI prefix (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3598&quot;&gt;3598&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Various date picker improvements&lt;/li&gt;
+  &lt;li&gt;Accessibility improvements (#&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3611&quot;&gt;3611&lt;/a&gt;, #&lt;a href=&quot;https://github.com/monero-project/monero-gui/pull/3603&quot;&gt;3603&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Minor bug fixes and UI improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The complete list of changes is &lt;a href=&quot;https://github.com/monero-project/monero-gui/compare/v0.17.2.2...v0.17.2.3&quot;&gt;available on GitHub&lt;/a&gt;, along with &lt;a href=&quot;https://github.com/monero-project/monero-gui/tree/v0.17.2.3&quot;&gt;the source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;contributors-for-this-release&quot;&gt;Contributors for this Release&lt;/h1&gt;
+
+&lt;p&gt;This release was the direct result of 3 people who worked, largely unpaid and altruistically, to put out 170 commits containing 26608 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;selsta&lt;/li&gt;
+  &lt;li&gt;luigi1111&lt;/li&gt;
+  &lt;li&gt;rating89us&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
+
+&lt;p&gt;The new binaries can be downloaded from the &lt;a href=&quot;/downloads/#gui&quot;&gt;Downloads page&lt;/a&gt; or from the direct links below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-win-x64-v0.17.2.3.zip&quot;&gt;Windows, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-install-win-x64-v0.17.2.3.exe&quot;&gt;Windows, 64-bit (Installer)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-mac-x64-v0.17.2.3.dmg&quot;&gt;macOS, 64-bit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.17.2.3.tar.bz2&quot;&gt;Linux, 64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A complete guide for the GUI wallet is included in the archives, but &lt;a href=&quot;https://github.com/monero-ecosystem/monero-GUI-guide/blob/master/monero-GUI-guide.md&quot;&gt;an online version is available&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;download-hashes&quot;&gt;Download Hashes&lt;/h1&gt;
+
+&lt;p&gt;If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;monero-gui-win-x64-v0.17.2.3.zip, 1ae06f71e7b469ea95f10008f2624797cf0a3223e47f07c42591c0dff63e63ec
+monero-gui-install-win-x64-v0.17.2.3.exe, 8b5f37eb6b2d0534cbbc490986f23d7fb470697b7839ac1305499c4675f1ea11
+monero-gui-mac-x64-v0.17.2.3.dmg, 20fe978294b65c2bb44932489f114e6a91cb4c2c4b03afb87ab683c8182cf811
+monero-gui-linux-x64-v0.17.2.3.tar.bz2, f011ba2bd67395ca8c17d5faf1397785905533dd1a8b9ebf1e6810d0f726f40f
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A GPG-signed list of the hashes is at &lt;a href=&quot;/downloads/hashes.txt&quot;&gt;https://www.getmonero.org/downloads/hashes.txt&lt;/a&gt; and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.&lt;/p&gt;
+
+&lt;p&gt;Two guides are available to guide you through the verification process: &lt;a href=&quot;/resources/user-guides/verification-windows-beginner.html&quot;&gt;Verify binaries on Windows (beginner)&lt;/a&gt; and &lt;a href=&quot;/resources/user-guides/verification-allos-advanced.html&quot;&gt;Verify binaries on Linux, Mac, or Windows command line (advanced)&lt;/a&gt;.&lt;/p&gt;</content><author><name>selsta</name></author><category term="releases" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" /><media:content medium="image" url="https://www.getmonero.org/blog/assets/2020-09-17-monero-0.17-released/oxygen-orion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Bitcoin &amp;lt;-&amp;gt; Monero atomic swaps are now live</title><link href="https://www.getmonero.org/2021/08/20/atomic-swaps.html" rel="alternate" type="text/html" title="Bitcoin &amp;lt;-&amp;gt; Monero atomic swaps are now live" /><published>2021-08-20T00:00:00+00:00</published><updated>2021-08-20T00:00:00+00:00</updated><id>https://www.getmonero.org/2021/08/20/atomic-swaps</id><content type="html" xml:base="https://www.getmonero.org/2021/08/20/atomic-swaps.html">&lt;p&gt;We are happy to announce that the Atomic Swap implementation developed by the COMIT team is mature enough to be used on Monero's network. For now, makers must buy Bitcoin and takers must buy Monero, but anyone can be a maker or taker. It is easier at the moment to sell Bitcoin for Monero than the other way around. To try a swap yourself, download the &lt;a href=&quot;https://github.com/comit-network/xmr-btc-swap/releases&quot;&gt;asb software&lt;/a&gt; developed by the COMIT team, follow &lt;a href=&quot;https://github.com/comit-network/xmr-btc-swap/blob/master/docs/cli/README.md&quot;&gt;the instructions&lt;/a&gt; and let them know if you find any issues (works also over Tor!). Remember this is brand new technology and might have unexpected bugs. Be careful and only test with small amounts. To find swap providers, visit &lt;a href=&quot;https://unstoppableswap.net/&quot;&gt;unstoppableswap.net&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-are-atomic-swaps&quot;&gt;What are Atomic Swaps?&lt;/h3&gt;
+
+&lt;p&gt;Atomic swaps are a way to exchange two cryptocurrencies (in our case Monero and Bitcoin) without relying on a trusted third party (like a cryptocurrency exchange company) and without needing to trust the person on the other side of the swap. These swaps are called &quot;atomic&quot; because they only have two possible outcomes: either the trade is successfully completed and each trader receives the other one's funds, or nothing happens and both traders keep the funds they started with. Since the protocol forces both parties to follow the rules, it is not possible to run away with the other party's coins, which is the main reason trusted third parties are required when exchanging cryptocurrencies.&lt;/p&gt;
+
+&lt;p&gt;Two teams are working on developing Atomic Swaps for Monero:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/comit-network/xmr-btc-swap&quot;&gt;COMIT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ccs.getmonero.org/proposals/h4sh3d-atomic-swap-implementation.html&quot;&gt;Farcaster&lt;/a&gt; (Research funded by the Monero community through the &lt;a href=&quot;https://ccs.getmonero.org/&quot;&gt;Community Crowdfunding System&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>ErCiccione</name></author><category term="community" /><summary type="html">We are happy to announce that the Atomic Swap implementation developed by the COMIT team is mature enough to be used on Monero's network. For now, makers must buy Bitcoin and takers must buy Monero, but anyone can be a maker or taker. It is easier at the moment to sell Bitcoin for Monero than the other way around. To try a swap yourself, download the asb software developed by the COMIT team, follow the instructions and let them know if you find any issues (works also over Tor!). Remember this is brand new technology and might have unexpected bugs. Be careful and only test with small amounts. To find swap providers, visit unstoppableswap.net.</summary></entry></feed>
